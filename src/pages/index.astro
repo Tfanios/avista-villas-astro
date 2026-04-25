@@ -16,15 +16,21 @@ const ctaImage = img('y2z8SWTM9KYApISpwHugI0C9TU.jpg', 2200);
 
 const rooms = [
 	{
-		name: 'Bellavista Essential',
+		name: 'The Private Resort',
+		meta: 'Sithonia · Built 2018',
+		description: 'Contemporary stone in a private clearing, with a long pergola, a quiet pool, and the distant blue of the Aegean.',
 		image: img('irpzvput8T6wavQdmcsbXA48hjw.jpg', 1400)
 	},
 	{
-		name: 'Bellavista Signature',
+		name: 'The Garden Residence',
+		meta: 'Sithonia · Reimagined 2020',
+		description: 'A warmer Greek family home, full of bougainvillea, terracotta floors, wicker, dark wood, and slow mornings.',
 		image: img('y2z8SWTM9KYApISpwHugI0C9TU.jpg', 1400)
 	},
 	{
-		name: 'Bellavista Premier',
+		name: 'The Cypress House',
+		meta: 'Sithonia · Built 2022',
+		description: 'A design-led house with a sleek pool wrapped in olive trees and tall cypresses, lit gently for late evenings.',
 		image: img('5baqDWM1vBNHKw7HCNQPGO3PFTw.jpg', 1400)
 	}
 ];
@@ -41,44 +47,44 @@ const galleryImages = [
 const testimonials = [
 	{
 		quote:
-			'Bellavista felt calm, thoughtful, and beautifully designed. Every detail just made sense, from the room to the service. Easily one of the best stays I’ve had.',
-		name: 'Sarah Mitchell',
-		role: 'Creative Director at Studio North'
+			'Avista felt private without feeling distant. The house was quiet, the garden was alive, and every local suggestion was exactly right.',
+		name: 'Family from London',
+		role: 'The Garden Residence'
 	},
 	{
 		quote:
-			'The balance between comfort and elegance is spot on. It’s the kind of place you want to come back to after a long day and truly unwind.',
-		name: 'Daniel Roberts',
-		role: 'Operations Manager at UrbanWorks'
+			'We spent the mornings under the pines and the evenings by the pool. Nothing felt rushed. That was the whole point.',
+		name: 'Couple from Athens',
+		role: 'The Cypress House'
 	},
 	{
 		quote:
-			'We hosted meetings here and stayed overnight - the experience was seamless. Great spaces, attentive staff, and a peaceful atmosphere.',
-		name: 'Ayesha Khan',
-		role: 'Project Lead at Horizon Consulting'
+			'The house gave everyone room to be together and room to disappear for a while. Sithonia did the rest.',
+		name: 'Family from Munich',
+		role: 'The Private Resort'
 	},
 	{
 		quote:
-			'From check-in to checkout, everything felt effortless. Bellavista doesn’t just offer rooms, it offers an experience.',
-		name: 'James Carter',
-		role: 'Founder at Brightline Co.'
+			'It felt family-run in the best way: personal when we needed something, invisible when we wanted the week to ourselves.',
+		name: 'Friends from Thessaloniki',
+		role: 'Avista Villas'
 	}
 ];
 
 const stories = [
 	{
-		title: 'A Different Kind of Escape',
-		date: 'December 26, 2025',
+		title: 'A quiet week in Sithonia',
+		date: 'Local notes',
 		image: img('nkuTtv3wFdDvIX5xgimU7lY0I.png', 1000)
 	},
 	{
-		title: 'Moments Between Check-In and Goodbye',
-		date: 'December 26, 2025',
+		title: 'The beaches we send friends to',
+		date: 'Hand-drawn map',
 		image: img('jkrN8mvDbY7UDlXBrst6vS3r2E.png', 1000)
 	},
 	{
-		title: 'The Art of Slowing Down',
-		date: 'December 26, 2025',
+		title: 'Dinner after the cicadas',
+		date: 'Sithonia evenings',
 		image: img('nzg8fDr0hzhA23MQmZDwgsEPpaU.jpg', 1000)
 	}
 ];
@@ -86,25 +92,25 @@ const stories = [
 const featureCards = [
 	{
 		image: diningImage,
-		eyebrow: '/ Dining',
-		title: 'Taste the Stay',
-		alt: 'Bellavista dining'
+		eyebrow: '/ The Land',
+		title: 'Morning under the pines',
+		alt: 'Quiet Avista garden detail'
 	},
 	{
 		image: meetingsImage,
-		eyebrow: '/ Meetings',
-		title: 'Work With a View',
-		alt: 'Bellavista meetings'
+		eyebrow: '/ Local',
+		title: 'The hour after sunset',
+		alt: 'Avista evening atmosphere'
 	}
 ];
 
 const section = 'px-3 py-20 tablet:px-5 tablet:py-24 desktop:py-32';
 const container = 'mx-auto w-full max-w-[1600px]';
-const label = 'font-display text-sm font-normal uppercase tracking-normal text-cream/75 tablet:text-base';
-const heading = 'font-display font-medium leading-[0.9] tracking-[-0.04em] text-cream';
-const headingHero = 'font-display font-medium leading-[0.8] tracking-[-0.06em] text-cream';
+const label = 'font-display text-sm font-normal tracking-normal text-cream/75 tablet:text-base';
+const heading = 'font-display font-medium leading-[0.95] text-cream';
+const headingHero = 'font-display font-medium leading-[0.85] text-cream';
 const button =
-	'inline-flex items-center justify-center border border-cream/35 px-6 py-4 font-display text-[18px] font-medium uppercase leading-none text-cream transition hover:bg-cream hover:text-charcoal';
+	'inline-flex items-center justify-center border border-cream/35 px-6 py-4 font-display text-[18px] font-medium leading-none text-cream transition hover:bg-cream hover:text-charcoal';
 ---
 
 <html lang="en">
@@ -114,28 +120,28 @@ const button =
 		<meta name="generator" content={Astro.generator} />
 		<meta
 			name="description"
-			content="Bellavista is where beautiful places meet effortless stays. Discover refined accommodations, dining, meetings, weddings, stories, and gallery moments."
+			content="Avista Villas is a small family collection of three private villas in the pines of Sithonia, Halkidiki. Quiet, private, and family-run."
 		/>
-		<meta name="theme-color" content="#023b2d" />
+		<meta name="theme-color" content="#2B2A27" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<title>Bellavista - Refined Stays</title>
+		<title>Avista Villas - Three private villas in Sithonia</title>
 	</head>
 	<body class="bg-charcoal text-cream">
 		<header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 tablet:px-5 tablet:pt-5">
 			<nav class="mx-auto flex max-w-[1600px] items-center justify-between" aria-label="Primary">
 				<a
 					href="#hero"
-					class="font-display text-[24px] font-medium uppercase leading-[0.9] tracking-[-0.04em] text-cream tablet:text-[28px]"
+					class="font-display text-[24px] font-medium leading-[0.9] text-cream tablet:text-[28px]"
 				>
-					Bellavista
+					Avista Villas
 				</a>
 				<div class="flex items-center bg-cream p-1.5">
 					<a
-						href="#stay"
-						class="hidden px-7 py-4 font-display text-[18px] font-medium uppercase leading-none text-ink tablet:block"
+						href="#contact"
+						class="hidden px-7 py-4 font-display text-[18px] font-medium leading-none text-ink tablet:block"
 					>
-						Book Now
+						Reach out
 					</a>
 					<a
 						href="#contact"
@@ -153,7 +159,7 @@ const button =
 			<section id="hero" class="relative min-h-screen bg-charcoal">
 				<img
 					src={heroImage}
-					alt="Aesthetic motion blur architect"
+					alt="Stone villa atmosphere with warm natural light"
 					class="absolute inset-0 h-full w-full scale-105 object-cover"
 					loading="eager"
 					decoding="async"
@@ -165,16 +171,16 @@ const button =
 				</div>
 				<div class={`${container} relative flex min-h-screen flex-col items-center justify-center px-6 text-center`}>
 					<h1
-						class={`${headingHero} uppercase`}
+						class={headingHero}
 						style="font-size: clamp(3.625rem, 10vw, 7.5rem);"
 					>
-						Discover<br />Bellavista
+						Avista<br />Villas
 					</h1>
 					<p class="mt-8 max-w-[520px] text-center font-display text-base font-normal leading-[1.4] text-cream tablet:text-lg">
-						Where flavor becomes art and every moment feels curated. Indulge in a world of refined tastes crafted in the center of europe
+						Three quiet houses in the pines, kept for families who want Greece on their own terms.
 					</p>
-					<a href="#about" class="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 font-display text-sm font-normal uppercase tracking-normal text-cream">
-						Scroll Down
+					<a href="#about" class="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 font-display text-sm font-normal text-cream">
+						Scroll down
 						<span class="h-24 w-px bg-cream"></span>
 					</a>
 				</div>
@@ -184,8 +190,8 @@ const button =
 				<div class={`${container}`}>
 					<div class="flex flex-col items-center gap-6 text-center">
 						<p class={`${label} text-center`}>/ About</p>
-						<h2 class={`${heading} uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-							Beauty<br />in Every Stay
+						<h2 class={heading} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+							A small family collection
 						</h2>
 					</div>
 					<div class="mt-12 grid grid-cols-2 gap-3 tablet:mt-16 tablet:gap-5">
@@ -195,7 +201,7 @@ const button =
 									<div class="aspect-[1808/2400]">
 										<img
 											src={image}
-											alt={index === 0 ? 'Bellavista drown view' : 'Bellavista stairs'}
+											alt={index === 0 ? 'Avista villa exterior detail' : 'Avista architectural stair detail'}
 											class="h-full w-full object-cover"
 											loading="lazy"
 											decoding="async"
@@ -206,12 +212,12 @@ const button =
 						}
 					</div>
 					<div class="mx-auto mt-12 flex max-w-[820px] flex-col items-center gap-10 text-center tablet:mt-16">
-						<p class="font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-cream/55 tablet:text-[28px]">
-							BELLAVISTA is where beautiful places meet effortless stays. We curate exceptional accommodations that blend comfort, design, and location, so every stay feels thoughtfully chosen. Whether you’re traveling for relaxation, work, or adventure, BELLAVISTA helps you discover spaces that elevate your journey.
+						<p class="font-display text-[22px] font-normal leading-[1.1] text-cream/55 tablet:text-[28px]">
+							Avista is a small family collection of three private villas in Sithonia, Halkidiki, set between the pines of the peninsula and the clearest water in the Aegean. Each house has its own character.
 							<br /><br />
-							We believe a great stay sets the tone for the entire experience. That’s why BELLAVISTA focuses on quality, transparency, and ease - from browsing to booking. With handpicked listings and a seamless platform, we make it simple to find stays you’ll love and return to, wherever life takes you.
+							All three share the same promise: a quiet week, a beautiful garden, and the kind of privacy that lets a family actually be on holiday.
 						</p>
-						<a href="#about" class={button}>About Us</a>
+						<a href="#stay" class={button}>The Collection</a>
 					</div>
 				</div>
 			</section>
@@ -220,21 +226,21 @@ const button =
 				<div class={`${container}`}>
 					<div class="grid gap-10 tablet:grid-cols-[1fr_0.8fr] tablet:items-end">
 						<div>
-							<p class={label}>/ Stay</p>
-							<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-								Your Kind of Stay
+							<p class={label}>/ The Collection</p>
+							<h2 class={`${heading} mt-5`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+								Three houses in Sithonia
 							</h2>
 						</div>
 						<div class="flex flex-col gap-8 tablet:items-start">
-							<p class="font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-cream/75 tablet:text-[28px]">
-								From peaceful escapes to city favorites, we focus on comfort, character, and the little details that make a place worth the night.
+							<p class="font-display text-[22px] font-normal leading-[1.1] text-cream/75 tablet:text-[28px]">
+								Each Avista villa has its own architectural mood. One collection. Three distinct ways to spend a week.
 							</p>
-							<a href="#stay" class={button}>View All Rooms</a>
+							<a href="#contact" class={button}>Ask about dates</a>
 						</div>
 					</div>
 					<figure class="mt-12 overflow-hidden tablet:mt-16">
 						<div class="aspect-[16/7] min-h-[330px]">
-							<img src={stayImage} alt="Architect pattern" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+							<img src={stayImage} alt="Avista villa architectural detail" class="h-full w-full object-cover" loading="lazy" decoding="async" />
 						</div>
 					</figure>
 					<div class="mt-5 grid gap-5 tablet:grid-cols-3">
@@ -250,9 +256,11 @@ const button =
 											decoding="async"
 										/>
 									</div>
-									<h3 class="mt-5 font-display text-[32px] font-medium uppercase leading-[0.9] tracking-[-0.04em] text-cream tablet:text-[46px]">
+									<p class="mt-5 font-display text-[14px] font-normal text-cream/60">{room.meta}</p>
+									<h3 class="mt-2 font-display text-[32px] font-medium leading-[0.95] text-cream tablet:text-[46px]">
 										{room.name}
 									</h3>
+									<p class="mt-4 max-w-[420px] font-display text-[18px] font-normal leading-[1.25] text-cream/65">{room.description}</p>
 								</a>
 							))
 						}
@@ -274,11 +282,11 @@ const button =
 							<div class="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/20 to-transparent"></div>
 							<div class="relative flex min-h-[620px] flex-col items-start justify-end p-5 tablet:p-10 desktop:p-16">
 								<p class={label}>{card.eyebrow}</p>
-								<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+								<h2 class={`${heading} mt-5`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
 									{card.title}
 								</h2>
 								<a href="#dining" class={`${button} mt-10`}>
-									Explore More
+									See the land
 								</a>
 							</div>
 						</article>
@@ -289,18 +297,18 @@ const button =
 			<section id="weddings" class={`${section} bg-charcoal`}>
 				<div class={`${container} grid gap-10 tablet:grid-cols-[0.86fr_1.14fr] tablet:items-end`}>
 					<div class="tablet:pb-8">
-						<p class={label}>/ Weddings</p>
-						<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-							Begin With Beauty
+						<p class={label}>/ The feeling</p>
+						<h2 class={`${heading} mt-5 italic`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+							Beautifully left alone.
 						</h2>
-						<p class="mt-8 font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-cream/75 tablet:text-[28px]">
-							Weddings at BELLAVISTA are designed to feel personal, beautiful, and unforgettable. From intimate ceremonies to grand celebrations, every detail is shaped around your story
+						<p class="mt-8 font-display text-[22px] font-normal leading-[1.1] text-cream/75 tablet:text-[28px]">
+							We look after the houses ourselves, because that is how they stay this quiet. Personal when you need us. Unhurried when you do not.
 						</p>
-						<a href="#weddings" class={`${button} mt-10`}>Explore More</a>
+						<a href="#contact" class={`${button} mt-10`}>Get in touch</a>
 					</div>
 					<figure class="overflow-hidden">
 						<div class="aspect-[4/5]">
-							<img src={weddingImage} alt="Bellavista Architect" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+							<img src={weddingImage} alt="Quiet Avista villa detail" class="h-full w-full object-cover" loading="lazy" decoding="async" />
 						</div>
 					</figure>
 				</div>
@@ -309,9 +317,9 @@ const button =
 			<section id="gallery" class={`${section} bg-ink`}>
 				<div class={`${container}`}>
 					<div class="text-center">
-						<p class={label}>/ Gallery</p>
-						<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-							A Closer Look
+						<p class={label}>/ The Land</p>
+						<h2 class={`${heading} mt-5`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+							Morning, stone, olive leaf
 						</h2>
 					</div>
 					<div class="mt-12 grid grid-cols-2 gap-3 tablet:mt-16 tablet:grid-cols-6 tablet:gap-5">
@@ -319,7 +327,7 @@ const button =
 							galleryImages.map((image, index) => (
 								<figure class={`overflow-hidden ${index === 0 || index === 5 ? 'tablet:col-span-2' : 'tablet:col-span-1'}`}>
 									<div class={index === 0 || index === 5 ? 'aspect-[4/5]' : 'aspect-[3/4]'}>
-										<img src={image} alt="Bellavista gallery" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+										<img src={image} alt="Avista visual detail from the villa collection" class="h-full w-full object-cover" loading="lazy" decoding="async" />
 									</div>
 								</figure>
 							))
@@ -332,16 +340,16 @@ const button =
 				<div class={`${container}`}>
 					<div class="grid gap-10 tablet:grid-cols-[0.9fr_1.1fr]">
 						<div>
-							<p class={label}>/ Testimonials</p>
-							<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-								Stories<br />From the Stay
+							<p class={label}>/ Notes</p>
+							<h2 class={`${heading} mt-5`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+								From people who stayed
 							</h2>
 						</div>
 						<div class="grid gap-5">
 							{
 								testimonials.map((item) => (
 									<figure class="border-t border-cream/25 py-7">
-										<blockquote class="font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-cream tablet:text-[28px]">
+										<blockquote class="font-display text-[22px] font-normal leading-[1.1] text-cream tablet:text-[28px]">
 											{item.quote}
 										</blockquote>
 										<figcaption class="mt-8 grid gap-1">
@@ -360,12 +368,12 @@ const button =
 				<div class={`${container}`}>
 					<div class="flex flex-col gap-10 tablet:flex-row tablet:items-end tablet:justify-between">
 						<div>
-							<p class={label}>/ Stories</p>
-							<h2 class={`${heading} mt-5 uppercase`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
-								Moments &amp; Memories
+							<p class={label}>/ Journal</p>
+							<h2 class={`${heading} mt-5`} style="font-size: clamp(2.5rem, 5vw, 3.625rem);">
+								Local notes from Sithonia
 							</h2>
 						</div>
-						<a href="#stories" class={button}>Explore More</a>
+						<a href="#contact" class={button}>Ask for the map</a>
 					</div>
 					<div class="mt-12 grid gap-5 tablet:mt-16 tablet:grid-cols-3">
 						{
@@ -383,7 +391,7 @@ const button =
 										</div>
 									</a>
 									<p class="mt-5 font-display text-[14px] font-normal text-cream/65">{story.date}</p>
-									<h3 class="mt-3 font-display text-[32px] font-medium uppercase leading-[0.9] tracking-[-0.04em] text-cream tablet:text-[46px]">
+									<h3 class="mt-3 font-display text-[32px] font-medium leading-[0.95] text-cream tablet:text-[46px]">
 										{story.title}
 									</h3>
 								</article>
@@ -393,65 +401,70 @@ const button =
 				</div>
 			</section>
 
-			<section id="book" class={`${section} relative min-h-[720px] bg-charcoal`}>
-				<img src={ctaImage} alt="Bellavista aesthetic architect" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+			<section id="book" class="relative overflow-hidden bg-charcoal px-3 pt-24 tablet:px-5 tablet:pt-32">
+				<img src={ctaImage} alt="Avista villa exterior atmosphere" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
 				<div class="noise-layer"></div>
 				<div class="absolute inset-0 bg-charcoal/55"></div>
-				<div class={`${container} relative flex min-h-[620px] flex-col items-center justify-center text-center`}>
-					<p class="font-display text-[18px] font-medium text-cream">4.9 | 25K+ Reviews</p>
-					<h2 class={`${headingHero} mt-6 max-w-[920px] uppercase`} style="font-size: clamp(3.625rem, 9vw, 7rem);">
-						Your Next Stay Starts Here
+				<div class={`${container} relative flex min-h-[520px] flex-col items-center justify-center text-center`}>
+					<p class="font-display text-[18px] font-medium text-cream">Sithonia · Halkidiki · Greece</p>
+					<h2 class={`${headingHero} mt-6 max-w-[920px] italic`} style="font-size: clamp(3.625rem, 9vw, 7rem);">
+						Plan a quiet week.
 					</h2>
 					<div class="mt-10 flex flex-wrap justify-center gap-3">
-						<a href="#stay" class="bg-cream px-7 py-4 font-display text-[18px] font-medium uppercase leading-none text-ink">Book Now</a>
-						<a href="#contact" class={button}>Contact Us</a>
+						<a href="#contact" class="bg-cream px-7 py-4 font-display text-[18px] font-medium leading-none text-ink">Reach out</a>
+						<a href="#stay" class={button}>See the houses</a>
 					</div>
+				</div>
+
+				<footer id="contact" class={`${container} relative z-10 -mb-8 mt-4 bg-cypress px-6 py-10 tablet:-mb-16 tablet:px-12 tablet:py-14 desktop:px-16 desktop:py-16`}>
+					<div class="grid min-h-[360px] gap-12 border-b border-cream/25 pb-14 tablet:grid-cols-[1.2fr_0.8fr_0.8fr] desktop:grid-cols-[1.5fr_0.7fr_0.7fr_0.8fr]">
+						<div>
+							<a href="#hero" class="font-display text-[40px] font-medium leading-[0.9] text-cream tablet:text-[58px]">
+								Avista Villas
+							</a>
+							<p class="mt-7 max-w-[360px] font-display text-[16px] font-normal leading-[1.4] text-cream/70">
+								Avista Villas · Sithonia, Greece<br />
+								40.1056° N, 23.8642° E
+							</p>
+							<div class="mt-7 grid gap-2 font-display text-[16px] font-normal text-cream/80">
+								<a href="tel:+300000000000">+30 ___ ___ ____</a>
+								<a href="mailto:hello@avistavillas.com">hello@avistavillas.com</a>
+							</div>
+						</div>
+						<nav class="grid gap-4 content-start" aria-label="Sitemap">
+							<p class={label}>/ Sitemap</p>
+							<a href="#hero" class="footer-link">Home</a>
+							<a href="#about" class="footer-link">About</a>
+							<a href="#stay" class="footer-link">The Collection</a>
+							<a href="#stories" class="footer-link">Stories</a>
+							<a href="#contact" class="footer-link">Contact</a>
+						</nav>
+						<nav class="grid gap-4 content-start" aria-label="Villas">
+							<p class={label}>/ Villas</p>
+							<a href="#stay" class="footer-link">The Private Resort</a>
+							<a href="#stay" class="footer-link">The Garden Residence</a>
+							<a href="#stay" class="footer-link">The Cypress House</a>
+						</nav>
+						<nav class="flex flex-col gap-4 desktop:items-end" aria-label="Social">
+							<a href="https://www.instagram.com/avistavillas/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+							<a href="mailto:hello@avistavillas.com" class="footer-link">@avistavillas</a>
+						</nav>
+					</div>
+					<div class="flex flex-col gap-7 pt-8 tablet:flex-row tablet:items-center tablet:justify-between">
+						<div class="flex flex-wrap gap-x-8 gap-y-3 font-display text-[18px] font-medium text-cream">
+							<a href="https://www.instagram.com/avistavillas/" target="_blank" rel="noopener">Instagram</a>
+							<a href="mailto:hello@avistavillas.com">Email</a>
+						</div>
+						<p class="font-display text-[14px] font-normal text-cream/70">✺ Avista · © 2026 Avista Villas</p>
+					</div>
+				</footer>
+
+				<div class={`${container} relative z-0 pt-16 pb-4 tablet:pt-24 desktop:pt-28`}>
+					<p class="pointer-events-none select-none whitespace-nowrap font-sans text-[22vw] font-black uppercase leading-[0.72] text-cream/55 [mask-image:linear-gradient(180deg,#000,rgba(0,0,0,0.25))]">
+						Avista Villas
+					</p>
 				</div>
 			</section>
 		</main>
-
-		<footer id="contact" class="relative bg-charcoal px-3 py-16 tablet:px-5 tablet:py-24">
-			<div class={`${container}`}>
-				<div class="grid gap-12 border-b border-cream/25 pb-14 tablet:grid-cols-[1.2fr_0.8fr_0.8fr] desktop:grid-cols-[1.5fr_0.7fr_0.7fr_0.8fr]">
-					<div>
-						<a href="#hero" class="font-display text-[40px] font-medium uppercase leading-[0.9] tracking-[-0.06em] text-cream tablet:text-[58px]">
-							Bellavista
-						</a>
-						<p class="mt-7 max-w-[360px] font-display text-[16px] font-normal leading-[1.4] text-cream/70">
-							123 Vista Boulevard, Palm Heights District, Downtown Marina Area,
-						</p>
-						<div class="mt-7 grid gap-2 font-display text-[16px] font-normal text-cream/80">
-							<a href="tel:+000123456789">+00 0123456789</a>
-							<a href="mailto:contact@bellavista.com">contact@bellavista.com</a>
-						</div>
-					</div>
-					<nav class="grid gap-4" aria-label="Sitemap">
-						<p class={label}>/ Sitemap</p>
-						<a href="#hero" class="footer-link">Home</a>
-						<a href="#about" class="footer-link">About</a>
-						<a href="#stay" class="footer-link">Rooms</a>
-						<a href="#stories" class="footer-link">Stories</a>
-						<a href="#contact" class="footer-link">Contact</a>
-					</nav>
-					<nav class="grid gap-4" aria-label="Amenities">
-						<p class={label}>/ Amenities</p>
-						<a href="#dining" class="footer-link">Dinning</a>
-						<a href="#dining" class="footer-link">Meetings</a>
-						<a href="#weddings" class="footer-link">Weddings</a>
-					</nav>
-					<nav class="flex flex-col gap-4 desktop:items-end" aria-label="Social">
-						<a href="https://x.com/basit_designs" target="_blank" rel="noopener" class="footer-link">Twitter(X)</a>
-						<a href="https://www.instagram.com/basit.designs/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
-						<a href="https://www.linkedin.com/in/basitakhan/?originalSubdomain=sa" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
-					</nav>
-				</div>
-				<div class="flex flex-col gap-7 pt-8 tablet:flex-row tablet:items-center tablet:justify-between">
-					<p class="font-display text-[14px] font-normal text-cream/70">© 2025 All rights reserved.</p>
-					<h2 class="pointer-events-none select-none font-display text-[21vw] font-medium uppercase leading-[0.75] tracking-[-0.07em] text-cream opacity-80 [mask-image:linear-gradient(180deg,#000,transparent)] tablet:text-[11vw]">
-						Bellavista
-					</h2>
-				</div>
-			</div>
-		</footer>
 	</body>
 </html>

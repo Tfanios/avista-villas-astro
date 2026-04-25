@@ -1,15 +1,15 @@
-# Avista Villas — Ardène Landing Page Content Deck
+# Avista Villas — Bellavista Landing Page Content Deck
 
-> Reference template: https://ardene.framer.website/
+> Reference template: https://bellavista.framer.media/
 > Brand guide: see `avista_style_guide.html` (Volume I) and `avista_assets_templates.html` (Volume II)
 
 ---
 
 ## How to use this document
 
-This deck is structured **section-by-section in Ardène's order**. For each section of Ardène's homepage, you'll find:
+This deck is structured **section-by-section in Bellavista's order**. For each section of Bellavista's homepage, you'll find:
 
-1. **What Ardène does** — the original block as reference
+1. **What Bellavista does** — the original block as reference
 2. **Avista replacement** — the copy and asset specifications you should ship
 3. **Notes for the developer** — anything to be careful of (links, conditionals, alt text)
 
@@ -31,7 +31,7 @@ INSTAGRAM            @avistavillas
 SITE URL             avistavillas.com
 ```
 
-### Color tokens (replace Ardène's palette)
+### Color tokens (replace Bellavista's palette)
 
 ```css
 --bone:      #FAF6EE;   /* page background */
@@ -46,7 +46,7 @@ SITE URL             avistavillas.com
 --whisper:   #B8B2A7;   /* muted text */
 ```
 
-### Typography (replace Ardène's fonts)
+### Typography (replace Bellavista's fonts)
 
 ```
 Display     Cormorant Garamond  (300, 400, 400 italic, 500)
@@ -58,7 +58,7 @@ Script      Original Avista logo (SVG only — do not recreate)
 
 - **Never** use: luxury, amenities, package, deal, amazing, stunning, unforgettable, paradise, dream, world-class, top-rated, resort-style, property, unit
 - **Always** use: quiet, slow mornings, the house, our garden, unhurried, cicadas, pine, olive leaf, stone, Sithonia, private, hand-drawn map, family-run, local
-- Sentence case for headlines (not UPPERCASE like Ardène's "ABOUT")
+- Sentence case for headlines (not UPPERCASE like Bellavista's "ABOUT")
 - Italic is the brand's emphasis — never bold for emotional weight
 - Greek allowed sparingly: only `καλώς ορίσατε` in the contact/booking confirmation
 
@@ -66,10 +66,10 @@ Script      Original Avista logo (SVG only — do not recreate)
 
 # Section 1 · Hero
 
-### Ardène original
+### Bellavista original
 - Full-bleed photo of stone villa interior with countryside view
 - Tagline above title: *"Creating timeless residences in France"*
-- Big serif title: **Ardène**
+- Big serif title: **Bellavista**
 
 ### Avista replacement
 
@@ -94,14 +94,14 @@ who want Greece on their own terms.
 
 **Notes:**
 - Add a subtle gradient overlay (charcoal at 30% opacity, top-down) so white type stays readable
-- The Ardène hero animates the title — keep that, it suits Avista's slow-pace feel
+- The Bellavista hero animates the title — keep that, it suits Avista's slow-pace feel
 - Add a small "scroll" indicator at the bottom in stone color
 
 ---
 
 # Section 2 · About
 
-### Ardène original
+### Bellavista original
 - Section eyebrow: "About"
 - Body paragraph about creating boutique residences across France
 - "Since 2004"
@@ -137,7 +137,7 @@ Since 2018
 The house at the hour before lunch.
 ```
 
-**Right-side small label/button (Ardène uses "Residences" jumping to anchor):**
+**Right-side small label/button (Bellavista uses "Residences" jumping to anchor):**
 ```
 The Collection →
 ```
@@ -147,11 +147,11 @@ The Collection →
 
 # Section 3 · Founder / Quote moment
 
-### Ardène original
+### Bellavista original
 - Photo: woman in light suit
-- Brand name: "Ardène"
+- Brand name: "Bellavista"
 - Phrase: "Understated luxury."
-- Founder name: "Juliette Ardène"
+- Founder name: "Bellavista founder/host"
 - "Let's talk" CTA
 
 ### Avista replacement
@@ -189,7 +189,7 @@ Get in touch
 
 # Section 4 · Marquee strip (the "✺ timeless ✺ french heritage ✺ elegant" scrolling line)
 
-### Ardène original
+### Bellavista original
 - Horizontal scrolling text with star ornaments
 
 ### Avista replacement
@@ -202,13 +202,13 @@ Get in touch
 **Notes:**
 - Keep the marquee animation
 - Use Cormorant Garamond italic, ~22px, in stone-deep color on cream background
-- Speed: slow (Ardène's is good — match it)
+- Speed: slow (Bellavista's is good — match it)
 
 ---
 
 # Section 5 · Residences (the collection grid)
 
-### Ardène original
+### Bellavista original
 - Section title: "Residences"
 - Eyebrow: "COLLECTION I — FRANCE"
 - Intro paragraph
@@ -361,14 +361,14 @@ See all three →
 
 # Section 6 · Heritage / Editorial moments grid
 
-### Ardène original
+### Bellavista original
 - Section title: "Heritage"
 - Repeated intro paragraph (probably a CMS oversight on their side)
 - A grid of small lifestyle/cultural photos with single-word labels:
   - "culture" — three women at a table
   - "heritage" — clay vase
   - "MOMENT" — wine glass
-  - "Ardène Residence" — text-only
+  - "Bellavista Residence" — text-only
   - "presence" — woman by sea
 
 ### Avista replacement
@@ -398,13 +398,13 @@ hand our guests when they arrive.
 
 **Notes:**
 - Keep the editorial single-word labels. Avoid sentences in this grid — it's about visual rhythm.
-- The text-only "Avista · Sithonia" tile is the quiet pause Ardène uses. Keep it.
+- The text-only "Avista · Sithonia" tile is the quiet pause Bellavista uses. Keep it.
 
 ---
 
 # Section 7 · Footer / Final CTA
 
-### Ardène original
+### Bellavista original
 - "Projects · 4" + "About" + "Buy template" links
 - Brand name large
 - Tagline
@@ -472,7 +472,7 @@ Reach out →
 
 # Section 8 · The Contact Page (since you mentioned starting with a form)
 
-Even though Ardène doesn't show a contact page on the homepage, you'll need one for "Reach out" to land somewhere meaningful.
+Even though Bellavista doesn't show a contact page on the homepage, you'll need one for "Reach out" to land somewhere meaningful.
 
 ### Suggested layout
 
@@ -560,7 +560,7 @@ hello@avistavillas.com
 
 # Animation & micro-interaction notes
 
-These are the small details Ardène does well that Avista should preserve:
+These are the small details Bellavista does well that Avista should preserve:
 
 - **Hero title fade-in** on page load (slow, 1.2s)
 - **Image scale-on-scroll** for villa cards (subtle — 1.0 to 1.05 over scroll)
@@ -594,12 +594,12 @@ The two **must-shoot** items before launching publicly: a real founder portrait 
 
 # THE CODEX PROMPT
 
-Paste the block below into Codex. It assumes you have already cloned/copied the Ardène template into your project, and that this content deck (`avista-content-deck.md`) and your brand guides are accessible.
+Paste the block below into Codex. It assumes you have already cloned/copied the Bellavista template into your project, and that this content deck (`avista-content-deck.md`) and your brand guides are accessible.
 
 ---
 
 ```
-You are converting an Ardène Framer template (https://ardene.framer.website/)
+You are converting the Bellavista Framer template (https://bellavista.framer.media/)
 into the homepage and contact page for Avista Villas — a small family collection
 of three private villas in Sithonia, Halkidiki, Greece.
 
@@ -609,14 +609,14 @@ CONTEXT FILES:
 - avista_assets_templates.html    ← Volume II — templates, monogram, icon set, patterns
 
 YOUR TASK:
-Modify the Ardène template's homepage and add a contact page so it becomes
+Modify the Bellavista template's homepage and add a contact page so it becomes
 Avista Villas. Keep the structure, layout, animation patterns, and overall
 editorial feel. Replace ALL content (text, images, colors, fonts, links)
 according to avista-content-deck.md.
 
 CRITICAL RULES:
 
-1. STRUCTURE — Match Ardène 1:1. Same section order (Hero → About → Founder
+1. STRUCTURE — Match Bellavista 1:1. Same section order (Hero → About → Founder
    quote → Marquee → Collection (3 villas) → Heritage grid → Footer). Do NOT
    add or remove sections.
 
@@ -635,7 +635,7 @@ CRITICAL RULES:
    Load from Google Fonts. Use sentence case for headlines (NOT UPPERCASE).
    Italic is the brand's emphasis — never use bold for emotional weight.
 
-5. COLOR — Replace Ardène's palette with the tokens at the top of
+5. COLOR — Replace Bellavista's palette with the tokens at the top of
    avista-content-deck.md. The hero color is honey stone (#C7B299). Cream
    (#F5EFE4) and bone (#FAF6EE) carry the backgrounds. Charcoal (#2B2A27)
    for primary text. Accents (olive, terracotta, aegean, cypress) used
@@ -649,7 +649,7 @@ CRITICAL RULES:
    Apply CSS filter: saturate(0.92) contrast(1.02) to all photography for
    the editorial desaturation specified in Volume I §06.
 
-8. ANIMATION — Keep Ardène's animation patterns (slow fade-in hero, scroll-
+8. ANIMATION — Keep Bellavista's animation patterns (slow fade-in hero, scroll-
    triggered image scale, slow marquee). Do NOT add: parallax, video
    backgrounds, custom cursors, autoplay audio, lens flares, HDR effects.
 
@@ -678,7 +678,7 @@ DELIVERABLES:
 - Updated <head> with proper SEO tags
 
 DO NOT TOUCH:
-- The Ardène template's underlying component structure unless the swap
+- The Bellavista template's underlying component structure unless the swap
   requires it
 - Any third-party scripts (analytics, etc.) — note them and ask before
   removing
@@ -694,12 +694,12 @@ When finished, output a summary of:
 
 ## A note before you run this
 
-The Codex prompt is intentionally **strict** — Ardène's template will tempt the model toward decoration, and Avista's brand wins through restraint. Lean into the strictness. If Codex pushes back or asks to "enhance" something, say no.
+The Codex prompt is intentionally **strict** — Bellavista's template will tempt the model toward decoration, and Avista's brand wins through restraint. Lean into the strictness. If Codex pushes back or asks to "enhance" something, say no.
 
 After the first build pass, the most common things to manually check:
 1. **Headline case** — Codex might quietly UPPERCASE things to "match the template"
 2. **The phrase "Beautifully left alone."** — make sure it sits *huge* and italic, not buried
-3. **Star ornaments (✺)** — Ardène uses these. Keep them. They're the only "decoration" allowed in the brand.
+3. **Star ornaments (✺)** — Bellavista uses these. Keep them. They're the only "decoration" allowed in the brand.
 4. **The marquee word list** — easy to drift. Verify it matches §4 exactly.
 5. **No "Book Now"** — if you see it anywhere, replace with "Reach out" or "Get in touch"
 

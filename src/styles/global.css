@@ -1,49 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap");
 @import "tailwindcss";
 
-@font-face {
-	font-family: "Geist";
-	src: url("https://fonts.gstatic.com/s/geist/v1/gyByhwUxId8gMEwcGFU.woff2") format("woff2");
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Geist";
-	src: url("https://fonts.gstatic.com/s/geist/v1/gyByhwUxId8gMEwcGFU.woff2") format("woff2");
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Inter";
-	src: url("https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2") format("woff2");
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Inter";
-	src: url("https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7.woff2") format("woff2");
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-}
-
 @theme {
-	--color-forest: rgb(2, 59, 45);
-	--color-charcoal: rgb(18, 18, 18);
-	--color-ink: rgb(10, 18, 20);
-	--color-cream: rgb(255, 252, 237);
-	--color-sand: rgb(255, 252, 237);
-	--color-gold: rgb(227, 175, 20);
-	--color-burgundy: rgb(113, 0, 23);
-	--color-muted: rgba(255, 252, 237, 0.6);
+	--color-bone: rgb(250, 246, 238);
+	--color-cream: rgb(245, 239, 228);
+	--color-stone: rgb(199, 178, 153);
+	--color-stone-deep: rgb(138, 119, 89);
+	--color-olive: rgb(107, 122, 79);
+	--color-cypress: rgb(74, 107, 82);
+	--color-terracotta: rgb(181, 103, 62);
+	--color-charcoal: rgb(43, 42, 39);
+	--color-ink: rgb(26, 25, 23);
+	--color-whisper: rgb(184, 178, 167);
+	--color-muted: rgba(245, 239, 228, 0.6);
 
 	--font-sans: "Inter", "Inter Placeholder", sans-serif;
-	--font-display: "Geist", "Geist Placeholder", sans-serif;
+	--font-display: "Cormorant Garamond", Georgia, serif;
 
 	--breakpoint-tablet: 810px;
 	--breakpoint-desktop: 1200px;
@@ -69,7 +41,7 @@
 	}
 
 	::selection {
-		background: rgba(255, 252, 237, 0.25);
+		background: rgba(199, 178, 153, 0.35);
 	}
 }
 
@@ -91,14 +63,13 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 1.2;
-		color: rgba(255, 252, 237, 0.82);
-		text-transform: uppercase;
+		color: rgba(245, 239, 228, 0.82);
 		transition:
 			color 180ms ease,
 			border-color 180ms ease;
 	}
 
 	.footer-link:hover {
-		color: rgb(255, 252, 237);
+		color: rgb(245, 239, 228);
 	}
 }

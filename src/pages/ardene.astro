@@ -1,0 +1,594 @@
+---
+import "../styles/ardene.css";
+
+const image = (name: string) => `/images/avista/${name}`;
+
+const villas = [
+  {
+    name: "Private Resort",
+    location: "Sithonia, 2018",
+    coords: "40.1056° N, 23.8642° E",
+    designer: "Designed by Michalis Papadopoulos",
+    description:
+      "A secluded resort surrounded by pines and stone. Stone walls, a long pergola, a pool with a quiet waterfall — and the distant blue of the Aegean.",
+    image: image("resort-02.jpg"),
+    detail: image("resort-04.jpg"),
+    href: "/villas/private-resort",
+  },
+  {
+    name: "Garden Residence",
+    location: "Sithonia, 2020",
+    coords: "40.1056° N, 23.8642° E",
+    designer: "Designed by Eleni Vassilopoulou",
+    description:
+      "A traditional Greek house full of terracotta and wicker. In July, the bougainvillea spills across the terrace and the days run long and slow.",
+    image: image("garden-02.webp"),
+    detail: image("garden-03.webp"),
+    href: "/villas/garden-residence",
+  },
+  {
+    name: "Cypress House",
+    location: "Sithonia, 2022",
+    coords: "40.1056° N, 23.8642° E",
+    designer: "Architecture by Nikos Konstantinou",
+    description:
+      "A design-led modern retreat. Sleek pool, olive grove, tall cypresses standing watch at dusk — a house of quiet presence.",
+    image: image("cypress-01.webp"),
+    detail: image("resort-03.jpg"),
+    href: "/villas/cypress-house",
+  },
+];
+
+const landMoments = [
+  {
+    label: "morning",
+    image: image("garden-01.webp"),
+    alt: "Warm bedroom light at Garden Residence",
+  },
+  {
+    label: "bougainvillea",
+    image: image("garden-03.webp"),
+    alt: "Bougainvillea terrace at Avista Villas",
+  },
+  {
+    label: "slow",
+    image: image("resort-04.jpg"),
+    alt: "Quiet bedroom detail at Avista Villas",
+  },
+  {
+    label: "Avista · Sithonia",
+    image: null,
+    alt: "",
+  },
+  {
+    label: "the hour after sunset",
+    image: image("cypress-01.webp"),
+    alt: "Pool at dusk at Cypress House",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  name: "Avista Villas",
+  description:
+    "A small family collection of three private villas in Sithonia, Halkidiki, Greece.",
+  url: "https://avistavillas.com",
+  image: "https://avistavillas.com/images/avista/resort-01.jpg",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sithonia",
+    addressRegion: "Halkidiki",
+    addressCountry: "GR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.1056,
+    longitude: 23.8642,
+  },
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      Avista Villas — Three private villas in Sithonia, Halkidiki, Greece
+    </title>
+    <meta
+      name="description"
+      content="A small family collection of three private villas in the pines of Sithonia, Halkidiki. Quiet, family-run, designed for guests who want Greece on their own terms."
+    />
+    <meta property="og:title" content="Avista Villas — Sithonia, Halkidiki" />
+    <meta
+      property="og:description"
+      content="Three quiet houses in the pines, kept for families who want Greece on their own terms."
+    />
+    <meta property="og:image" content="/images/avista/resort-01.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://avistavillas.com" />
+    <meta name="theme-color" content="#FAF6EE" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="avista-page bg-avista-bone text-avista-charcoal">
+    <header class="avista-header" aria-label="Primary">
+      <div class="hidden h-full items-center justify-between tablet:flex">
+        <nav class="avista-header-left" aria-label="Sections">
+          <a href="#collection" class="avista-header-link">
+            Collection <span class="avista-menu-count">3</span>
+          </a>
+          <a href="#about" class="avista-header-link">About</a>
+        </nav>
+
+        <a href="#hero" class="avista-wordmark" aria-label="Avista Villas home">
+          <span>Avista</span>
+          <span class="avista-rosette" aria-hidden="true"></span>
+        </a>
+
+        <nav class="avista-header-right" aria-label="Contact and social">
+          <a
+            href="https://www.instagram.com/avistavillas"
+            target="_blank"
+            rel="noopener"
+            class="avista-header-link"
+          >
+            Instagram
+          </a>
+          <a href="/contact" class="avista-buy-link">Reach out →</a>
+        </nav>
+      </div>
+      <div class="flex h-full items-center justify-between tablet:hidden">
+        <a
+          href="#hero"
+          class="flex items-center gap-2 font-display text-[30px] italic leading-none text-avista-cream"
+        >
+          Avista <span class="text-[18px] not-italic">✺</span>
+        </a>
+        <a href="#contact" class="mobile-menu-button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="relative mx-auto min-h-screen max-w-[1600px] overflow-hidden bg-avista-charcoal"
+      >
+        <img
+          src={image("resort-01.jpg")}
+          alt="Private Resort pool and stone house in Sithonia"
+          class="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-avista-charcoal/45 via-avista-charcoal/18 to-avista-charcoal/35"
+        >
+        </div>
+        <h1 class="sr-only">
+          Avista — Boutique residences in Sithonia, Halkidiki, Greece
+        </h1>
+        <div
+          class="relative flex min-h-screen flex-col items-center justify-center px-5 text-center text-avista-cream"
+        >
+          <p class="avista-kicker" data-gsap="hero-copy">
+            Creating timeless residences in Greece
+          </p>
+          <p class="avista-hero-wordmark" data-gsap="hero-title">Avista</p>
+          <p
+            class="mt-10 font-mono text-[12px] uppercase tracking-[0.28em] text-avista-cream/80 tablet:text-[13px]"
+          >
+            Since 2018
+          </p>
+        </div>
+        <a
+          href="#about"
+          class="absolute bottom-8 left-1/2 -translate-x-1/2 text-sm uppercase tracking-[0.3em] text-avista-stone"
+        >
+          Scroll
+        </a>
+      </section>
+
+      <section
+        id="about"
+        class="bg-avista-bone text-avista-charcoal"
+        data-gsap-section
+      >
+        <div
+          class="grid tablet:min-h-screen tablet:grid-cols-2 tablet:items-stretch"
+        >
+          <div
+            class="flex flex-col gap-12 p-5 tablet:gap-16 tablet:p-12 desktop:p-16"
+          >
+            <h2
+              class="font-sans text-[56px] font-normal lowercase leading-[0.9] tracking-[-0.04em] text-avista-charcoal tablet:text-[82px] desktop:text-[128px]"
+            >
+              about
+            </h2>
+            <p
+              class="max-w-[640px] font-sans text-[24px] font-normal lowercase leading-tight tracking-[-0.02em] text-avista-charcoal desktop:text-[32px]"
+            >
+              at avista, we keep three boutique residences in sithonia,
+              halkidiki — defined by pine shade, stone underfoot, natural light,
+              and the elegance of simplicity. each home reflects greek heritage
+              and a timeless spirit of refined living
+            </p>
+            <div class="mt-auto flex items-end justify-between gap-6 pt-12">
+              <div
+                class="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[-0.02em] text-avista-charcoal tablet:text-[13px]"
+              >
+                <span
+                  class="text-[20px] leading-none text-avista-stone-deep"
+                  aria-hidden="true">✺</span
+                >
+                <span>Since 2018</span>
+              </div>
+              <a
+                href="#collection"
+                class="font-mono text-[12px] uppercase tracking-[-0.02em] text-avista-charcoal underline decoration-dotted decoration-avista-charcoal/40 underline-offset-4 tablet:text-[13px]"
+              >
+                Residences
+              </a>
+            </div>
+          </div>
+
+          <div class="relative min-h-[520px] tablet:min-h-screen">
+            <img
+              src={image("about-portrait.png")}
+              alt="Avista founder portrait against a terracotta wall"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div
+              class="absolute right-5 bottom-5 w-[calc(100%-40px)] max-w-[460px] bg-avista-bone p-6 text-avista-charcoal tablet:right-10 tablet:bottom-10 tablet:p-8"
+            >
+              <p
+                class="font-sans text-[20px] font-normal lowercase tracking-[-0.04em] text-avista-charcoal tablet:text-[24px]"
+              >
+                avista
+              </p>
+              <p
+                class="mt-6 font-display text-[42px] italic leading-[0.95] text-avista-charcoal tablet:text-[56px]"
+              >
+                Michalis
+              </p>
+              <div
+                class="mt-10 grid grid-cols-2 gap-4 font-mono text-[11px] uppercase tracking-[-0.02em] text-avista-charcoal tablet:text-[12px]"
+              >
+                <p>Understated luxury.</p>
+                <p class="text-right">Michalis Papadopoulos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="marquee"
+        class="relative mx-auto overflow-hidden bg-avista-charcoal py-8"
+      >
+        <div class="ticker-track text-avista-stone">
+          <p class="avista-marquee">
+            ✺ timeless ✺ greek heritage ✺ elegant ✺ unhurried ✺ Sithonia
+          </p>
+          <p class="avista-marquee" aria-hidden="true">
+            ✺ timeless ✺ greek heritage ✺ elegant ✺ unhurried ✺ Sithonia
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="collection"
+        class="avista-section bg-avista-bone"
+        data-gsap-section
+      >
+        <div class="avista-container">
+          <div
+            class="grid gap-12 tablet:grid-cols-[1.4fr_1fr] tablet:gap-16 tablet:items-end"
+          >
+            <div class="flex flex-col gap-16 tablet:gap-24">
+              <h2
+                class="font-sans text-[56px] font-normal lowercase leading-[0.9] tracking-[-0.04em] text-avista-ink tablet:text-[82px] desktop:text-[128px]"
+              >
+                residences
+              </h2>
+              <div
+                class="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[-0.02em] text-avista-ink tablet:text-[13px]"
+              >
+                <span
+                  class="text-[20px] leading-none text-avista-stone-deep"
+                  aria-hidden="true">✺</span
+                >
+                <span>Collection I — Sithonia</span>
+              </div>
+            </div>
+            <p
+              class="max-w-130 font-sans text-[24px] font-normal lowercase leading-tight tracking-[-0.02em] text-avista-ink desktop:text-[32px]"
+            >
+              each avista residence is more than a house. it is a dialogue
+              between landscape, architecture, and light — designed to belong,
+              to endure, to inspire
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-8 tablet:mt-24 tablet:gap-10">
+            {
+              villas.map((villa, index) => (
+                <a href={villa.href} class="villa-panel group">
+                  <img
+                    src={villa.image}
+                    alt={villa.name}
+                    class="villa-image absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-b from-avista-charcoal/55 via-avista-charcoal/20 to-avista-charcoal/72" />
+                  <div class="absolute inset-0 bg-avista-charcoal/10 transition duration-500 group-hover:bg-avista-charcoal/0" />
+
+                  <div class="relative z-10 grid min-h-[640px] grid-rows-[auto_1fr_auto] gap-10 p-5 text-avista-cream tablet:min-h-205 tablet:p-8 desktop:p-10">
+                    <div class="grid items-start gap-4 tablet:grid-cols-2">
+                      <p class="max-w-[13ch] font-mono text-[12px] uppercase leading-[1.4] tracking-[-0.02em] text-avista-cream/90 tablet:text-[14px]">
+                        {villa.coords}
+                      </p>
+                      <div>
+                        <p class="font-mono text-[12px] uppercase leading-[1.4] tracking-[-0.02em] text-avista-cream/90 tablet:text-[14px]">
+                          {villa.location}
+                        </p>
+                        <h3 class=" font-sans text-[56px] font-normal lowercase leading-[0.9] tracking-[-0.04em] text-avista-cream tablet:text-[82px] desktop:text-[128px]">
+                          {villa.name}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-8 tablet:grid-cols-[0.9fr_1.1fr] tablet:items-end">
+                      <p class="max-w-[18ch] font-mono text-[12px] uppercase leading-[1.4] tracking-[-0.02em] text-avista-cream/85 tablet:text-[14px]">
+                        {villa.designer}
+                      </p>
+                      <div class="tablet:justify-self-end">
+                        <p class="max-w-[480px] font-sans text-[24px] font-normal lowercase leading-tight tracking-[-0.02em] text-avista-cream desktop:text-[24px]">
+                          {villa.description}
+                        </p>
+                        <p class="mt-5 inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-[-0.02em] text-avista-cream/90 tablet:text-[14px]">
+                          <span>View residence</span>
+                          <span class="transition group-hover:translate-x-1">
+                            →
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+
+          <div class="mt-16 flex justify-center">
+            <a href="#collection" class="avista-button">See more →</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="land"
+        class="avista-section bg-avista-charcoal pt-0 text-avista-cream"
+        data-gsap-section
+      >
+        <div class="avista-container">
+          <div
+            class="grid gap-12 tablet:grid-cols-[0.4fr_1.6fr] tablet:items-start tablet:gap-20"
+          >
+            <p
+              class="font-mono text-[12px] uppercase tracking-[-0.02em] text-avista-cream/70 tablet:text-[13px]"
+            >
+              Moment II — Sithonia
+            </p>
+            <p
+              class="max-w-230 font-display text-[28px] leading-[1.18] text-avista-cream tablet:text-[44px]"
+            >
+              Sithonia is the quieter middle leg of Halkidiki — forested,
+              unhurried, closer to how Greece felt twenty years ago than how it
+              looks on Instagram today. These are the moments we hand our guests
+              when they arrive.
+            </p>
+          </div>
+
+          <div
+            class="mt-16 grid gap-5 tablet:mt-24 tablet:grid-cols-5 tablet:items-start"
+          >
+            {
+              landMoments.map((item, index) => (
+                <article
+                  class={`${index === 0 || index === 4 ? "tablet:translate-y-12" : ""}`}
+                >
+                  {item.image ? (
+                    <figure class="overflow-hidden">
+                      <div
+                        class={
+                          index === 0 || index === 4
+                            ? "aspect-[3/4]"
+                            : "aspect-square"
+                        }
+                      >
+                        <img
+                          src={item.image}
+                          alt={item.alt}
+                          class="h-full w-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </figure>
+                  ) : (
+                    <div class="flex aspect-square items-center justify-center border border-avista-cream/15 bg-avista-ink p-6 text-center font-display text-[34px] italic leading-none text-avista-stone">
+                      {item.label}
+                    </div>
+                  )}
+                  {item.image && (
+                    <p class="mt-4 font-display text-[34px] italic leading-none text-avista-stone tablet:text-[42px]">
+                      {item.label}
+                    </p>
+                  )}
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-avista-charcoal px-4 py-24 text-center text-avista-cream tablet:py-32"
+      >
+        <p
+          class="font-display text-[60px] italic leading-none text-avista-stone tablet:text-[120px]"
+        >
+          Plan a quiet week.
+        </p>
+        <a href="/contact" class="avista-button avista-button-light mt-10"
+          >Reach out →</a
+        >
+      </section>
+    </main>
+
+    <footer
+      id="contact"
+      class="bg-avista-charcoal px-4 py-16 text-avista-cream tablet:py-24"
+    >
+      <div class="mx-auto max-w-[1600px]">
+        <div class="mb-16">
+          <a
+            href="#hero"
+            class="font-display text-[72px] italic leading-none text-avista-cream tablet:text-[132px]"
+          >
+            Avista
+          </a>
+          <p
+            class="mt-4 max-w-[560px] font-display text-[28px] italic leading-[1.1] text-avista-stone tablet:text-[38px]"
+          >
+            boutique villas in Sithonia — quiet, private, family-run
+          </p>
+        </div>
+
+        <div
+          class="grid gap-12 border-t border-avista-cream/20 pt-10 tablet:grid-cols-[1.2fr_1fr_1fr] tablet:items-start"
+        >
+          <div class="text-[16px] leading-[1.45]">
+            <p>Avista Villas · Sithonia, Greece</p>
+            <p>40.1056° N, 23.8642° E</p>
+            <a
+              href="mailto:hello@avistavillas.com"
+              class="mt-5 inline-block underline decoration-avista-stone/50 underline-offset-4"
+            >
+              hello@avistavillas.com
+            </a>
+            <p>+30 ___ ___ ____</p>
+          </div>
+          <nav class="grid gap-2" aria-label="Footer collection">
+            <a href="#collection" class="footer-link">Collection</a>
+            <a href="/villas/private-resort" class="footer-link"
+              >Private Resort</a
+            >
+            <a href="/villas/garden-residence" class="footer-link"
+              >Garden Residence</a
+            >
+            <a href="/villas/cypress-house" class="footer-link">Cypress House</a
+            >
+          </nav>
+          <nav
+            class="grid gap-2 tablet:justify-self-end"
+            aria-label="Footer links"
+          >
+            <a href="#about" class="footer-link">About</a>
+            <a href="#land" class="footer-link">Journal</a>
+            <a href="/contact" class="footer-link">Contact</a>
+            <a
+              href="https://www.instagram.com/avistavillas"
+              target="_blank"
+              rel="noopener"
+              class="footer-link"
+            >
+              Instagram @avistavillas
+            </a>
+          </nav>
+        </div>
+
+        <div
+          class="mt-20 flex flex-col gap-3 border-t border-avista-cream/20 pt-6 text-[14px] text-avista-cream/70 tablet:flex-row tablet:items-center tablet:justify-between"
+        >
+          <p>✺ Avista</p>
+          <p>© 2026 Avista Villas</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      import gsap from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!reduceMotion) {
+        gsap
+          .timeline({ defaults: { ease: "power3.out" } })
+          .from(".avista-header", { y: -86, duration: 0.9 })
+          .from(
+            '[data-gsap="hero-copy"]',
+            { y: 28, opacity: 0, duration: 0.8 },
+            "-=0.35",
+          )
+          .from(
+            '[data-gsap="hero-title"]',
+            { y: 34, opacity: 0, filter: "blur(10px)", duration: 1.2 },
+            "-=0.55",
+          );
+
+        gsap.utils
+          .toArray<HTMLElement>("[data-gsap-section]")
+          .forEach((section) => {
+            gsap.from(
+              section.querySelectorAll(
+                "h2, p, article, figure, .avista-button",
+              ),
+              {
+                y: 32,
+                opacity: 0,
+                duration: 0.85,
+                ease: "power3.out",
+                stagger: 0.06,
+                scrollTrigger: {
+                  trigger: section,
+                  start: "top 78%",
+                  once: true,
+                },
+              },
+            );
+          });
+
+        gsap.utils.toArray<HTMLElement>(".villa-image").forEach((img) => {
+          gsap.fromTo(
+            img,
+            { scale: 1 },
+            {
+              scale: 1.05,
+              ease: "none",
+              scrollTrigger: {
+                trigger: img,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            },
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

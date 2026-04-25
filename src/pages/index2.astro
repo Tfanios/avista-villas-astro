@@ -1,0 +1,490 @@
+---
+import '../styles/global.css';
+
+const year = 2026;
+
+const navLinks = [
+	{ href: '#about', label: 'About' },
+	{ href: '#residences', label: 'Residences' },
+	{ href: '#heritage', label: 'Heritage' }
+];
+
+const headerLinks = [
+	{ href: null, label: 'Projects', meta: '4' },
+	{ href: '#about', label: 'About' }
+];
+
+const heroImage =
+	'https://framerusercontent.com/images/0WVmIwuuJVFtVPeCd8xKkFVjp8I.png?width=1344&height=896';
+const aboutPortrait =
+	'https://framerusercontent.com/images/2ukGpTC63zS9rQcSO51cj8u7TQM.png?width=1956';
+
+const residences = [
+	{
+		title: 'Villa Lumière',
+		coordinates: '43.7031° N, 5.4500° E',
+		location: 'Provence, 2025',
+		author: 'Designed by Jean-Pierre Lefèvre',
+		description:
+			'A secluded villa surrounded by vineyards and olive trees. Expansive windows, natural textures, a horizon that never ends.',
+		image: 'https://framerusercontent.com/images/24NpEk4VYis880amUJ0BVpEFmBc.png?width=1344',
+		alt: 'Stone villa surrounded by vineyards and olive trees in Provence.'
+	},
+	{
+		title: 'Villa Solenne',
+		coordinates: '43.5528° N, 7.0174° E',
+		location: 'Côte d’Azur, 2025',
+		author: 'Designed by Claire Moreau',
+		description:
+			'A coastal villa where the sea and sky merge. Terraces bathed in mediterranean light, serene interiors, and the calm of endless horizons.',
+		image: 'https://framerusercontent.com/images/ZSpVyvz66B4hQs2QXi0QtLp0tXw.png?width=1344',
+		alt: 'Coastal villa terrace with sea and sky on the horizon.'
+	},
+	{
+		title: 'Maison Élysée',
+		coordinates: '43.5510° N, 7.0174° E',
+		location: 'Côte d’Azur, 2025',
+		author: 'Architecture by Camille Rousseau',
+		description:
+			'An intimate mediterranean retreat. Sunlit terraces, citrus gardens, and the stillness of water — a house of quiet presence.',
+		image: 'https://framerusercontent.com/images/8XwAz6kOwW2XBWbuGMv2Trqqe80.png?width=1344',
+		alt: 'Mediterranean residence with pale stone walls and still water.'
+	}
+];
+
+const heritageItems = [
+	{
+		label: 'culture',
+		image: 'https://framerusercontent.com/images/rj3mXwHoxkCcSw9HmyNr8bP7e80.png?width=2688',
+		alt: 'Three women at a table with drinks.'
+	},
+	{
+		label: 'heritage',
+		image: 'https://framerusercontent.com/images/CDWDEe6rgB07RDMHeDWvUur4mXY.png?width=1024',
+		alt: 'Clay vase with a card displaying its minimalist illustration.'
+	},
+	{
+		label: 'MOMENT',
+		heading: 'Ardène Residence',
+		image: 'https://framerusercontent.com/images/F1mgfSrmJqHPR0N41EW5JirkM.png?width=1075',
+		alt: 'Glass of white wine held on a table.'
+	},
+	{
+		label: 'presence',
+		image: 'https://framerusercontent.com/images/NWDud2T3bGlKl242xbPpCWH06Ms.png?width=1344',
+		alt: 'Woman by the sea with waves splashing.'
+	}
+];
+
+const labelClass =
+	'font-mono text-[11px] uppercase tracking-[0.32em] text-muted tablet:text-xs';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="The Ardène Framer template is designed for real estate agencies, architects, and developers. Its minimal editorial style highlights properties and projects, making it ideal for real estate, property management, and luxury rentals."
+		/>
+		<meta name="theme-color" content="#121212" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>Ardène — Real Estate &amp; Architecture Template</title>
+	</head>
+	<body>
+		<header class="absolute inset-x-0 top-0 z-30 px-6 pt-6 tablet:px-10 desktop:px-14">
+			<div class="mx-auto max-w-[1600px] text-soft-white">
+				<div class="hidden grid-cols-[1fr_auto_1fr] items-center gap-6 tablet:grid">
+					<nav class="flex items-center gap-8 justify-self-start" aria-label="Primary">
+						{
+							headerLinks.map((link) =>
+								link.href ? (
+									<a href={link.href} class="font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/88">
+										{link.label}
+									</a>
+								) : (
+									<span class="font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/88">
+										{link.label} {link.meta}
+									</span>
+								)
+							)
+						}
+					</nav>
+
+					<a
+						href="#hero"
+						class="justify-self-center font-display text-sm uppercase tracking-[0.38em] text-soft-white tablet:text-base"
+					>
+						Ardène
+					</a>
+
+					<a
+						href="https://tmpl.digital/framer-templates/ardene"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="justify-self-end rounded-full border border-soft-white/30 bg-soft-white/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white backdrop-blur-sm"
+					>
+						Buy template →
+					</a>
+				</div>
+
+				<div class="flex items-center justify-between tablet:hidden">
+					<a href="#hero" class="font-display text-sm uppercase tracking-[0.38em] text-soft-white">
+						Ardène
+					</a>
+
+					<details class="relative">
+						<summary
+							class="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-soft-white/25 bg-soft-white/10 text-soft-white backdrop-blur-sm"
+						>
+							<span class="sr-only">Toggle navigation</span>
+							<span class="flex flex-col gap-1">
+								<span class="block h-px w-4 bg-current"></span>
+								<span class="block h-px w-4 bg-current"></span>
+							</span>
+						</summary>
+						<div
+							class="absolute right-0 top-14 w-64 rounded-card border border-soft-white/15 bg-charcoal/96 p-5 text-soft-white shadow-editorial backdrop-blur-md"
+						>
+							<nav class="flex flex-col gap-4" aria-label="Mobile">
+								<span class="font-mono text-[11px] uppercase tracking-[0.3em] text-soft-white/76">
+									Projects 4
+								</span>
+								<a href="#about" class="font-mono text-[11px] uppercase tracking-[0.3em] text-soft-white/88">
+									About
+								</a>
+								<a
+									href="https://tmpl.digital/framer-templates/ardene"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="mt-2 rounded-full border border-soft-white/20 px-4 py-3 text-center font-mono text-[11px] uppercase tracking-[0.3em]"
+								>
+									Buy template →
+								</a>
+							</nav>
+						</div>
+					</details>
+				</div>
+			</div>
+		</header>
+
+		<main class="overflow-x-hidden">
+			<section id="hero" class="relative min-h-screen bg-charcoal text-soft-white">
+				<img
+					src={heroImage}
+					alt="View of the French countryside through a stone villa’s open living room, with sofas and trees framing the scene"
+					class="absolute inset-0 h-full w-full object-cover"
+					loading="eager"
+					decoding="async"
+				/>
+				<div class="absolute inset-0 bg-black/45"></div>
+				<div
+					class="relative mx-auto flex min-h-screen max-w-[1600px] items-end px-6 pb-16 pt-32 tablet:px-10 tablet:pb-20 desktop:px-14 desktop:pb-24"
+				>
+					<div class="max-w-[900px] text-center desktop:text-left">
+						<p class="font-mono text-[11px] uppercase tracking-[0.32em] text-soft-white/80 tablet:text-xs">
+							Creating timeless residences in France
+						</p>
+						<h1
+							class="mt-6 font-display text-[clamp(3.4rem,12vw,10rem)] font-normal uppercase leading-none tracking-[0.22em] tablet:tracking-[0.28em] desktop:max-w-[14ch] desktop:tracking-[0.36em]"
+						>
+							Ardène
+						</h1>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="bg-sand px-6 py-20 tablet:px-10 tablet:py-24 desktop:px-14 desktop:py-28">
+				<div class="mx-auto max-w-[1600px]">
+					<div class="grid gap-12 desktop:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] desktop:gap-16">
+						<div class="space-y-10">
+							<div>
+								<p class={labelClass}>About</p>
+								<p
+									class="mt-6 max-w-[18ch] font-display text-[clamp(2rem,5.8vw,4.75rem)] leading-[1.02] tracking-[-0.04em] text-charcoal"
+								>
+									At Ardène, we create boutique residences across France, defined by open space,
+									natural light, and the elegance of simplicity.
+								</p>
+								<p class="mt-6 max-w-[56ch] text-base leading-7 text-darkgray tablet:text-lg">
+									Each home reflects French heritage and a timeless spirit of refined living.
+								</p>
+							</div>
+
+							<div class="rounded-card border border-charcoal/10 bg-surface p-6 shadow-editorial tablet:p-8">
+								<p class={labelClass}>Since 2004</p>
+								<p class="mt-4 max-w-[34ch] text-sm leading-7 text-darkgray tablet:text-base">
+									A quiet collection of homes shaped by landscape, architecture, and light.
+								</p>
+							</div>
+						</div>
+
+						<div class="space-y-6">
+							<figure class="overflow-hidden rounded-card bg-surface shadow-editorial">
+								<div class="aspect-[4/5]">
+									<img
+										src={aboutPortrait}
+										alt="Woman in a light suit sitting thoughtfully against a terracotta wall"
+										class="h-full w-full object-cover"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+							</figure>
+
+							<div class="grid gap-6 tablet:grid-cols-[minmax(0,1fr)_220px]">
+								<div class="rounded-card bg-charcoal p-7 text-soft-white shadow-editorial tablet:p-8">
+									<p class="font-display text-3xl uppercase tracking-[0.22em] tablet:text-[2.1rem]">
+										Ardène
+									</p>
+									<p class="mt-12 text-xl leading-tight text-soft-white/95 tablet:text-2xl">
+										Understated luxury.
+									</p>
+									<p class="mt-6 font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/60 tablet:text-xs">
+										Juliette Ardène
+									</p>
+								</div>
+
+								<a
+									href="mailto:hello@tmpl.digital"
+									class="flex flex-col justify-between rounded-card border border-charcoal/10 bg-surface p-6 shadow-editorial"
+								>
+									<p class={labelClass}>Let&apos;s talk</p>
+									<div class="mt-10">
+										<p class="font-display text-[1.8rem] leading-none tracking-[-0.04em] text-charcoal">
+											Juliette Ardène
+										</p>
+										<p class="mt-4 text-sm leading-6 text-darkgray">hello@tmpl.digital</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="ticker" class="bg-charcoal px-6 py-4 text-soft-white tablet:px-10 desktop:px-14">
+				<div class="mx-auto max-w-[1600px]">
+					<p class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.32em] tablet:text-xs">
+						<span>✺ timeless</span>
+						<span>✺ french heritage</span>
+						<span>✺ elegant</span>
+						<span>✺ timeless</span>
+						<span>✺ french heritage</span>
+						<span>✺ elegant</span>
+					</p>
+				</div>
+			</section>
+
+			<section
+				id="residences"
+				class="bg-sand px-6 py-20 tablet:px-10 tablet:py-24 desktop:px-14 desktop:py-28"
+			>
+				<div class="mx-auto max-w-[1600px]">
+					<div class="grid gap-10 desktop:grid-cols-[minmax(0,1fr)_minmax(320px,0.75fr)] desktop:gap-16">
+						<div>
+							<p class={labelClass}>Residences</p>
+							<p
+								class="mt-6 max-w-[14ch] font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.02] tracking-[-0.05em]"
+							>
+								Collection I — France
+							</p>
+						</div>
+
+						<p class="max-w-[44ch] text-base leading-7 text-darkgray tablet:text-lg">
+							Each Ardène residence is more than a home. It is a dialogue between landscape,
+							architecture, and light — designed to belong, to endure, to inspire.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-8 desktop:grid-cols-3">
+						{
+							residences.map((residence) => (
+								<article class="flex h-full flex-col overflow-hidden rounded-card border border-charcoal/10 bg-surface shadow-editorial">
+									<div class="aspect-[4/5] overflow-hidden">
+										<img
+											src={residence.image}
+											alt={residence.alt}
+											class="h-full w-full object-cover"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<div class="flex flex-1 flex-col p-6 tablet:p-7">
+										<div class="flex flex-wrap items-center justify-between gap-3">
+											<p class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+												{residence.coordinates}
+											</p>
+											<p class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+												{residence.location}
+											</p>
+										</div>
+
+										<h2
+											class="mt-8 font-display text-[2rem] uppercase leading-[0.95] tracking-[0.18em] text-charcoal tablet:text-[2.4rem]"
+										>
+											{residence.title}
+										</h2>
+
+										<p class="mt-5 font-mono text-[11px] uppercase tracking-[0.24em] text-darkgray">
+											{residence.author}
+										</p>
+										<p class="mt-5 text-sm leading-7 text-darkgray tablet:text-base">
+											{residence.description}
+										</p>
+									</div>
+								</article>
+							))
+						}
+					</div>
+
+					<div class="mt-10 flex justify-center desktop:mt-12">
+						<span
+							aria-disabled="true"
+							class="inline-flex rounded-full border border-charcoal/15 bg-surface px-6 py-3 font-mono text-[11px] uppercase tracking-[0.3em] text-darkgray shadow-editorial"
+						>
+							See more
+						</span>
+					</div>
+				</div>
+			</section>
+
+			<section
+				id="heritage"
+				class="bg-sand px-6 pb-20 tablet:px-10 tablet:pb-24 desktop:px-14 desktop:pb-28"
+			>
+				<div class="mx-auto max-w-[1600px] border-t border-charcoal/12 pt-20 tablet:pt-24">
+					<div class="grid gap-10 desktop:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)] desktop:gap-16">
+						<div>
+							<p class={labelClass}>Heritage</p>
+							<p
+								class="mt-6 max-w-[14ch] font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.02] tracking-[-0.05em]"
+							>
+								A quieter idea of luxury.
+							</p>
+						</div>
+
+						<p class="max-w-[44ch] text-base leading-7 text-darkgray tablet:text-lg">
+							Each Ardène residence is more than a home. It is a dialogue between landscape,
+							architecture, and light — designed to belong, to endure, to inspire.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-6 desktop:grid-cols-[1.12fr_0.88fr]">
+						<figure class="overflow-hidden rounded-card border border-charcoal/10 bg-surface shadow-editorial">
+							<div class="aspect-[4/5] overflow-hidden">
+								<img
+									src={heritageItems[0].image}
+									alt={heritageItems[0].alt}
+									class="h-full w-full object-cover"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+							<figcaption class="p-5 font-mono text-[11px] uppercase tracking-[0.3em] text-darkgray tablet:p-6">
+								{heritageItems[0].label}
+							</figcaption>
+						</figure>
+
+						<div class="grid gap-6">
+							<figure class="overflow-hidden rounded-card border border-charcoal/10 bg-surface shadow-editorial">
+								<div class="aspect-[16/11] overflow-hidden">
+									<img
+										src={heritageItems[1].image}
+										alt={heritageItems[1].alt}
+										class="h-full w-full object-cover"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<figcaption class="p-5 font-mono text-[11px] uppercase tracking-[0.3em] text-darkgray tablet:p-6">
+									{heritageItems[1].label}
+								</figcaption>
+							</figure>
+
+							<div class="grid gap-6 tablet:grid-cols-2">
+								<figure class="overflow-hidden rounded-card border border-charcoal/10 bg-surface shadow-editorial">
+									<div class="aspect-[4/5] overflow-hidden">
+										<img
+											src={heritageItems[2].image}
+											alt={heritageItems[2].alt}
+											class="h-full w-full object-cover"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<figcaption class="p-5 tablet:p-6">
+										<p class="font-mono text-[11px] uppercase tracking-[0.3em] text-darkgray">
+											{heritageItems[2].label}
+										</p>
+										<p class="mt-4 font-display text-2xl leading-none tracking-[-0.04em] text-charcoal">
+											{heritageItems[2].heading}
+										</p>
+									</figcaption>
+								</figure>
+
+								<figure class="overflow-hidden rounded-card border border-charcoal/10 bg-surface shadow-editorial">
+									<div class="aspect-[4/5] overflow-hidden">
+										<img
+											src={heritageItems[3].image}
+											alt={heritageItems[3].alt}
+											class="h-full w-full object-cover"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<figcaption class="p-5 font-mono text-[11px] uppercase tracking-[0.3em] text-darkgray tablet:p-6">
+										{heritageItems[3].label}
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="bg-charcoal px-6 py-14 text-soft-white tablet:px-10 tablet:py-16 desktop:px-14">
+			<div class="mx-auto max-w-[1600px]">
+				<div class="grid gap-10 border-b border-soft-white/12 pb-10 desktop:grid-cols-[1.2fr_0.8fr_0.8fr]">
+					<div>
+						<p class="font-display text-xl uppercase tracking-[0.26em] tablet:text-2xl">Ardène</p>
+						<p class="mt-5 max-w-[24ch] text-sm uppercase tracking-[0.16em] text-soft-white/60">
+							boutique residences across france — understated, timeless, refined
+						</p>
+					</div>
+
+					<div class="space-y-3">
+						<p class="font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/50">
+							Ardène · Provence, France
+						</p>
+						<p class="font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/50">
+							43.7031° N, 5.4500° E
+						</p>
+						<a href="mailto:hello@tmpl.digital" class="block text-sm text-soft-white/80">
+							hello@tmpl.digital
+						</a>
+					</div>
+
+					<nav class="flex flex-col gap-3" aria-label="Footer">
+						{
+							navLinks.map((link) => (
+								<a href={link.href} class="font-mono text-[11px] uppercase tracking-[0.28em] text-soft-white/80">
+									{link.label}
+								</a>
+							))
+						}
+					</nav>
+				</div>
+
+				<div class="flex flex-col gap-4 pt-6 text-soft-white/55 tablet:flex-row tablet:items-center tablet:justify-between">
+					<p class="font-mono text-[11px] uppercase tracking-[0.28em]">✺ Ardène</p>
+					<p class="font-mono text-[11px] uppercase tracking-[0.2em]">© {year} Ardène</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

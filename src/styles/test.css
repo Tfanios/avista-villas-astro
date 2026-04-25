@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "DM Mono";
+	src: url("https://fonts.gstatic.com/s/dmmono/v15/aFTU7PB1QTsUX8KYhhiaBYyMcKw.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Mono";
+	src: url("https://fonts.gstatic.com/s/dmmono/v15/aFTR7PB1QTsUX8KYvumzIYGnbKX9Rlk.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("https://framerusercontent.com/assets/VgYFWiwsAC5OYxAycRXXvhze58.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter Display";
+	src: url("https://framerusercontent.com/assets/bHYNJqzTyl2lqvmMiRRS6Y16Es.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@theme {
+	--color-sand: rgb(248 240 221);
+	--color-charcoal: rgb(18 18 18);
+	--color-soft-white: rgb(240 240 240);
+	--color-surface: rgb(250 250 250);
+	--color-darkgray: rgb(51 51 51);
+	--color-muted: rgb(128 128 128);
+
+	--font-sans: "Inter", sans-serif;
+	--font-display: "Inter Display", "Inter", sans-serif;
+	--font-mono: "DM Mono", monospace;
+
+	--breakpoint-tablet: 810px;
+	--breakpoint-desktop: 1200px;
+
+	--radius-card: 24px;
+	--shadow-editorial: 0px 0.602px 0.602px -1.25px rgba(0, 0, 0, 0.26),
+		0px 2.289px 2.289px -2.5px rgba(0, 0, 0, 0.23), 0px 10px 10px -3.75px rgba(0, 0, 0, 0.09);
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		background: var(--color-sand);
+	}
+
+	body {
+		min-height: 100vh;
+		background: var(--color-sand);
+		color: var(--color-charcoal);
+		font-family: var(--font-sans);
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a,
+	button,
+	summary {
+		outline-offset: 4px;
+	}
+
+	img {
+		display: block;
+	}
+
+	::selection {
+		background: rgba(18, 18, 18, 0.18);
+	}
+
+	details > summary {
+		list-style: none;
+	}
+
+	details > summary::-webkit-details-marker {
+		display: none;
+	}
+}

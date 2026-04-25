@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Geist";
+	src: url("https://fonts.gstatic.com/s/geist/v1/gyByhwUxId8gMEwcGFU.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geist";
+	src: url("https://fonts.gstatic.com/s/geist/v1/gyByhwUxId8gMEwcGFU.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@theme {
+	--color-forest: rgb(2, 59, 45);
+	--color-charcoal: rgb(18, 18, 18);
+	--color-ink: rgb(10, 18, 20);
+	--color-cream: rgb(255, 252, 237);
+	--color-sand: rgb(255, 252, 237);
+	--color-gold: rgb(227, 175, 20);
+	--color-burgundy: rgb(113, 0, 23);
+	--color-muted: rgba(255, 252, 237, 0.6);
+
+	--font-sans: "Inter", "Inter Placeholder", sans-serif;
+	--font-display: "Geist", "Geist Placeholder", sans-serif;
+
+	--breakpoint-tablet: 810px;
+	--breakpoint-desktop: 1200px;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		background: var(--color-charcoal);
+	}
+
+	body {
+		min-height: 100vh;
+		background: var(--color-charcoal);
+		color: var(--color-cream);
+		font-family: var(--font-sans);
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img {
+		display: block;
+	}
+
+	::selection {
+		background: rgba(255, 252, 237, 0.25);
+	}
+}
+
+@layer components {
+	.noise-layer {
+		pointer-events: none;
+		position: absolute;
+		inset: 0;
+		background-image: url("https://framerusercontent.com/images/Zc51XICRMXtLRbug4tGLcbo.gif");
+		background-size: 120px 120px;
+		background-repeat: repeat;
+		opacity: 0.1;
+	}
+
+	.footer-link {
+		width: max-content;
+		border-bottom: 1px solid currentColor;
+		font-family: var(--font-display);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: rgba(255, 252, 237, 0.82);
+		text-transform: uppercase;
+		transition:
+			color 180ms ease,
+			border-color 180ms ease;
+	}
+
+	.footer-link:hover {
+		color: rgb(255, 252, 237);
+	}
+}

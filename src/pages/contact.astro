@@ -1,0 +1,119 @@
+---
+import '../styles/ardene.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Contact Avista Villas — Plan a quiet week in Sithonia</title>
+		<meta
+			name="description"
+			content="Tell Avista Villas when you're hoping to come to Sithonia. We'll write back personally, usually the same day."
+		/>
+		<meta name="theme-color" content="#FAF6EE" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body class="avista-page bg-avista-charcoal text-avista-cream">
+		<header class="avista-header" aria-label="Primary">
+			<div class="hidden h-full items-center justify-between tablet:flex">
+				<nav class="avista-header-left" aria-label="Sections">
+					<a href="/ardene#collection" class="avista-header-link">
+						Collection <span class="avista-menu-count">3</span>
+					</a>
+					<a href="/ardene#about" class="avista-header-link">About</a>
+				</nav>
+
+				<a href="/ardene" class="avista-wordmark" aria-label="Avista Villas home">
+					<span>Avista</span>
+					<span class="avista-rosette" aria-hidden="true"></span>
+				</a>
+
+				<nav class="avista-header-right" aria-label="Contact and social">
+					<a href="https://www.instagram.com/avistavillas" target="_blank" rel="noopener" class="avista-header-link">
+						Instagram
+					</a>
+					<a href="/contact" class="avista-buy-link">Reach out →</a>
+				</nav>
+			</div>
+			<div class="flex h-full items-center justify-between tablet:hidden">
+				<a href="/ardene" class="flex items-center gap-2 font-display text-[30px] italic leading-none text-avista-cream">
+					Avista <span class="text-[18px] not-italic">✺</span>
+				</a>
+				<a href="mailto:hello@avistavillas.com" class="mobile-menu-button" aria-label="Email Avista Villas">
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+		</header>
+
+		<main class="pt-[72px] tablet:pt-[78px]">
+			<section class="avista-section">
+				<div class="avista-container">
+					<div class="grid gap-12 tablet:grid-cols-[1.05fr_0.95fr] tablet:items-start">
+						<div>
+							<p class="avista-kicker text-avista-stone">Reach out</p>
+							<h1 class="mt-5 max-w-[880px] font-display text-[64px] font-light leading-[0.9] tracking-[-0.045em] text-avista-cream tablet:text-[128px]">
+								Tell us when you're hoping to come.
+							</h1>
+							<p class="mt-8 max-w-[620px] font-display text-[28px] italic leading-[1.1] text-avista-stone tablet:text-[40px]">
+								We'll write back personally — usually the same day, always within twenty-four hours. No automated quotes, no booking widgets. Just a conversation.
+							</p>
+						</div>
+
+						<aside class="border border-avista-cream/15 bg-avista-ink p-6 tablet:p-10">
+							<p class="font-display text-[34px] italic leading-none text-avista-stone">
+								Or call us directly:
+							</p>
+							<p class="mt-5 text-[18px] leading-[1.5] text-avista-cream/80">
+								+30 ___ ___ ____<br />
+								<a href="mailto:hello@avistavillas.com" class="underline decoration-avista-stone/40 underline-offset-4">
+									hello@avistavillas.com
+								</a>
+							</p>
+							<p class="mt-12 font-display text-[46px] italic leading-none text-avista-stone">
+								καλώς ορίσατε.
+							</p>
+						</aside>
+					</div>
+
+					<form class="mt-16 grid gap-5 border border-avista-cream/15 bg-avista-ink p-5 tablet:mt-24 tablet:grid-cols-2 tablet:p-10" method="post">
+						<label class="contact-field">
+							<span>Your name</span>
+							<input type="text" name="name" autocomplete="name" />
+						</label>
+						<label class="contact-field">
+							<span>Email</span>
+							<input type="email" name="email" autocomplete="email" />
+						</label>
+						<label class="contact-field">
+							<span>Approximate dates</span>
+							<input type="text" name="dates" placeholder="First two weeks of July" />
+						</label>
+						<label class="contact-field">
+							<span>Number of guests — adults / children</span>
+							<input type="text" name="guests" />
+						</label>
+						<label class="contact-field tablet:col-span-2">
+							<span>Which villa interests you most?</span>
+							<select name="villa">
+								<option>The Private Resort</option>
+								<option>The Garden Residence</option>
+								<option>The Cypress House</option>
+								<option>Not sure yet</option>
+							</select>
+						</label>
+						<label class="contact-field tablet:col-span-2">
+							<span>Anything else we should know?</span>
+							<textarea name="message" rows="6"></textarea>
+						</label>
+						<div class="tablet:col-span-2">
+							<button class="avista-button avista-button-light" type="submit">Send →</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

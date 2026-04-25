@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--color-avista-bone: #faf6ee;
+	--color-avista-cream: #f5efe4;
+	--color-avista-stone: #c7b299;
+	--color-avista-stone-deep: #8a7759;
+	--color-avista-olive: #6b7a4f;
+	--color-avista-cypress: #4a6b52;
+	--color-avista-terracotta: #b5673e;
+	--color-avista-charcoal: #2b2a27;
+	--color-avista-ink: #1a1917;
+	--color-avista-whisper: #b8b2a7;
+
+	--font-display: "Cormorant Garamond", Georgia, serif;
+	--font-sans: "Inter", sans-serif;
+	--font-mono: "DM Mono", ui-monospace, monospace;
+
+	--breakpoint-tablet: 810px;
+	--breakpoint-desktop: 1200px;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		background: var(--color-avista-bone);
+	}
+
+	body {
+		min-height: 100vh;
+		background: var(--color-avista-bone);
+		color: var(--color-avista-charcoal);
+		font-family: var(--font-sans);
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img {
+		display: block;
+	}
+
+	::selection {
+		background: rgba(138, 119, 89, 0.25);
+	}
+}
+
+@layer components {
+	.avista-page {
+		font-feature-settings:
+			"cv03" on,
+			"cv04" on,
+			"cv09" on,
+			"cv11" on;
+	}
+
+	.avista-container {
+		margin-inline: auto;
+		width: 100%;
+		max-width: 1600px;
+		padding-inline: 16px;
+	}
+
+	.avista-section {
+		padding-block: 88px;
+	}
+
+	.avista-heading {
+		font-family: var(--font-display);
+		font-size: clamp(5rem, 14vw, 14rem);
+		font-weight: 300;
+		letter-spacing: -0.045em;
+		line-height: 0.86;
+		color: var(--color-avista-ink);
+	}
+
+	.avista-kicker {
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: 0.28em;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+
+	.avista-mono {
+		font-size: 11px;
+		letter-spacing: 0.24em;
+		line-height: 1.4;
+		text-transform: uppercase;
+		color: var(--color-avista-stone-deep);
+	}
+
+	.avista-hero-wordmark {
+		margin-top: 18px;
+		font-family: var(--font-display);
+		font-size: clamp(6rem, 18vw, 18rem);
+		font-style: italic;
+		font-weight: 300;
+		letter-spacing: -0.08em;
+		line-height: 0.78;
+	}
+
+	.avista-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid rgba(138, 119, 89, 0.55);
+		border-radius: 999px;
+		padding: 15px 24px;
+		font-size: 15px;
+		line-height: 1;
+		color: var(--color-avista-charcoal);
+		transition:
+			background 180ms ease,
+			color 180ms ease,
+			border-color 180ms ease;
+	}
+
+	.avista-button:hover {
+		border-color: var(--color-avista-charcoal);
+		background: var(--color-avista-charcoal);
+		color: var(--color-avista-cream);
+	}
+
+	.avista-button-light {
+		border-color: rgba(245, 239, 228, 0.45);
+		color: var(--color-avista-cream);
+	}
+
+	.avista-button-light:hover {
+		border-color: var(--color-avista-cream);
+		background: var(--color-avista-cream);
+		color: var(--color-avista-charcoal);
+	}
+
+	.avista-header {
+		position: fixed;
+		z-index: 50;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 78px;
+		padding: 0 22px;
+		background: var(--color-avista-charcoal);
+		color: var(--color-avista-cream);
+	}
+
+	.avista-header-left,
+	.avista-header-right {
+		display: flex;
+		align-items: center;
+	}
+
+	.avista-header-left {
+		gap: 52px;
+		min-width: 360px;
+	}
+
+	.avista-header-right {
+		min-width: 360px;
+		justify-content: flex-end;
+		gap: 26px;
+	}
+
+	.avista-header-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		font-size: 20px;
+		font-weight: 300;
+		letter-spacing: -0.04em;
+		line-height: 1;
+		color: var(--color-avista-cream);
+		text-transform: uppercase;
+		transition: opacity 180ms ease;
+	}
+
+	.avista-header-link:hover,
+	.avista-buy-link:hover {
+		opacity: 0.72;
+	}
+
+	.avista-wordmark {
+		position: absolute;
+		left: 50%;
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		color: var(--color-avista-cream);
+		font-family: var(--font-display);
+		font-size: 46px;
+		font-style: italic;
+		font-weight: 300;
+		letter-spacing: -0.07em;
+		line-height: 1;
+		transform: translateX(-50%);
+	}
+
+	.avista-menu-count {
+		display: inline-flex;
+		width: 24px;
+		height: 24px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 999px;
+		background: var(--color-avista-cream);
+		color: var(--color-avista-charcoal);
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	.avista-rosette {
+		position: relative;
+		display: inline-block;
+		width: 34px;
+		height: 34px;
+		border-radius: 999px;
+		background:
+			repeating-conic-gradient(from 0deg, var(--color-avista-cream) 0deg 8deg, transparent 8deg 16deg),
+			radial-gradient(circle at center, var(--color-avista-charcoal) 0 18%, transparent 19%);
+	}
+
+	.avista-rosette::after {
+		content: "";
+		position: absolute;
+		inset: 11px;
+		border-radius: 999px;
+		background: var(--color-avista-charcoal);
+	}
+
+	.avista-buy-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 154px;
+		height: 42px;
+		border: 1px solid rgba(245, 239, 228, 0.55);
+		color: var(--color-avista-cream);
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		line-height: 1;
+		text-transform: uppercase;
+		transition: opacity 180ms ease;
+	}
+
+	.mobile-menu-button {
+		position: relative;
+		display: flex;
+		width: 44px;
+		height: 44px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 999px;
+		background: var(--color-avista-cream);
+	}
+
+	.mobile-menu-button span {
+		position: absolute;
+		width: 16px;
+		height: 1px;
+		border-radius: 1px;
+		background: var(--color-avista-stone-deep);
+	}
+
+	.mobile-menu-button span:last-child {
+		transform: rotate(90deg);
+	}
+
+	.ticker-track {
+		display: flex;
+		width: max-content;
+		animation: avista-marquee 28s linear infinite;
+	}
+
+	.avista-marquee {
+		display: inline-block;
+		padding-inline: 2.5rem;
+		font-family: var(--font-display);
+		font-size: clamp(2rem, 4vw, 4rem);
+		font-style: italic;
+		letter-spacing: -0.02em;
+		line-height: 1;
+		white-space: nowrap;
+	}
+
+	.villa-panel {
+		position: relative;
+		display: block;
+		min-height: 640px;
+		overflow: hidden;
+		background: var(--color-avista-charcoal);
+	}
+
+	.villa-panel .villa-image {
+		transition:
+			filter 500ms ease,
+			transform 700ms ease;
+	}
+
+	.villa-panel:hover .villa-image {
+		filter: brightness(1.08);
+		transform: scale(1.035);
+	}
+
+	.footer-link {
+		width: max-content;
+		color: var(--color-avista-cream);
+		font-size: 16px;
+		line-height: 1.35;
+		text-decoration: underline;
+		text-decoration-color: rgba(199, 178, 153, 0.45);
+		text-underline-offset: 4px;
+	}
+
+	.footer-link:hover {
+		text-decoration-color: currentColor;
+	}
+
+	.contact-field {
+		display: grid;
+		gap: 10px;
+		color: rgba(245, 239, 228, 0.72);
+		font-size: 13px;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.contact-field input,
+	.contact-field select,
+	.contact-field textarea {
+		width: 100%;
+		border: 1px solid rgba(245, 239, 228, 0.18);
+		background: var(--color-avista-charcoal);
+		padding: 16px 14px;
+		color: var(--color-avista-cream);
+		font-size: 16px;
+		letter-spacing: 0;
+		line-height: 1.4;
+		text-transform: none;
+		outline: none;
+	}
+
+	.contact-field input:focus,
+	.contact-field select:focus,
+	.contact-field textarea:focus {
+		border-color: var(--color-avista-stone-deep);
+	}
+}
+
+@keyframes avista-marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@media (min-width: 810px) {
+	.avista-container {
+		padding-inline: 20px;
+	}
+
+	.avista-section {
+		padding-block: 136px;
+	}
+
+	.avista-header {
+		padding: 0 22px;
+	}
+}
+
+@media (max-width: 809px) {
+	.avista-header {
+		height: 72px;
+	}
+}

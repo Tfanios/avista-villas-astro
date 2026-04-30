@@ -3,37 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avista Villas — Brand & Style Guide 2026</title>
+<title>Avista Villas — Brand & Style Guide · Volume I</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* CORE PALETTE */
     --stone: #C7B299;
     --stone-light: #E8DDCC;
     --stone-deep: #8A7759;
     --cream: #F5EFE4;
     --bone: #FAF6EE;
-
     --olive: #6B7A4F;
     --olive-deep: #3F4A2B;
     --pine: #2C3A28;
     --cypress: #4A6B52;
-
     --aegean: #6FB5B0;
     --aegean-deep: #3A7A76;
-
     --terracotta: #B5673E;
     --terracotta-deep: #8A4A2A;
     --bougainvillea: #C44536;
-
     --charcoal: #2B2A27;
     --ink: #1A1917;
     --whisper: #B8B2A7;
-
     --rule: rgba(43, 42, 39, 0.12);
-
     --ff-display: 'Cormorant Garamond', 'Times New Roman', serif;
     --ff-body: 'Inter', -apple-system, sans-serif;
     --ff-script: 'Dancing Script', cursive;
@@ -41,7 +34,6 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bone);
     color: var(--ink);
@@ -50,9 +42,7 @@
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
-
   body::before {
     content: '';
     position: fixed;
@@ -63,1111 +53,200 @@
     opacity: 0.5;
     mix-blend-mode: multiply;
   }
-
   h1, h2, h3, h4 { font-family: var(--ff-display); font-weight: 400; letter-spacing: -0.01em; }
-
   .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 2; }
 
-  /* ========== COVER ========== */
-  .cover {
-    min-height: 100vh;
-    background: var(--charcoal);
-    color: var(--cream);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
-  .cover-texture {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 30%, rgba(199, 178, 153, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 70%, rgba(111, 181, 176, 0.05) 0%, transparent 50%);
-  }
-  .cover-top {
-    padding: 48px 48px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--whisper);
-    position: relative;
-    z-index: 2;
-  }
-  .cover-center {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 48px;
-    position: relative;
-    z-index: 2;
-  }
-  .cover-logo {
-    font-family: var(--ff-script);
-    font-size: clamp(96px, 14vw, 220px);
-    font-weight: 500;
-    color: var(--cream);
-    line-height: 0.9;
-    letter-spacing: -0.02em;
-  }
-  .cover-logo-sub {
-    font-family: var(--ff-body);
-    font-size: 14px;
-    letter-spacing: 0.6em;
-    margin-top: 12px;
-    text-indent: 0.6em;
-    color: var(--cream);
-  }
-  .cover-rule {
-    width: 60px; height: 1px;
-    background: var(--stone);
-    margin: 48px auto 32px;
-  }
-  .cover-title {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: clamp(22px, 2.4vw, 32px);
-    font-weight: 300;
-    max-width: 580px;
-    color: var(--cream);
-    opacity: 0.85;
-  }
-  .cover-bottom {
-    padding: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--whisper);
-    position: relative;
-    z-index: 2;
-  }
-  .cover-bottom .edition {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: none;
-    color: var(--stone);
-  }
+  /* COVER */
+  .cover { min-height: 100vh; background: var(--charcoal); color: var(--cream); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .cover::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%, rgba(199, 178, 153, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(111, 181, 176, 0.05) 0%, transparent 50%); }
+  .cover-top, .cover-bottom { padding: 48px; display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--whisper); position: relative; z-index: 2; }
+  .cover-center { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 48px; position: relative; z-index: 2; }
+  .cover-logo { font-family: var(--ff-script); font-size: clamp(96px, 14vw, 220px); font-weight: 500; color: var(--cream); line-height: 0.9; }
+  .cover-logo-sub { font-family: var(--ff-body); font-size: 14px; letter-spacing: 0.6em; margin-top: 12px; text-indent: 0.6em; color: var(--cream); }
+  .cover-rule { width: 60px; height: 1px; background: var(--stone); margin: 48px auto 32px; }
+  .cover-title { font-family: var(--ff-display); font-style: italic; font-size: clamp(22px, 2.4vw, 32px); font-weight: 300; max-width: 580px; color: var(--cream); opacity: 0.85; }
+  .cover-bottom .edition { font-family: var(--ff-display); font-style: italic; font-size: 14px; letter-spacing: 0.05em; text-transform: none; color: var(--stone); }
 
-  /* ========== SECTION ========== */
+  /* SECTION */
   section { padding: 120px 0; position: relative; }
   section + section { border-top: 1px solid var(--rule); }
-
-  .section-number {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 14px;
-    color: var(--stone-deep);
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-size: clamp(48px, 6vw, 88px);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 24px;
-  }
+  .section-number { font-family: var(--ff-display); font-style: italic; font-size: 14px; color: var(--stone-deep); letter-spacing: 0.1em; margin-bottom: 12px; }
+  .section-title { font-size: clamp(48px, 6vw, 88px); line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 24px; }
   .section-title .italic { font-style: italic; color: var(--stone-deep); font-weight: 300; }
-  .section-lede {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 22px;
-    line-height: 1.5;
-    font-weight: 300;
-    max-width: 680px;
-    color: var(--charcoal);
-    margin-bottom: 80px;
-  }
-  .eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 16px;
-  }
+  .section-lede { font-family: var(--ff-display); font-style: italic; font-size: 22px; line-height: 1.5; font-weight: 300; max-width: 680px; color: var(--charcoal); margin-bottom: 80px; }
+  .eyebrow { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 16px; }
 
-  /* ========== TOC ========== */
+  /* TOC */
   .toc-section { padding: 120px 0 80px; background: var(--bone); }
-  .toc-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-    margin-top: 60px;
-  }
-  .toc-item {
-    grid-column: span 4;
-    border-top: 1px solid var(--rule);
-    padding: 20px 0;
-    text-decoration: none;
-    color: var(--ink);
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
-    transition: all 0.3s ease;
-  }
+  .toc-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 60px; }
+  .toc-item { grid-column: span 4; border-top: 1px solid var(--rule); padding: 20px 0; text-decoration: none; color: var(--ink); display: flex; align-items: baseline; gap: 20px; transition: all 0.3s ease; }
   .toc-item:hover { padding-left: 8px; color: var(--stone-deep); }
-  .toc-num {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 14px;
-    color: var(--stone-deep);
-    min-width: 30px;
-  }
-  .toc-label {
-    font-family: var(--ff-display);
-    font-size: 24px;
-    font-weight: 400;
-  }
+  .toc-num { font-family: var(--ff-display); font-style: italic; font-size: 14px; color: var(--stone-deep); min-width: 30px; }
+  .toc-label { font-family: var(--ff-display); font-size: 24px; font-weight: 400; }
 
-  /* ========== FOUNDATION ========== */
-  .foundation-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 48px 32px;
-  }
-  .principle {
-    grid-column: span 6;
-    padding: 48px;
-    background: var(--cream);
-    position: relative;
-  }
-  .principle-num {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 80px;
-    color: var(--stone);
-    line-height: 1;
-    position: absolute;
-    top: 32px; right: 40px;
-    opacity: 0.4;
-  }
-  .principle h3 {
-    font-size: 32px;
-    margin-bottom: 16px;
-    color: var(--ink);
-    line-height: 1.15;
-  }
-  .principle p {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--charcoal);
-  }
-
-  .pillars {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-top: 80px;
-    padding-top: 80px;
-    border-top: 1px solid var(--rule);
-  }
-  .pillar h4 {
-    font-size: 22px;
-    font-style: italic;
-    color: var(--stone-deep);
-    margin-bottom: 12px;
-  }
+  /* FOUNDATION */
+  .foundation-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 48px 32px; }
+  .principle { grid-column: span 6; padding: 48px; background: var(--cream); position: relative; }
+  .principle-num { font-family: var(--ff-display); font-style: italic; font-size: 80px; color: var(--stone); line-height: 1; position: absolute; top: 32px; right: 40px; opacity: 0.4; }
+  .principle h3 { font-size: 32px; margin-bottom: 16px; line-height: 1.15; }
+  .principle p { font-size: 15px; line-height: 1.7; color: var(--charcoal); }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 80px; padding-top: 80px; border-top: 1px solid var(--rule); }
+  .pillar h4 { font-size: 22px; font-style: italic; color: var(--stone-deep); margin-bottom: 12px; }
   .pillar p { font-size: 14px; color: var(--charcoal); }
 
-  /* ========== THE COLLECTION ========== */
-  .collection-intro {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
-    margin-bottom: 80px;
-  }
-  .collection-intro .note {
-    grid-column: span 8;
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 22px;
-    line-height: 1.5;
-    color: var(--charcoal);
-    padding-right: 48px;
-  }
-  .collection-intro .count {
-    grid-column: span 4;
-    border-left: 1px solid var(--rule);
-    padding-left: 32px;
-  }
-  .collection-intro .count-num {
-    font-family: var(--ff-display);
-    font-size: 96px;
-    line-height: 1;
-    color: var(--stone-deep);
-    font-weight: 300;
-  }
-  .collection-intro .count-label {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-top: 8px;
-  }
+  /* COLLECTION */
+  .collection-intro { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; margin-bottom: 80px; }
+  .collection-intro .note { grid-column: span 8; font-family: var(--ff-display); font-style: italic; font-size: 22px; line-height: 1.5; color: var(--charcoal); padding-right: 48px; }
+  .collection-intro .count { grid-column: span 4; border-left: 1px solid var(--rule); padding-left: 32px; }
+  .collection-intro .count-num { font-family: var(--ff-display); font-size: 96px; line-height: 1; color: var(--stone-deep); font-weight: 300; }
+  .collection-intro .count-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--charcoal); margin-top: 8px; }
 
-  .villa-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    margin-bottom: 80px;
-    align-items: center;
-  }
+  .villa-card { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 80px; align-items: center; }
   .villa-card.reverse { direction: rtl; }
   .villa-card.reverse > * { direction: ltr; }
-
-  .villa-gallery {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 8px;
-    aspect-ratio: 5/4;
-  }
-  .villa-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: saturate(0.92) contrast(1.02);
-  }
+  .villa-gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; aspect-ratio: 5/4; }
+  .villa-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.92) contrast(1.02); }
   .villa-gallery .g1 { grid-row: 1 / 3; }
-
-  .villa-info .villa-num {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 14px;
-    color: var(--stone-deep);
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-  }
-  .villa-info h3 {
-    font-size: 48px;
-    line-height: 1;
-    margin-bottom: 8px;
-    color: var(--ink);
-  }
+  .villa-gallery .photo-placeholder { background: var(--stone-light); display: flex; align-items: center; justify-content: center; color: var(--stone-deep); font-family: var(--ff-display); font-style: italic; font-size: 14px; padding: 16px; text-align: center; }
+  .villa-info .villa-num { font-family: var(--ff-display); font-style: italic; font-size: 14px; color: var(--stone-deep); letter-spacing: 0.1em; margin-bottom: 12px; }
+  .villa-info h3 { font-size: 48px; line-height: 1; margin-bottom: 8px; }
   .villa-info h3 em { font-style: italic; color: var(--stone-deep); font-weight: 300; }
-  .villa-info .villa-tag {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 20px;
-    color: var(--stone-deep);
-    margin-bottom: 24px;
-  }
-  .villa-info p {
-    font-size: 15px;
-    color: var(--charcoal);
-    line-height: 1.8;
-    margin-bottom: 24px;
-  }
-  .villa-meta {
-    display: flex;
-    gap: 32px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-    flex-wrap: wrap;
-  }
-  .meta-item .meta-label {
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 4px;
-  }
-  .meta-item .meta-val {
-    font-family: var(--ff-display);
-    font-size: 18px;
-    color: var(--ink);
-  }
+  .villa-info .villa-tag { font-family: var(--ff-display); font-style: italic; font-size: 20px; color: var(--stone-deep); margin-bottom: 24px; }
+  .villa-info p { font-size: 15px; color: var(--charcoal); line-height: 1.8; margin-bottom: 24px; }
+  .villa-meta { display: flex; gap: 32px; padding-top: 24px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
+  .meta-item .meta-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 4px; }
+  .meta-item .meta-val { font-family: var(--ff-display); font-size: 18px; }
 
-  /* ========== COLOR PALETTE ========== */
-  .palette-hero {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0;
-    margin-bottom: 60px;
-    height: 200px;
-    border: 1px solid var(--rule);
-  }
-  .palette-hero > div {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 16px;
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 13px;
-  }
+  /* The "two styles" callout */
+  .style-architecture { margin-top: 80px; padding: 48px; background: var(--charcoal); color: var(--cream); }
+  .style-architecture h4 { font-family: var(--ff-display); font-style: italic; font-size: 28px; color: var(--stone); margin-bottom: 24px; }
+  .style-architecture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .style-block h5 { font-family: var(--ff-display); font-size: 24px; color: var(--cream); margin-bottom: 12px; }
+  .style-block .which { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--stone); margin-bottom: 16px; }
+  .style-block p { font-size: 14px; opacity: 0.85; line-height: 1.7; }
 
+  /* PALETTE */
+  .palette-hero { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-bottom: 60px; height: 200px; border: 1px solid var(--rule); }
+  .palette-hero > div { position: relative; display: flex; align-items: flex-end; padding: 16px; font-family: var(--ff-display); font-style: italic; font-size: 13px; }
   .palette-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-  .palette-group h4 {
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--rule);
-    font-family: var(--ff-body);
-    font-weight: 500;
-  }
+  .palette-group h4 { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); font-family: var(--ff-body); font-weight: 500; }
   .swatch-row { display: flex; align-items: center; gap: 20px; padding: 12px 0; }
-  .swatch-chip {
-    width: 60px; height: 60px;
-    border-radius: 2px;
-    border: 1px solid var(--rule);
-    flex-shrink: 0;
-  }
+  .swatch-chip { width: 60px; height: 60px; border-radius: 2px; border: 1px solid var(--rule); flex-shrink: 0; }
   .swatch-info { flex: 1; }
-  .swatch-name {
-    font-family: var(--ff-display);
-    font-size: 20px;
-    color: var(--ink);
-  }
-  .swatch-role {
-    font-size: 12px;
-    color: var(--charcoal);
-    font-style: italic;
-    margin-top: 2px;
-  }
-  .swatch-codes {
-    font-family: var(--ff-body);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--whisper);
-    font-weight: 400;
-    margin-top: 4px;
-  }
-
-  .palette-usage {
-    margin-top: 60px;
-    padding: 32px;
-    background: var(--charcoal);
-    color: var(--cream);
-  }
-  .palette-usage h4 {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 22px;
-    margin-bottom: 16px;
-    color: var(--stone);
-  }
-  .usage-bar {
-    display: flex;
-    height: 24px;
-    margin: 16px 0;
-    border-radius: 2px;
-    overflow: hidden;
-  }
+  .swatch-name { font-family: var(--ff-display); font-size: 20px; }
+  .swatch-role { font-size: 12px; color: var(--charcoal); font-style: italic; margin-top: 2px; }
+  .swatch-codes { font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.1em; color: var(--whisper); font-weight: 400; margin-top: 4px; }
+  .palette-usage { margin-top: 60px; padding: 32px; background: var(--charcoal); color: var(--cream); }
+  .palette-usage h4 { font-family: var(--ff-display); font-style: italic; font-size: 22px; margin-bottom: 16px; color: var(--stone); }
+  .usage-bar { display: flex; height: 24px; margin: 16px 0; border-radius: 2px; overflow: hidden; }
   .usage-bar > div { display: flex; align-items: center; justify-content: center; font-size: 10px; letter-spacing: 0.1em; color: var(--charcoal); }
 
-  /* ========== TYPOGRAPHY ========== */
-  .type-showcase {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 48px;
-    margin-top: 40px;
-  }
-  .type-card {
-    grid-column: span 6;
-    padding: 48px;
-    background: var(--cream);
-    border-top: 2px solid var(--stone-deep);
-  }
+  /* TYPOGRAPHY */
+  .type-showcase { display: grid; grid-template-columns: repeat(12, 1fr); gap: 48px; margin-top: 40px; }
+  .type-card { grid-column: span 6; padding: 48px; background: var(--cream); border-top: 2px solid var(--stone-deep); }
   .type-card.sans { border-top-color: var(--olive); }
-  .type-card .type-label {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 24px;
-  }
+  .type-card .type-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 24px; }
   .type-card.sans .type-label { color: var(--olive-deep); }
-  .type-specimen {
-    font-size: 96px;
-    line-height: 1;
-    margin-bottom: 24px;
-  }
-  .type-specimen.display {
-    font-family: var(--ff-display);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-  }
-  .type-specimen.sans {
-    font-family: var(--ff-body);
-    font-weight: 300;
-    letter-spacing: -0.04em;
-    font-size: 84px;
-  }
-  .type-name {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 32px;
-    color: var(--ink);
-  }
-  .type-usage {
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--charcoal);
-    margin-top: 16px;
-  }
-  .type-weights {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-    flex-wrap: wrap;
-  }
-  .weight-chip {
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    padding: 4px 12px;
-    background: rgba(43, 42, 39, 0.05);
-    color: var(--charcoal);
-  }
-
-  .type-scale {
-    margin-top: 80px;
-    padding: 48px 0;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-  }
-  .scale-row {
-    display: grid;
-    grid-template-columns: 120px 80px 1fr;
-    align-items: baseline;
-    gap: 32px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--rule);
-  }
+  .type-specimen { font-size: 96px; line-height: 1; margin-bottom: 24px; }
+  .type-specimen.display { font-family: var(--ff-display); font-weight: 300; letter-spacing: -0.02em; }
+  .type-specimen.sans { font-family: var(--ff-body); font-weight: 300; letter-spacing: -0.04em; font-size: 84px; }
+  .type-name { font-family: var(--ff-display); font-style: italic; font-size: 32px; }
+  .type-usage { font-size: 13px; line-height: 1.7; color: var(--charcoal); margin-top: 16px; }
+  .type-weights { display: flex; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
+  .weight-chip { font-size: 11px; letter-spacing: 0.1em; padding: 4px 12px; background: rgba(43, 42, 39, 0.05); color: var(--charcoal); }
+  .type-scale { margin-top: 80px; padding: 48px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .scale-row { display: grid; grid-template-columns: 120px 80px 1fr; align-items: baseline; gap: 32px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
   .scale-row:last-child { border-bottom: none; }
-  .scale-label {
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-  }
-  .scale-size {
-    font-family: var(--ff-body);
-    font-size: 11px;
-    color: var(--whisper);
-  }
-  .scale-sample { color: var(--ink); }
+  .scale-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep); }
+  .scale-size { font-family: var(--ff-body); font-size: 11px; color: var(--whisper); }
 
-  /* ========== LOGO ========== */
+  /* LOGO */
   .logo-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; }
-  .logo-display {
-    grid-column: span 7;
-    aspect-ratio: 4/3;
-    background: var(--charcoal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
+  .logo-display { grid-column: span 7; aspect-ratio: 4/3; background: var(--charcoal); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
   .logo-display.light { background: var(--cream); }
-  .logo-display.photo {
-    background-image: url('images/resort-01.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .logo-display.photo::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
-  }
-  .logo-lockup {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
-  .logo-lockup .script {
-    font-family: var(--ff-script);
-    font-size: 120px;
-    line-height: 0.9;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-  }
-  .logo-lockup .sub {
-    font-family: var(--ff-body);
-    font-size: 14px;
-    letter-spacing: 0.6em;
-    margin-top: 8px;
-    text-indent: 0.6em;
-  }
-  .logo-display .logo-lockup .script,
-  .logo-display .logo-lockup .sub { color: var(--cream); }
-  .logo-display.light .logo-lockup .script,
-  .logo-display.light .logo-lockup .sub { color: var(--charcoal); }
-
-  .logo-rules {
-    grid-column: span 5;
-    padding-left: 24px;
-  }
-  .rule-item {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--rule);
-  }
+  .logo-display.photo { background-image: url('images/resort-01.jpg'); background-size: cover; background-position: center; }
+  .logo-display.photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3)); }
+  .logo-lockup { text-align: center; position: relative; z-index: 2; }
+  .logo-lockup .script { font-family: var(--ff-script); font-size: 120px; line-height: 0.9; font-weight: 500; }
+  .logo-lockup .sub { font-family: var(--ff-body); font-size: 14px; letter-spacing: 0.6em; margin-top: 8px; text-indent: 0.6em; }
+  .logo-display .logo-lockup .script, .logo-display .logo-lockup .sub { color: var(--cream); }
+  .logo-display.light .logo-lockup .script, .logo-display.light .logo-lockup .sub { color: var(--charcoal); }
+  .logo-rules { grid-column: span 5; padding-left: 24px; }
+  .rule-item { padding: 20px 0; border-bottom: 1px solid var(--rule); }
   .rule-item:first-child { padding-top: 0; }
-  .rule-item h5 {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 20px;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
+  .rule-item h5 { font-family: var(--ff-display); font-style: italic; font-size: 20px; margin-bottom: 8px; }
   .rule-item p { font-size: 13px; color: var(--charcoal); }
 
-  .logo-variants {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 60px;
-  }
-  .variant-tile {
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .variant-tile.dark { background: var(--charcoal); }
-  .variant-tile.light { background: var(--cream); }
-  .variant-tile.stone { background: var(--stone); }
-  .variant-tile .variant-logo {
-    font-family: var(--ff-script);
-    font-size: 52px;
-    font-weight: 500;
-  }
-  .variant-tile.dark .variant-logo { color: var(--cream); }
-  .variant-tile.light .variant-logo { color: var(--charcoal); }
-  .variant-tile.stone .variant-logo { color: var(--cream); }
-  .variant-tile .variant-label {
-    position: absolute;
-    bottom: 12px; left: 12px;
-    font-size: 9px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-  }
-  .variant-tile.dark .variant-label,
-  .variant-tile.stone .variant-label { color: var(--cream); opacity: 0.6; }
-  .variant-tile.light .variant-label { color: var(--charcoal); opacity: 0.6; }
-
-  .donts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 60px;
-  }
-  .dont {
-    aspect-ratio: 1;
-    background: var(--cream);
-    border: 1px solid var(--rule);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 16px;
-    position: relative;
-  }
-  .dont::before {
-    content: '×';
-    position: absolute;
-    top: 8px; right: 12px;
-    color: var(--terracotta-deep);
-    font-size: 20px;
-    font-family: var(--ff-display);
-  }
-  .dont-visual {
-    font-family: var(--ff-script);
-    font-size: 32px;
-    margin-bottom: 12px;
-    color: var(--charcoal);
-  }
-  .dont.stretch .dont-visual { transform: scaleX(1.5); }
-  .dont.rotate .dont-visual { transform: rotate(-12deg); }
-  .dont.color .dont-visual { color: var(--terracotta); }
-  .dont.bg {
-    background: linear-gradient(45deg, #ff006e, #8338ec);
-  }
-  .dont.bg .dont-visual { color: white; }
-  .dont-label {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-  }
-  .dont.bg .dont-label { color: white; }
-
-  /* ========== PHOTOGRAPHY ========== */
-  .photo-hero {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
-    margin-top: 40px;
-  }
-  .photo-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: saturate(0.92) contrast(1.02);
-  }
+  /* PHOTOGRAPHY */
+  .photo-hero { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 40px; }
+  .photo-hero img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.92) contrast(1.02); }
   .p-1 { grid-column: span 8; aspect-ratio: 16/10; overflow: hidden; }
   .p-2 { grid-column: span 4; aspect-ratio: 4/5; overflow: hidden; }
   .p-3 { grid-column: span 4; aspect-ratio: 4/5; overflow: hidden; }
   .p-4 { grid-column: span 8; aspect-ratio: 16/10; overflow: hidden; }
+  .photo-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 80px; }
+  .photo-principle { padding-top: 24px; border-top: 1px solid var(--rule); }
+  .photo-principle .num { font-family: var(--ff-display); font-style: italic; font-size: 14px; color: var(--stone-deep); margin-bottom: 8px; }
+  .photo-principle h4 { font-size: 24px; margin-bottom: 12px; }
+  .photo-principle p { font-size: 14px; color: var(--charcoal); line-height: 1.7; }
 
-  .photo-principles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 80px;
-  }
-  .photo-principle {
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-  }
-  .photo-principle .num {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 14px;
-    color: var(--stone-deep);
-    margin-bottom: 8px;
-  }
-  .photo-principle h4 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
-  .photo-principle p {
-    font-size: 14px;
-    color: var(--charcoal);
-    line-height: 1.7;
-  }
+  /* Photo reality table */
+  .photo-reality { margin-top: 60px; padding: 32px; background: var(--charcoal); color: var(--cream); }
+  .photo-reality h4 { font-family: var(--ff-display); font-style: italic; font-size: 22px; color: var(--stone); margin-bottom: 24px; }
+  .pr-table { display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 16px; }
+  .pr-table > div { padding: 12px 16px; border-bottom: 1px solid rgba(199, 178, 153, 0.15); font-size: 13px; }
+  .pr-table .pr-villa { font-family: var(--ff-display); font-size: 16px; color: var(--cream); }
+  .pr-table .pr-status { color: var(--stone); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
+  .pr-table .pr-action { color: var(--cream); opacity: 0.8; }
 
-  .shot-list {
-    margin-top: 80px;
-    padding: 48px;
-    background: var(--charcoal);
-    color: var(--cream);
-  }
-  .shot-list h3 {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 32px;
-    color: var(--stone);
-    margin-bottom: 24px;
-  }
-  .shot-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-  .shot-col h5 {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-bottom: 12px;
-    font-family: var(--ff-body);
-    font-weight: 500;
-  }
-  .shot-col ul {
-    list-style: none;
-    font-size: 13px;
-    color: var(--cream);
-    opacity: 0.85;
-  }
-  .shot-col li {
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(245, 239, 228, 0.1);
-  }
+  /* SITHONIA SECTION */
+  .sithonia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+  .sithonia-text h4 { font-size: 32px; margin-bottom: 20px; }
+  .sithonia-text p { font-size: 15px; line-height: 1.8; color: var(--charcoal); margin-bottom: 16px; }
+  .sithonia-pages { padding: 0; }
+  .sithonia-page { padding: 24px; background: var(--cream); margin-bottom: 12px; display: grid; grid-template-columns: 60px 1fr; gap: 16px; align-items: start; }
+  .sithonia-page .ico { font-family: var(--ff-display); font-style: italic; font-size: 20px; color: var(--stone-deep); }
+  .sithonia-page h5 { font-family: var(--ff-display); font-size: 20px; margin-bottom: 4px; }
+  .sithonia-page p { font-size: 13px; color: var(--charcoal); line-height: 1.6; }
 
-  /* ========== VOICE ========== */
-  .voice-intro {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
-    margin-bottom: 80px;
-  }
-  .voice-persona {
-    grid-column: span 7;
-    padding: 48px;
-    background: var(--cream);
-  }
-  .voice-persona h4 {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 36px;
-    margin-bottom: 16px;
-    color: var(--ink);
-  }
-  .voice-persona p { font-size: 15px; line-height: 1.8; color: var(--charcoal); }
-
-  .voice-attributes {
-    grid-column: span 5;
-    padding: 48px 0 48px 32px;
-  }
-  .attr-row {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--rule);
-  }
+  /* VOICE */
+  .voice-intro { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; margin-bottom: 80px; }
+  .voice-persona { grid-column: span 7; padding: 48px; background: var(--cream); }
+  .voice-persona h4 { font-family: var(--ff-display); font-style: italic; font-size: 36px; margin-bottom: 16px; }
+  .voice-persona p { font-size: 15px; line-height: 1.8; color: var(--charcoal); margin-bottom: 16px; }
+  .voice-persona p:last-child { margin-bottom: 0; }
+  .voice-attributes { grid-column: span 5; padding: 48px 0 48px 32px; }
+  .attr-row { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
   .attr-row:last-child { border: none; }
-  .attr-label {
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    min-width: 70px;
-  }
-  .attr-word {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 22px;
-    color: var(--olive-deep);
-  }
+  .attr-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--stone-deep); min-width: 70px; }
+  .attr-word { font-family: var(--ff-display); font-style: italic; font-size: 22px; color: var(--olive-deep); }
 
-  .voice-samples {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  .sample {
-    padding: 40px;
-    background: var(--bone);
-    border-left: 2px solid var(--stone);
-  }
-  .sample .sample-type {
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 16px;
-  }
-  .sample .sample-body {
-    font-family: var(--ff-display);
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: var(--ink);
-  }
-  .sample .sample-body.small {
-    font-size: 16px;
-    font-family: var(--ff-body);
-    font-weight: 300;
-    line-height: 1.65;
-  }
+  .voice-samples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .sample { padding: 40px; background: var(--bone); border-left: 2px solid var(--stone); }
+  .sample .sample-type { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep); margin-bottom: 16px; }
+  .sample .sample-body { font-family: var(--ff-display); font-size: 20px; line-height: 1.5; font-weight: 400; }
+  .sample .sample-body.small { font-size: 16px; font-family: var(--ff-body); font-weight: 300; line-height: 1.65; }
 
-  .word-list {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-  }
-  .word-col h4 {
-    font-size: 14px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--rule);
-    font-family: var(--ff-body);
-    font-weight: 500;
-  }
+  .word-list { margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .word-col h4 { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); font-family: var(--ff-body); font-weight: 500; }
   .word-col.use h4 { color: var(--olive-deep); }
   .word-col.avoid h4 { color: var(--terracotta-deep); }
-  .word-col ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .word-col li {
-    padding: 6px 14px;
-    background: var(--cream);
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 15px;
-    color: var(--ink);
-  }
-  .word-col.avoid li {
-    text-decoration: line-through;
-    color: var(--whisper);
-    font-style: normal;
-    font-family: var(--ff-body);
-    font-size: 13px;
-    letter-spacing: 0.05em;
-  }
+  .word-col ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .word-col li { padding: 6px 14px; background: var(--cream); font-family: var(--ff-display); font-style: italic; font-size: 15px; }
+  .word-col.avoid li { text-decoration: line-through; color: var(--whisper); font-style: normal; font-family: var(--ff-body); font-size: 13px; letter-spacing: 0.05em; }
 
-  /* ========== INSTAGRAM ========== */
-  .ig-grid-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    margin-top: 40px;
-  }
-  .ig-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    background: var(--bone);
-    padding: 16px;
-    border: 1px solid var(--rule);
-  }
-  .ig-tile {
-    aspect-ratio: 1;
-    position: relative;
-    overflow: hidden;
-  }
-  .ig-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); }
-  .ig-tile.text {
-    background: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    text-align: center;
-  }
-  .ig-tile.text.stone { background: var(--stone-light); }
-  .ig-tile.text.olive { background: var(--olive); color: var(--cream); }
-  .ig-tile.text.charcoal { background: var(--charcoal); color: var(--cream); }
-  .ig-tile-quote {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.3;
-    color: var(--ink);
-  }
-  .ig-tile.text.olive .ig-tile-quote,
-  .ig-tile.text.charcoal .ig-tile-quote { color: var(--cream); }
+  /* CLOSE */
+  .close { background: var(--charcoal); color: var(--cream); padding: 120px 0; text-align: center; }
+  .close-mark { font-family: var(--ff-script); font-size: 120px; color: var(--cream); line-height: 0.9; }
+  .close-line { font-family: var(--ff-display); font-style: italic; font-size: 28px; color: var(--stone); margin-top: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .close-meta { margin-top: 80px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--whisper); }
 
-  .ig-explain { padding-top: 16px; }
-  .ig-explain h4 {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  .ig-system {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 16px;
-    padding: 16px 0;
-    border-top: 1px solid var(--rule);
-    align-items: start;
-  }
-  .ig-system .num {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 20px;
-    color: var(--stone-deep);
-  }
-  .ig-system h5 {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-  .ig-system p { font-size: 13px; color: var(--charcoal); }
-
-  /* ========== APPLICATIONS ========== */
-  .app-mockup {
-    background: var(--charcoal);
-    padding: 40px;
-    margin-bottom: 32px;
-    border-radius: 4px;
-  }
-  .browser-bar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 24px;
-  }
-  .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(245, 239, 228, 0.2); }
-  .browser-url {
-    flex: 1;
-    margin-left: 16px;
-    padding: 6px 16px;
-    background: rgba(245, 239, 228, 0.08);
-    font-size: 11px;
-    color: var(--whisper);
-    border-radius: 2px;
-    font-family: var(--ff-body);
-    letter-spacing: 0.05em;
-  }
-  .browser-frame {
-    background: var(--bone);
-    min-height: 520px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-img {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
-    filter: saturate(0.9) brightness(0.95);
-    display: block;
-  }
-  .hero-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 520px;
-    background: linear-gradient(180deg, rgba(43,42,39,0.15) 0%, rgba(43,42,39,0.55) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 48px;
-  }
-  .hero-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .hero-nav .nav-logo {
-    font-family: var(--ff-script);
-    font-size: 32px;
-    color: var(--cream);
-  }
-  .hero-nav .nav-items {
-    display: flex;
-    gap: 32px;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--cream);
-  }
-  .hero-content {
-    color: var(--cream);
-  }
-  .hero-eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-bottom: 16px;
-  }
-  .hero-headline {
-    font-family: var(--ff-display);
-    font-size: 64px;
-    line-height: 1;
-    font-weight: 300;
-    max-width: 600px;
-  }
-  .hero-headline em { font-style: italic; color: var(--stone); }
-  .hero-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 32px;
-    padding: 14px 32px;
-    border: 1px solid var(--cream);
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--cream);
-  }
-  .hero-cta span { font-family: var(--ff-display); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 14px; }
-  .browser-sub {
-    padding: 48px;
-    background: var(--bone);
-  }
-  .browser-sub-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-  .feature {
-    padding-top: 16px;
-    border-top: 1px solid var(--rule);
-  }
-  .feature-label {
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--stone-deep);
-    margin-bottom: 8px;
-  }
-  .feature h6 {
-    font-family: var(--ff-display);
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-  .feature p {
-    font-size: 13px;
-    color: var(--charcoal);
-  }
-
-  /* ========== CLOSING ========== */
-  .close {
-    background: var(--charcoal);
-    color: var(--cream);
-    padding: 120px 0;
-    text-align: center;
-  }
-  .close-mark {
-    font-family: var(--ff-script);
-    font-size: 120px;
-    font-weight: 500;
-    color: var(--cream);
-    line-height: 0.9;
-  }
-  .close-line {
-    font-family: var(--ff-display);
-    font-style: italic;
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--stone);
-    margin-top: 32px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .close-meta {
-    margin-top: 80px;
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--whisper);
-  }
-
-  /* Responsive */
   @media (max-width: 900px) {
     .container { padding: 0 24px; }
     section { padding: 80px 0; }
-    .foundation-grid > .principle,
-    .palette-groups,
-    .type-showcase > .type-card,
-    .logo-grid > *,
-    .voice-intro > *,
-    .voice-samples,
-    .word-list,
-    .ig-grid-wrap,
-    .browser-sub-grid,
-    .photo-principles,
-    .shot-grid,
-    .pillars,
-    .villa-card,
-    .collection-intro > * { grid-column: 1 / -1; grid-template-columns: 1fr; }
+    .foundation-grid > .principle, .palette-groups, .type-showcase > .type-card, .logo-grid > *, .voice-intro > *, .voice-samples, .word-list, .photo-principles, .pillars, .villa-card, .collection-intro > *, .style-architecture-grid, .sithonia-grid { grid-column: 1 / -1; grid-template-columns: 1fr; }
     .villa-card.reverse { direction: ltr; }
     .photo-hero > * { grid-column: 1 / -1; }
-    .hero-headline { font-size: 40px; }
-    .hero-nav .nav-items { display: none; }
     .toc-item { grid-column: span 6; }
     .villa-info h3 { font-size: 36px; }
   }
@@ -1175,64 +254,56 @@
 </head>
 <body>
 
-<!-- ============ COVER ============ -->
+<!-- COVER -->
 <div class="cover">
-  <div class="cover-texture"></div>
-
   <div class="cover-top">
     <span>Avista Villas</span>
     <span>Halkidiki · Greece</span>
   </div>
-
   <div class="cover-center">
     <div class="cover-logo">Avista</div>
     <div class="cover-logo-sub">VILLAS</div>
-
     <div class="cover-rule"></div>
-
     <div class="cover-title">
       The Brand &amp; Style Guide<br>
-      Three houses, one quiet Greece.
+      Three quiet houses in the pines.
     </div>
   </div>
-
   <div class="cover-bottom">
-    <span>Vol. 01 / 2026</span>
+    <span>Vol. 01 / 2026 · v2</span>
     <span class="edition">Sithonia Edition</span>
     <span>Internal · Not for distribution</span>
   </div>
 </div>
 
-<!-- ============ TOC ============ -->
+<!-- TOC -->
 <section class="toc-section">
   <div class="container">
     <div class="section-number">I · Contents</div>
     <h2 class="section-title">Inside this <span class="italic">guide</span></h2>
     <div class="section-lede">
-      A living document. Every decision — a colour, a word, a crop — is here so that Avista reads as one collection, one voice, wherever a guest finds us.
+      A living document. Every decision — a colour, a word, a crop — is here so that Avista reads as one collection wherever a guest finds us.
     </div>
-
     <div class="toc-grid">
       <a class="toc-item" href="#foundation"><span class="toc-num">01</span><span class="toc-label">Foundation</span></a>
       <a class="toc-item" href="#collection"><span class="toc-num">02</span><span class="toc-label">The Collection</span></a>
-      <a class="toc-item" href="#palette"><span class="toc-num">03</span><span class="toc-label">Colour</span></a>
-      <a class="toc-item" href="#typography"><span class="toc-num">04</span><span class="toc-label">Typography</span></a>
-      <a class="toc-item" href="#logo"><span class="toc-num">05</span><span class="toc-label">Logo</span></a>
-      <a class="toc-item" href="#photography"><span class="toc-num">06</span><span class="toc-label">Photography</span></a>
-      <a class="toc-item" href="#voice"><span class="toc-num">07</span><span class="toc-label">Voice &amp; Tone</span></a>
-      <a class="toc-item" href="#instagram"><span class="toc-num">08</span><span class="toc-label">Instagram</span></a>
-      <a class="toc-item" href="#applications"><span class="toc-num">09</span><span class="toc-label">Applications</span></a>
+      <a class="toc-item" href="#sithonia"><span class="toc-num">03</span><span class="toc-label">The Sithonia Guide</span></a>
+      <a class="toc-item" href="#palette"><span class="toc-num">04</span><span class="toc-label">Colour</span></a>
+      <a class="toc-item" href="#typography"><span class="toc-num">05</span><span class="toc-label">Typography</span></a>
+      <a class="toc-item" href="#logo"><span class="toc-num">06</span><span class="toc-label">Logo</span></a>
+      <a class="toc-item" href="#photography"><span class="toc-num">07</span><span class="toc-label">Photography</span></a>
+      <a class="toc-item" href="#voice"><span class="toc-num">08</span><span class="toc-label">Voice &amp; Tone</span></a>
     </div>
   </div>
 </section>
 
-<!-- ============ FOUNDATION ============ -->
+<!-- FOUNDATION -->
 <section id="foundation">
   <div class="container">
     <div class="section-number">01 · Foundation</div>
     <h2 class="section-title">What Avista <span class="italic">means</span></h2>
     <div class="section-lede">
-      Avista Villas is a small family collection of three private houses in Sithonia, Halkidiki. Each villa has its own character. Together, they share a single promise: quiet luxury, held in stone, pine, and olive.
+      Avista is a small collection of three private houses in Sithonia, Halkidiki. One contemporary stone flagship and two warmer sister villas — kept by the people who built them, for guests who want a quiet week in Greece.
     </div>
 
     <div class="foundation-grid">
@@ -1240,21 +311,21 @@
         <div class="principle-num">01</div>
         <div class="eyebrow">Essence</div>
         <h3>Three houses in the pines of Sithonia.</h3>
-        <p>Between the forest and the Aegean sits a small, private collection of homes. Stone walls that hold the cool of the morning. Gardens that smell of olive leaf and bougainvillea. The closest thing most guests will find to a second home in Greece.</p>
+        <p>Between the forest and the Aegean sits a small, private collection of homes. Stone walls that hold the cool of the morning. Gardens that smell of olive leaf and pine. The closest thing most guests will find to a second home in Greece.</p>
       </div>
 
       <div class="principle">
         <div class="principle-num">02</div>
         <div class="eyebrow">Promise</div>
-        <h3>Beautifully left alone.</h3>
-        <p>Guests are handed keys, a hand-drawn map of Sithonia, and a phone number that actually answers. The rest of the week belongs to them. Privacy is the deliverable. Hospitality is the foundation underneath it.</p>
+        <h3>A quiet week, beautifully looked after.</h3>
+        <p>We hand guests keys, a hand-drawn map of Sithonia, and a phone number that actually answers. The rest of the week belongs to them. Privacy is the deliverable. Hospitality is the foundation underneath it.</p>
       </div>
 
       <div class="principle">
         <div class="principle-num">03</div>
         <div class="eyebrow">Personality</div>
         <h3>Warm, slow, deeply local.</h3>
-        <p>Avista speaks with the calm of a family friend who has lived in Halkidiki for a lifetime. Knows which beach is best on a Tuesday, where to find the fish that arrived at six in the morning, and how to leave guests to their holiday.</p>
+        <p>We are the people behind Avista — a small team that grew up in Halkidiki and built these houses one by one. We know which beach is best on a Tuesday and where to find the fish that arrived at six in the morning. We also know how to leave guests to their holiday.</p>
       </div>
 
       <div class="principle">
@@ -1279,147 +350,202 @@
       <div class="pillar">
         <div class="eyebrow">Pillar III</div>
         <h4>Personal hospitality</h4>
-        <p>A founder-led team. Real recommendations. A human presence when you want it and full privacy when you don't.</p>
+        <p>A small team you can reach directly. Real recommendations. A human presence when you want it and full privacy when you don't.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ THE COLLECTION ============ -->
+<!-- COLLECTION -->
 <section id="collection" style="background: var(--cream);">
   <div class="container">
     <div class="section-number">02 · The Collection</div>
-    <h2 class="section-title">Three houses, <span class="italic">three moods</span></h2>
+    <h2 class="section-title">One flagship, <span class="italic">two sisters</span></h2>
     <div class="section-lede">
-      Each villa in the Avista collection has its own architectural story and its own feeling. The brand voice and visual system wrap around all three — but when speaking about a specific villa, lean into its particular character.
+      Avista is three villas in two architectural styles. The Private Resort is the contemporary stone flagship — a statement house in its own clearing. The Avista Villa and the Avista Superb Villa are sister properties — same warm Greek architecture, different scale, one with a pool and one without.
     </div>
 
     <div class="collection-intro">
       <div class="note">
-        "A collection lets guests self-select. A family of six who wants space and a private pool chooses differently than a couple with a toddler who wants a short walk to the village. Position each villa for the guest who will love it most."
+        "A collection lets guests self-select. The family of six who wants the showpiece chooses differently than the couple who wants the smaller, simpler sister villa. Position each house for the guest who will love it most."
       </div>
       <div class="count">
         <div class="count-num">3</div>
-        <div class="count-label">Distinct villas · One collection</div>
+        <div class="count-label">Three villas · Two styles · One collection</div>
       </div>
     </div>
 
-    <!-- VILLA 1: THE PRIVATE RESORT -->
+    <!-- VILLA 1: AVISTA PRIVATE RESORT -->
     <div class="villa-card">
       <div class="villa-gallery">
-        <img class="g1" src="images/resort-01.jpg" alt="Private Resort pool">
-        <img src="images/resort-02.jpg" alt="Private Resort aerial">
-        <img src="images/resort-04.jpg" alt="Private Resort interior">
+        <img class="g1" src="images/resort-01.jpg" alt="Avista Private Resort pool">
+        <img src="images/resort-02.jpg" alt="Avista Private Resort aerial">
+        <img src="images/resort-04.jpg" alt="Avista Private Resort interior">
       </div>
       <div class="villa-info">
-        <div class="villa-num">Villa One</div>
-        <h3>The <em>Private</em> Resort</h3>
-        <div class="villa-tag">Architectural · Secluded · The statement house</div>
-        <p>Set in a private clearing of 2,500 square metres, framed by pines and looking toward the distant Aegean. Stone walls, a generous pergola, a pool with a waterfall feature. Handcrafted masonry with clean contemporary lines inside. Designed for larger families, groups, or anyone who wants complete seclusion with the polish of a resort suite.</p>
+        <div class="villa-num">Villa One · Flagship</div>
+        <h3>Avista <em>Private</em> Resort</h3>
+        <div class="villa-tag">Contemporary stone · Secluded · The statement house</div>
+        <p>Set in a private clearing of 2,500 square metres, framed by pines and looking toward the distant Aegean. Stone walls, a generous pergola, a pool with a quiet waterfall. Handcrafted masonry with clean contemporary lines inside. Designed for larger families, groups, or anyone who wants complete seclusion with the polish of a resort suite.</p>
         <div class="villa-meta">
-          <div class="meta-item">
-            <div class="meta-label">Style</div>
-            <div class="meta-val">Contemporary stone</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Best for</div>
-            <div class="meta-val">Large families · Groups</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Grounds</div>
-            <div class="meta-val">2,500 sqm</div>
-          </div>
+          <div class="meta-item"><div class="meta-label">Style</div><div class="meta-val">Contemporary stone</div></div>
+          <div class="meta-item"><div class="meta-label">Best for</div><div class="meta-val">Large families · Groups</div></div>
+          <div class="meta-item"><div class="meta-label">Grounds</div><div class="meta-val">2,500 sqm</div></div>
         </div>
       </div>
     </div>
 
-    <!-- VILLA 2: THE GARDEN RESIDENCE -->
+    <!-- VILLA 2: AVISTA VILLA -->
     <div class="villa-card reverse">
       <div class="villa-gallery">
-        <img class="g1" src="images/garden-02.webp" alt="Garden Residence living">
-        <img src="images/garden-01.webp" alt="Garden Residence bedroom">
-        <img src="images/garden-03.webp" alt="Garden Residence terrace">
+        <img class="g1" src="images/villa-living.webp" alt="Avista Villa living room">
+        <img src="images/villa-bedroom.webp" alt="Avista Villa bedroom">
+        <img src="images/villa-pool-night.webp" alt="Avista Villa pool at night">
       </div>
       <div class="villa-info">
-        <div class="villa-num">Villa Two</div>
-        <h3>The <em>Garden</em> Residence</h3>
-        <div class="villa-tag">Traditional · Warm · Full of character</div>
-        <p>A classic Greek family home, reimagined. Double-height ceilings, wicker and dark wood furniture, terracotta floors that hold the cool of the morning. Bougainvillea tumbles across the terrace in July. A red accent wall in the bedroom catches the late-afternoon light through the shutters. Warmer and more "home" than the Private Resort — the villa that feels like visiting Greek family you didn't know you had.</p>
+        <div class="villa-num">Villa Two · Sister</div>
+        <h3>Avista <em>Villa</em></h3>
+        <div class="villa-tag">Traditional Greek · Pool · Warm and lived-in</div>
+        <p>A classic Greek family home, reimagined. Double-height ceilings with wicker and dark wood, terracotta floors that hold the cool of the morning. A sleek pool wrapped in olive trees, lit beautifully for the evenings. The villa that feels like visiting Greek family you didn't know you had — with everything you'd want from a private pool home.</p>
         <div class="villa-meta">
-          <div class="meta-item">
-            <div class="meta-label">Style</div>
-            <div class="meta-val">Traditional Greek</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Best for</div>
-            <div class="meta-val">Young families · Couples</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Character</div>
-            <div class="meta-val">Warm · Lived-in</div>
-          </div>
+          <div class="meta-item"><div class="meta-label">Style</div><div class="meta-val">Traditional Greek</div></div>
+          <div class="meta-item"><div class="meta-label">Best for</div><div class="meta-val">Families · Couples</div></div>
+          <div class="meta-item"><div class="meta-label">Pool</div><div class="meta-val">Yes — private</div></div>
         </div>
       </div>
     </div>
 
-    <!-- VILLA 3: THE CYPRESS HOUSE -->
+    <!-- VILLA 3: AVISTA SUPERB VILLA -->
     <div class="villa-card">
       <div class="villa-gallery">
-        <img class="g1" src="images/cypress-01.webp" alt="Cypress House pool at dusk">
-        <img src="images/resort-03.jpg" alt="Cypress House garden">
-        <img src="images/garden-03.webp" alt="Cypress House terrace">
+        <img class="g1" src="images/villa-terrace.webp" alt="Avista Superb Villa terrace">
+        <img src="images/villa-garden-day.jpg" alt="Avista Superb Villa garden">
+        <div class="photo-placeholder">More photos · summer 2026</div>
       </div>
       <div class="villa-info">
-        <div class="villa-num">Villa Three</div>
-        <h3>The <em>Cypress</em> House</h3>
-        <div class="villa-tag">Design-led · Atmospheric · Romantic</div>
-        <p>The collection's design-forward villa. A sleek rectangular pool wrapped in an olive grove, with tall cypresses standing watch at dusk. Deep planters, stone retaining walls, an outdoor day-bed platform for long evenings. Lit carefully at night for an atmospheric feel that photographs beautifully. Ideal for families with older children, creative travellers, or couples combined for a small-group stay.</p>
+        <div class="villa-num">Villa Three · Sister</div>
+        <h3>Avista <em>Superb</em> Villa</h3>
+        <div class="villa-tag">Traditional Greek · No pool · The quieter sister</div>
+        <p>Sharing the same warm Greek architecture as the Avista Villa — terracotta tile, white-washed walls, a bougainvillea-covered terrace and the same garden quality. Without a private pool, this villa is a more accessible choice for families who'd rather walk to the beach, or for couples and smaller groups who don't need a pool to make the week feel like Greece.</p>
         <div class="villa-meta">
-          <div class="meta-item">
-            <div class="meta-label">Style</div>
-            <div class="meta-val">Design-led modern</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Best for</div>
-            <div class="meta-val">Design lovers · Families with teens</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Signature</div>
-            <div class="meta-val">Olive grove &amp; night lighting</div>
-          </div>
+          <div class="meta-item"><div class="meta-label">Style</div><div class="meta-val">Traditional Greek</div></div>
+          <div class="meta-item"><div class="meta-label">Best for</div><div class="meta-val">Couples · Smaller families</div></div>
+          <div class="meta-item"><div class="meta-label">Pool</div><div class="meta-val">No — shared garden</div></div>
         </div>
       </div>
     </div>
 
-    <div style="margin-top: 80px; padding: 48px; background: var(--charcoal); color: var(--cream);">
-      <div class="eyebrow" style="color: var(--stone);">Naming rules for the collection</div>
-      <h4 style="font-family: var(--ff-display); font-style: italic; font-size: 28px; color: var(--cream); margin: 8px 0 24px;">How to refer to each villa, consistently</h4>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 14px; line-height: 1.7;">
-        <div>
-          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone); font-size: 18px; margin-bottom: 8px;">Villa One</div>
-          <div style="font-family: var(--ff-display); font-size: 22px; color: var(--cream); margin-bottom: 8px;">The Private Resort</div>
-          <p style="opacity: 0.75; font-size: 13px;">Short name: <em>Private Resort</em>. Always leads with "The". Avoid "Villa 1" or "Resort Villa" in public copy.</p>
+    <!-- The two-styles framing -->
+    <div class="style-architecture">
+      <h4>Two architectural styles</h4>
+      <p style="font-size: 14px; opacity: 0.85; margin-bottom: 32px;">The collection has range, but it is not three random villas. Two architectural worlds, with the Private Resort standing alone, and the Villa and Superb Villa as warm sister properties.</p>
+      <div class="style-architecture-grid">
+        <div class="style-block">
+          <div class="which">Style I — The Flagship</div>
+          <h5>Contemporary Stone</h5>
+          <p>The Avista Private Resort. Modern handcrafted masonry, clean horizontal lines, a generous pergola and a pool with a waterfall feature. Designed in 2018, photographed in detail. The villa to lead with in marketing — the architectural piece de résistance of the collection.</p>
         </div>
-        <div>
-          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone); font-size: 18px; margin-bottom: 8px;">Villa Two</div>
-          <div style="font-family: var(--ff-display); font-size: 22px; color: var(--cream); margin-bottom: 8px;">The Garden Residence</div>
-          <p style="opacity: 0.75; font-size: 13px;">Short name: <em>The Garden</em>. The word "residence" signals warmth and home. Avoid "Garden Villa" or "Villa 2".</p>
-        </div>
-        <div>
-          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone); font-size: 18px; margin-bottom: 8px;">Villa Three</div>
-          <div style="font-family: var(--ff-display); font-size: 22px; color: var(--cream); margin-bottom: 8px;">The Cypress House</div>
-          <p style="opacity: 0.75; font-size: 13px;">Short name: <em>The Cypress</em>. The name anchors the most photogenic element on the property. Avoid "Villa 3".</p>
+        <div class="style-block">
+          <div class="which">Style II — The Sisters</div>
+          <h5>Traditional Greek</h5>
+          <p>The Avista Villa and the Avista Superb Villa. Same architectural language — terracotta floors, wood shutters, double-height ceilings, bougainvillea, olive grove. The Villa has a private pool; the Superb Villa does not. Together they offer two price points and two sizes inside the same warm Greek aesthetic.</p>
         </div>
       </div>
-      <p style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(245, 239, 228, 0.15); font-family: var(--ff-display); font-style: italic; font-size: 16px; color: var(--stone);">Suggested names — open to your revision. The important thing is that each villa has a proper name (a noun), rather than a number or type.</p>
+    </div>
+
+    <!-- Naming rules -->
+    <div style="margin-top: 48px; padding: 48px; background: var(--bone); border: 1px solid var(--rule);">
+      <div class="eyebrow">Naming rules</div>
+      <h4 style="font-family: var(--ff-display); font-style: italic; font-size: 28px; margin: 8px 0 24px;">How to refer to each villa, consistently</h4>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 14px; line-height: 1.7;">
+        <div>
+          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone-deep); font-size: 18px; margin-bottom: 8px;">Villa One</div>
+          <div style="font-family: var(--ff-display); font-size: 22px; margin-bottom: 8px;">Avista Private Resort</div>
+          <p style="font-size: 13px; color: var(--charcoal);">Short name in running copy: <em>the Private Resort</em> or <em>the Resort</em>. Full name on first mention, in headlines, and on every booking confirmation. Matches the OTA name exactly.</p>
+        </div>
+        <div>
+          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone-deep); font-size: 18px; margin-bottom: 8px;">Villa Two</div>
+          <div style="font-family: var(--ff-display); font-size: 22px; margin-bottom: 8px;">Avista Villa</div>
+          <p style="font-size: 13px; color: var(--charcoal);">Short name: <em>the Villa</em>. Always with capital V to distinguish from the generic word. Matches the OTA name exactly.</p>
+        </div>
+        <div>
+          <div style="font-family: var(--ff-display); font-style: italic; color: var(--stone-deep); font-size: 18px; margin-bottom: 8px;">Villa Three</div>
+          <div style="font-family: var(--ff-display); font-size: 22px; margin-bottom: 8px;">Avista Superb Villa</div>
+          <p style="font-size: 13px; color: var(--charcoal);">Short name: <em>the Superb Villa</em>. The word "superb" is the OTA convention — keep it for SEO and brand consistency, even though the brand voice rarely uses superlatives elsewhere.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PALETTE ============ -->
-<section id="palette">
+<!-- SITHONIA GUIDE -->
+<section id="sithonia">
   <div class="container">
-    <div class="section-number">03 · Colour</div>
+    <div class="section-number">03 · The Sithonia Guide</div>
+    <h2 class="section-title">A guide for our <span class="italic">guests</span></h2>
+    <div class="section-lede">
+      Sithonia is the quieter middle leg of Halkidiki. Forested, unhurried, closer to how Greece felt twenty years ago than how it looks on Instagram today. The Sithonia Guide is a major part of the website — and one of our strongest SEO assets, because nobody else writes about this peninsula in detail.
+    </div>
+
+    <div class="sithonia-grid">
+      <div class="sithonia-text">
+        <h4>Why this section matters</h4>
+        <p>Most luxury villa websites have one paragraph about the area. Ours has a full guide — and that's deliberate. Two reasons.</p>
+        <p><strong>One:</strong> Guests booking a private villa in Greece are paying for *insider knowledge* as much as for the house itself. Anyone can rent a villa. We tell them which fishmonger to visit, which beach is empty on Tuesday, which baker opens at seven. That's the offer.</p>
+        <p><strong>Two:</strong> SEO. People searching "best beaches Sithonia," "things to do Halkidiki," "where to eat Vourvourou" should land on our pages. Each guide page becomes an entry point to the brand.</p>
+      </div>
+
+      <div class="sithonia-pages">
+        <div class="sithonia-page">
+          <div class="ico">01</div>
+          <div>
+            <h5>Beaches</h5>
+            <p>Our top eight, ranked honestly. Kavourotrypes, Goa, Karydi, Lagomandra, plus three our guests rarely find without us. Each with a one-paragraph note: when to go, what to bring, where to park, what the water is like.</p>
+          </div>
+        </div>
+        <div class="sithonia-page">
+          <div class="ico">02</div>
+          <div>
+            <h5>Tavernas &amp; restaurants</h5>
+            <p>Five tavernas worth the drive — from the seafood shack in Sárti to the family taverna up the hill in Neos Marmaras. With approximate prices, what to order, whether to book, and the one menu item that actually defines the place.</p>
+          </div>
+        </div>
+        <div class="sithonia-page">
+          <div class="ico">03</div>
+          <div>
+            <h5>Things to do</h5>
+            <p>Beyond the beach. A boat trip from Vourvourou around the small islands. A quiet hike to Mount Itamos. Mount Athos seen from a boat (Athos itself is monks-only, but the southern coast is a different country in itself).</p>
+          </div>
+        </div>
+        <div class="sithonia-page">
+          <div class="ico">04</div>
+          <div>
+            <h5>The local map</h5>
+            <p>A hand-drawn map of Sithonia we share with every guest. It marks the beaches, tavernas, baker, fishmonger, wine shop, pharmacy, and the back road that everyone misses. Designed to print, fold, and keep in the glove box.</p>
+          </div>
+        </div>
+        <div class="sithonia-page">
+          <div class="ico">05</div>
+          <div>
+            <h5>Practical Sithonia</h5>
+            <p>Airport transfers, supermarket runs, pharmacies, the nearest hospital, where to buy good wine. The unromantic but essential page that takes the friction out of a first visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; padding: 32px; background: var(--charcoal); color: var(--cream);">
+      <div class="eyebrow" style="color: var(--stone);">Voice for the guide pages</div>
+      <h4 style="font-family: var(--ff-display); font-style: italic; font-size: 24px; color: var(--cream); margin: 8px 0 16px;">Specific. Honest. With opinions.</h4>
+      <p style="font-size: 14px; opacity: 0.9; line-height: 1.8;">The Sithonia Guide is the place where the brand voice <em>can</em> have opinions. "We don't recommend Kavourotrypes after July 15 — too crowded, go to Lagomandra instead." "The taverna at the end of the road in Sárti looks like nothing from the outside; ignore the appearance, order the bream." This kind of specificity is what makes the guide useful and the brand believable. The Sithonia Guide reads like a friend texting you, not like a tourism board page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PALETTE -->
+<section id="palette" style="background: var(--cream);">
+  <div class="container">
+    <div class="section-number">04 · Colour</div>
     <h2 class="section-title">A palette pulled from the <span class="italic">property itself</span></h2>
     <div class="section-lede">
       Every colour in this system was lifted from a photograph of the three villas. Honey stone, cream linen, olive leaf, Aegean pool, terracotta roof, bougainvillea petal. Nothing invented.
@@ -1437,82 +563,19 @@
     <div class="palette-groups">
       <div class="palette-group">
         <h4>Primary — the villa itself</h4>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--stone);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Honey Stone</div>
-            <div class="swatch-role">Hero colour. The walls. Use generously.</div>
-            <div class="swatch-codes">#C7B299 · RGB 199 178 153</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--cream);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Linen Cream</div>
-            <div class="swatch-role">Background. Soft — a warmer alternative to white.</div>
-            <div class="swatch-codes">#F5EFE4 · RGB 245 239 228</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--charcoal);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Charcoal</div>
-            <div class="swatch-role">Primary text, logo lockup, depth moments.</div>
-            <div class="swatch-codes">#2B2A27 · RGB 43 42 39</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--stone-deep);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Stone Shadow</div>
-            <div class="swatch-role">Accent text, italics, subheads.</div>
-            <div class="swatch-codes">#8A7759 · RGB 138 119 89</div>
-          </div>
-        </div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--stone);"></div><div class="swatch-info"><div class="swatch-name">Honey Stone</div><div class="swatch-role">Hero colour. The walls of the Private Resort.</div><div class="swatch-codes">#C7B299 · RGB 199 178 153</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--cream);"></div><div class="swatch-info"><div class="swatch-name">Linen Cream</div><div class="swatch-role">Background. Soft — a warmer alternative to white.</div><div class="swatch-codes">#F5EFE4 · RGB 245 239 228</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--charcoal);"></div><div class="swatch-info"><div class="swatch-name">Charcoal</div><div class="swatch-role">Primary text, logo lockup, depth moments.</div><div class="swatch-codes">#2B2A27 · RGB 43 42 39</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--stone-deep);"></div><div class="swatch-info"><div class="swatch-name">Stone Shadow</div><div class="swatch-role">Accent text, italics, subheads.</div><div class="swatch-codes">#8A7759 · RGB 138 119 89</div></div></div>
       </div>
 
       <div class="palette-group">
         <h4>Secondary — the land around it</h4>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--olive);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Olive Leaf</div>
-            <div class="swatch-role">Botanical. Seasonal accents.</div>
-            <div class="swatch-codes">#6B7A4F · RGB 107 122 79</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--cypress);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Cypress</div>
-            <div class="swatch-role">The Cypress House signature. Depth.</div>
-            <div class="swatch-codes">#4A6B52 · RGB 74 107 82</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--aegean);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Aegean</div>
-            <div class="swatch-role">Pool, sea, a moment of freshness.</div>
-            <div class="swatch-codes">#6FB5B0 · RGB 111 181 176</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--terracotta);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Terracotta</div>
-            <div class="swatch-role">Roof tile, sunset. The Garden Residence.</div>
-            <div class="swatch-codes">#B5673E · RGB 181 103 62</div>
-          </div>
-        </div>
-        <div class="swatch-row">
-          <div class="swatch-chip" style="background: var(--bougainvillea);"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Bougainvillea</div>
-            <div class="swatch-role">The Garden's flowers. Rare. Editorial only.</div>
-            <div class="swatch-codes">#C44536 · RGB 196 69 54</div>
-          </div>
-        </div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--olive);"></div><div class="swatch-info"><div class="swatch-name">Olive Leaf</div><div class="swatch-role">Botanical. Seasonal accents.</div><div class="swatch-codes">#6B7A4F · RGB 107 122 79</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--cypress);"></div><div class="swatch-info"><div class="swatch-name">Cypress</div><div class="swatch-role">Garden depth. Rare.</div><div class="swatch-codes">#4A6B52 · RGB 74 107 82</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--aegean);"></div><div class="swatch-info"><div class="swatch-name">Aegean</div><div class="swatch-role">Pool, sea, a moment of freshness.</div><div class="swatch-codes">#6FB5B0 · RGB 111 181 176</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--terracotta);"></div><div class="swatch-info"><div class="swatch-name">Terracotta</div><div class="swatch-role">Roof tile, Avista Villa floor.</div><div class="swatch-codes">#B5673E · RGB 181 103 62</div></div></div>
+        <div class="swatch-row"><div class="swatch-chip" style="background: var(--bougainvillea);"></div><div class="swatch-info"><div class="swatch-name">Bougainvillea</div><div class="swatch-role">The Villa's terrace flowers. Rare. Editorial only.</div><div class="swatch-codes">#C44536 · RGB 196 69 54</div></div></div>
       </div>
     </div>
 
@@ -1532,10 +595,10 @@
   </div>
 </section>
 
-<!-- ============ TYPOGRAPHY ============ -->
-<section id="typography" style="background: var(--cream);">
+<!-- TYPOGRAPHY -->
+<section id="typography">
   <div class="container">
-    <div class="section-number">04 · Typography</div>
+    <div class="section-number">05 · Typography</div>
     <h2 class="section-title">Two voices, one <span class="italic">conversation</span></h2>
     <div class="section-lede">
       A refined serif with Mediterranean character, paired with a calm humanist sans. Both are free, both work beautifully at any size, and both reflect the property's mood of unhurried elegance.
@@ -1544,7 +607,7 @@
     <div class="type-showcase">
       <div class="type-card">
         <div class="type-label">Display · For feeling</div>
-        <div class="type-specimen display">Aa Αα</div>
+        <div class="type-specimen display">Aa</div>
         <div class="type-name">Cormorant Garamond</div>
         <p class="type-usage">Headlines, pull-quotes, section titles, and any moment where tone matters more than density. The italic is the brand's signature voice — use it for warmth, one phrase at a time.</p>
         <div class="type-weights">
@@ -1557,7 +620,7 @@
 
       <div class="type-card sans">
         <div class="type-label">Text · For clarity</div>
-        <div class="type-specimen sans">Aa Αα</div>
+        <div class="type-specimen sans">Aa</div>
         <div class="type-name">Inter</div>
         <p class="type-usage">Body copy, navigation, forms, booking flows, microcopy, UI elements. Always 300 or 400 weight. Uppercase with wide letter-spacing for eyebrows, labels, and navigation items.</p>
         <div class="type-weights">
@@ -1569,47 +632,23 @@
     </div>
 
     <div class="type-scale">
-      <div class="scale-row">
-        <span class="scale-label">Hero</span>
-        <span class="scale-size">72–96px</span>
-        <span class="scale-sample" style="font-family: var(--ff-display); font-size: 56px; line-height: 1; font-weight: 300;">A <em style="font-style: italic; color: var(--stone-deep);">quiet</em> house in the pines.</span>
-      </div>
-      <div class="scale-row">
-        <span class="scale-label">Section H2</span>
-        <span class="scale-size">48–64px</span>
-        <span class="scale-sample" style="font-family: var(--ff-display); font-size: 40px; line-height: 1.1; font-weight: 400;">Where the forest meets the Aegean</span>
-      </div>
-      <div class="scale-row">
-        <span class="scale-label">H3</span>
-        <span class="scale-size">28–32px</span>
-        <span class="scale-sample" style="font-family: var(--ff-display); font-style: italic; font-size: 26px;">Our local map of Sithonia</span>
-      </div>
-      <div class="scale-row">
-        <span class="scale-label">Lede</span>
-        <span class="scale-size">20–22px</span>
-        <span class="scale-sample" style="font-family: var(--ff-display); font-style: italic; font-size: 20px; color: var(--charcoal);">Drawn by someone who has lived here for twenty years.</span>
-      </div>
-      <div class="scale-row">
-        <span class="scale-label">Body</span>
-        <span class="scale-size">15–16px</span>
-        <span class="scale-sample" style="font-family: var(--ff-body); font-size: 15px; font-weight: 300; color: var(--charcoal);">Our villas are designed for long, slow mornings and longer, slower dinners.</span>
-      </div>
-      <div class="scale-row">
-        <span class="scale-label">Eyebrow</span>
-        <span class="scale-size">10–11px</span>
-        <span class="scale-sample" style="font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep);">Halkidiki · Greece · Est. 2018</span>
-      </div>
+      <div class="scale-row"><span class="scale-label">Hero</span><span class="scale-size">72–96px</span><span style="font-family: var(--ff-display); font-size: 56px; line-height: 1; font-weight: 300;">A <em style="font-style: italic; color: var(--stone-deep);">quiet</em> house in the pines.</span></div>
+      <div class="scale-row"><span class="scale-label">Section H2</span><span class="scale-size">48–64px</span><span style="font-family: var(--ff-display); font-size: 40px; line-height: 1.1;">Where the forest meets the Aegean</span></div>
+      <div class="scale-row"><span class="scale-label">H3</span><span class="scale-size">28–32px</span><span style="font-family: var(--ff-display); font-style: italic; font-size: 26px;">Our local map of Sithonia</span></div>
+      <div class="scale-row"><span class="scale-label">Lede</span><span class="scale-size">20–22px</span><span style="font-family: var(--ff-display); font-style: italic; font-size: 20px; color: var(--charcoal);">Drawn by the people who live here.</span></div>
+      <div class="scale-row"><span class="scale-label">Body</span><span class="scale-size">15–16px</span><span style="font-family: var(--ff-body); font-size: 15px; font-weight: 300; color: var(--charcoal);">Our villas are designed for long, slow mornings and longer, slower dinners.</span></div>
+      <div class="scale-row"><span class="scale-label">Eyebrow</span><span class="scale-size">10–11px</span><span style="font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone-deep);">Halkidiki · Greece</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ LOGO ============ -->
-<section id="logo">
+<!-- LOGO -->
+<section id="logo" style="background: var(--bone);">
   <div class="container">
-    <div class="section-number">05 · Logo</div>
+    <div class="section-number">06 · Logo</div>
     <h2 class="section-title">The mark, <span class="italic">kept as is</span></h2>
     <div class="section-lede">
-      The Avista wordmark — a handwritten script over the sub-label VILLAS — stays as it is. What follows is the system that surrounds it: where it sits, how it breathes, and what it sits against.
+      The Avista wordmark — a handwritten script over the sub-label VILLAS — stays as it is. What follows is the system that surrounds it.
     </div>
 
     <div class="logo-grid">
@@ -1620,48 +659,17 @@
         </div>
       </div>
       <div class="logo-rules">
-        <div class="rule-item">
-          <h5>Primary lockup</h5>
-          <p>The signature version: white script on charcoal. Use for covers, primary brand surfaces, email signatures, and formal applications.</p>
-        </div>
-        <div class="rule-item">
-          <h5>Clear space</h5>
-          <p>Maintain minimum clear space equal to the height of the capital 'A' on all four sides. Keep it uncrowded.</p>
-        </div>
-        <div class="rule-item">
-          <h5>Minimum size</h5>
-          <p>Digital: 80px wide for the full lockup. Print: 20mm. Below this size, consider a monogram or initial variant.</p>
-        </div>
-        <div class="rule-item">
-          <h5>File formats</h5>
-          <p>SVG for all digital surfaces. PDF or EPS for print. Avoid PNG for any application that may scale.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top: 60px;">
-      <div class="eyebrow">Approved variants</div>
-      <h3 style="font-size: 28px; margin-bottom: 24px;">Three surfaces, one mark</h3>
-      <div class="logo-variants">
-        <div class="variant-tile dark">
-          <div class="variant-logo">Avista</div>
-          <div class="variant-label">On Charcoal</div>
-        </div>
-        <div class="variant-tile light">
-          <div class="variant-logo">Avista</div>
-          <div class="variant-label">On Cream</div>
-        </div>
-        <div class="variant-tile stone">
-          <div class="variant-logo">Avista</div>
-          <div class="variant-label">On Stone</div>
-        </div>
+        <div class="rule-item"><h5>Primary lockup</h5><p>White script on charcoal. Use for covers, primary brand surfaces, email signatures, and formal applications.</p></div>
+        <div class="rule-item"><h5>Clear space</h5><p>Maintain minimum clear space equal to the height of the capital 'A' on all four sides.</p></div>
+        <div class="rule-item"><h5>Minimum size</h5><p>Digital: 80px wide for the full lockup. Print: 20mm. Below this size, use the monogram (see Vol. II).</p></div>
+        <div class="rule-item"><h5>File formats</h5><p>SVG for digital, PDF/EPS for print. Avoid PNG for any application that may scale.</p></div>
       </div>
     </div>
 
     <div style="margin-top: 60px;">
       <div class="eyebrow">Placement on photography</div>
       <h3 style="font-size: 28px; margin-bottom: 24px;">Let the image breathe</h3>
-      <div class="logo-display photo" style="aspect-ratio: 21/9;">
+      <div class="logo-display photo" style="aspect-ratio: 21/9; grid-column: unset; width: 100%;">
         <div class="logo-lockup" style="position: absolute; top: 32px; left: 32px; text-align: left;">
           <div class="script" style="font-size: 64px;">Avista</div>
           <div class="sub" style="font-size: 10px;">VILLAS</div>
@@ -1669,36 +677,13 @@
       </div>
       <p style="font-size: 13px; color: var(--charcoal); margin-top: 16px; max-width: 580px;">Always white when placed on photography. Always positioned in the calmest quadrant — sky, out-of-focus foliage, water. Keep clear of faces, doorways, and horizon lines.</p>
     </div>
-
-    <div style="margin-top: 80px;">
-      <div class="eyebrow">Rules to respect</div>
-      <h3 style="font-size: 28px; margin-bottom: 24px;">What to avoid</h3>
-      <div class="donts">
-        <div class="dont stretch">
-          <div class="dont-visual">Avista</div>
-          <div class="dont-label">Stretching or distortion</div>
-        </div>
-        <div class="dont rotate">
-          <div class="dont-visual">Avista</div>
-          <div class="dont-label">Rotation or tilting</div>
-        </div>
-        <div class="dont color">
-          <div class="dont-visual">Avista</div>
-          <div class="dont-label">Recolouring the mark</div>
-        </div>
-        <div class="dont bg">
-          <div class="dont-visual">Avista</div>
-          <div class="dont-label">Busy or bright backgrounds</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ============ PHOTOGRAPHY ============ -->
-<section id="photography" style="background: var(--cream);">
+<!-- PHOTOGRAPHY -->
+<section id="photography">
   <div class="container">
-    <div class="section-number">06 · Photography</div>
+    <div class="section-number">07 · Photography</div>
     <h2 class="section-title">The property is the <span class="italic">hero</span></h2>
     <div class="section-lede">
       Avista's photography should feel observed, almost unstaged. Natural light, a little shadow, room for imperfection. The frame should feel like a guest took it — with a very good eye.
@@ -1706,123 +691,68 @@
 
     <div class="photo-hero">
       <div class="p-1"><img src="images/resort-02.jpg" alt="Aerial view"></div>
-      <div class="p-2"><img src="images/garden-03.webp" alt="Terrace detail"></div>
-      <div class="p-3"><img src="images/cypress-01.webp" alt="Pool at dusk"></div>
-      <div class="p-4"><img src="images/garden-02.webp" alt="Interior"></div>
+      <div class="p-2"><img src="images/villa-terrace.webp" alt="Terrace detail"></div>
+      <div class="p-3"><img src="images/villa-pool-night.webp" alt="Pool at dusk"></div>
+      <div class="p-4"><img src="images/villa-living.webp" alt="Interior"></div>
     </div>
 
     <div class="photo-principles">
-      <div class="photo-principle">
-        <div class="num">01</div>
-        <h4>Golden light</h4>
-        <p>Shoot at the edges of the day — early morning and the hour before sunset. Midday light flattens stone and turns pool water into something clinical.</p>
-      </div>
-      <div class="photo-principle">
-        <div class="num">02</div>
-        <h4>Slight desaturation</h4>
-        <p>Pull saturation down 5–10% in edit. Greens should read olive, blues should read Aegean. This single edit is the biggest shift between stock photography and Avista photography.</p>
-      </div>
-      <div class="photo-principle">
-        <div class="num">03</div>
-        <h4>Leave room in frame</h4>
-        <p>Avoid centred compositions. Let sky, grass, stone, or pool occupy a third of the image. Crops should feel editorial, generous, unhurried.</p>
-      </div>
-      <div class="photo-principle">
-        <div class="num">04</div>
-        <h4>People as suggestion</h4>
-        <p>When families appear, show them from behind, as silhouettes, or as partial figures. Looking at the camera breaks the spell. Aspiration is stronger than pose.</p>
-      </div>
-      <div class="photo-principle">
-        <div class="num">05</div>
-        <h4>Details over wides</h4>
-        <p>Ten details outperform ten wide shots. Olive leaves backlit. Stone texture at close range. A breakfast table mid-meal. Instagram lives on details.</p>
-      </div>
-      <div class="photo-principle">
-        <div class="num">06</div>
-        <h4>Each villa, its own character</h4>
-        <p>The Private Resort — architectural and clean. The Garden Residence — warm and lived-in. The Cypress House — atmospheric and dusky. Let each villa photograph in its own register.</p>
-      </div>
+      <div class="photo-principle"><div class="num">01</div><h4>Golden light</h4><p>Shoot at the edges of the day — early morning and the hour before sunset. Midday light flattens stone and turns pool water into something clinical.</p></div>
+      <div class="photo-principle"><div class="num">02</div><h4>Slight desaturation</h4><p>Pull saturation down 5–10% in edit. Greens should read olive, blues should read Aegean. This single edit is the biggest shift between stock photography and Avista photography.</p></div>
+      <div class="photo-principle"><div class="num">03</div><h4>Leave room in frame</h4><p>Avoid centred compositions. Let sky, grass, stone, or pool occupy a third of the image. Crops should feel editorial, generous, unhurried.</p></div>
+      <div class="photo-principle"><div class="num">04</div><h4>People as suggestion</h4><p>When families appear, show them from behind, as silhouettes, or as partial figures. Looking at the camera breaks the spell. Aspiration is stronger than pose.</p></div>
+      <div class="photo-principle"><div class="num">05</div><h4>Details over wides</h4><p>Ten details outperform ten wide shots. Olive leaves backlit. Stone texture at close range. A breakfast table mid-meal. Instagram lives on details.</p></div>
+      <div class="photo-principle"><div class="num">06</div><h4>Each villa, its own register</h4><p>The Private Resort photographs architecturally — clean, statement, contemporary. The Villa and the Superb Villa photograph warmly — bougainvillea, terracotta, lived-in light. Don't mix the registers.</p></div>
     </div>
 
-    <div class="shot-list">
-      <h3>The seasonal shot list</h3>
-      <p style="font-size: 13px; opacity: 0.85; margin-bottom: 32px;">A rolling brief for any photographer. Cover all three columns each summer; rotate the specific shots annually for freshness.</p>
-      <div class="shot-grid">
-        <div class="shot-col">
-          <h5>The houses</h5>
-          <ul>
-            <li>Stone wall — raking morning light</li>
-            <li>Pergola shadow on the deck, 8am</li>
-            <li>Front door open, path beyond</li>
-            <li>Interior bedroom, natural light</li>
-            <li>Aerial golden-hour wide</li>
-            <li>Architectural vertical detail</li>
-          </ul>
-        </div>
-        <div class="shot-col">
-          <h5>The land</h5>
-          <ul>
-            <li>Olive tree close-up (leaf backlit)</li>
-            <li>Bougainvillea in bloom, soft focus</li>
-            <li>Pool water surface, no people</li>
-            <li>Cypress silhouettes at dusk</li>
-            <li>Wild herbs and rosemary detail</li>
-            <li>Path through grass, wet from dew</li>
-          </ul>
-        </div>
-        <div class="shot-col">
-          <h5>The life</h5>
-          <ul>
-            <li>Breakfast table mid-use</li>
-            <li>Child's hand picking a fig</li>
-            <li>Hat on an empty sunbed</li>
-            <li>Wet footprints on warm stone</li>
-            <li>Book face-down on the hammock</li>
-            <li>Wine poured, evening light</li>
-          </ul>
-        </div>
+    <!-- PHOTO REALITY TABLE -->
+    <div class="photo-reality">
+      <h4>The honest photo inventory · 2026</h4>
+      <p style="font-size: 13px; opacity: 0.85; margin-bottom: 24px;">Where the collection's photography stands today, and what's needed before the website launches and through next summer.</p>
+      <div class="pr-table">
+        <div class="pr-villa">Avista Private Resort</div>
+        <div class="pr-status">Complete</div>
+        <div class="pr-action">Full professional shoot — aerials, day &amp; night, every room. 50+ usable images. The flagship's photography is the brand's strongest visual asset.</div>
+
+        <div class="pr-villa">Avista Villa</div>
+        <div class="pr-status">Partial</div>
+        <div class="pr-action">Strong interior shots, the night pool, the bougainvillea terrace. Missing: golden-hour exterior wide, aerial, kitchen detail. Plan a half-day shoot in May 2026 to fill gaps.</div>
+
+        <div class="pr-villa">Avista Superb Villa</div>
+        <div class="pr-status">Light</div>
+        <div class="pr-action">A handful of older shots. Plan a full half-day shoot in May 2026 — same photographer, same edit treatment, parallel to the Villa's gap-fill shoot. Until then, treat the Superb Villa lightly on the website ("more photographs · summer 2026").</div>
+
+        <div class="pr-villa">Sithonia Guide content</div>
+        <div class="pr-status">To shoot</div>
+        <div class="pr-action">A summer-long shoot list: beaches at golden hour, taverna details, the back roads, the local map photographed flat-lay. Roll into the daily life of the houses.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ VOICE ============ -->
-<section id="voice">
+<!-- VOICE -->
+<section id="voice" style="background: var(--cream);">
   <div class="container">
-    <div class="section-number">07 · Voice</div>
+    <div class="section-number">08 · Voice</div>
     <h2 class="section-title">How Avista <span class="italic">speaks</span></h2>
     <div class="section-lede">
-      Fewer words, and the right ones. The Avista voice reads like the person handing a guest the key on arrival — warm, specific, local, unhurried. Written in English, with the occasional Greek word where it earns its place.
+      Fewer words, and the right ones. The Avista voice reads like the people who built and run the villas — warm, specific, local, unhurried.
     </div>
 
     <div class="voice-intro">
       <div class="voice-persona">
         <div class="eyebrow">The Avista voice</div>
-        <h4>A host with a key in hand.</h4>
-        <p>Picture a family friend who grew up in Halkidiki. Warm, but without fuss. Specific — they know names of beaches, bakers, fishermen. Quietly confident. They use "we" and "our garden" because it is theirs. They'd rather tell a guest the name of the best fishmonger than list amenities. They write the way they'd talk across a kitchen table: in shorter sentences than expected, occasionally in Greek when Greek is the right word.</p>
+        <h4>"We" — the people behind Avista.</h4>
+        <p>The voice is collective, not individual. We use "we" and "our garden" because the houses belong to a small team that grew up in Halkidiki and built them. Warm, but without fuss. Specific — we know names of beaches, bakers, fishermen. Quietly confident.</p>
+        <p>We'd rather tell a guest the name of the best fishmonger than list amenities. We write the way we'd talk across a kitchen table — in shorter sentences than expected.</p>
       </div>
       <div class="voice-attributes">
         <div class="eyebrow">Five attributes of the voice</div>
-        <div class="attr-row">
-          <span class="attr-label">One</span>
-          <span class="attr-word">Warm</span>
-        </div>
-        <div class="attr-row">
-          <span class="attr-label">Two</span>
-          <span class="attr-word">Specific</span>
-        </div>
-        <div class="attr-row">
-          <span class="attr-label">Three</span>
-          <span class="attr-word">Quietly confident</span>
-        </div>
-        <div class="attr-row">
-          <span class="attr-label">Four</span>
-          <span class="attr-word">Calm</span>
-        </div>
-        <div class="attr-row">
-          <span class="attr-label">Five</span>
-          <span class="attr-word">Locally rooted</span>
-        </div>
+        <div class="attr-row"><span class="attr-label">One</span><span class="attr-word">Warm</span></div>
+        <div class="attr-row"><span class="attr-label">Two</span><span class="attr-word">Specific</span></div>
+        <div class="attr-row"><span class="attr-label">Three</span><span class="attr-word">Quietly confident</span></div>
+        <div class="attr-row"><span class="attr-label">Four</span><span class="attr-word">Calm</span></div>
+        <div class="attr-row"><span class="attr-label">Five</span><span class="attr-word">Locally rooted</span></div>
       </div>
     </div>
 
@@ -1830,13 +760,13 @@
       <div class="word-col use">
         <h4>Words we use</h4>
         <ul>
-          <li>quiet</li><li>slow mornings</li><li>the house</li><li>our garden</li><li>unhurried</li><li>cicadas</li><li>pine</li><li>olive leaf</li><li>stone</li><li>Sithonia</li><li>a week of nothing</li><li>private</li><li>hand-drawn map</li><li>family-run</li><li>local</li><li>breathing room</li><li>shutters open</li><li>the Aegean</li>
+          <li>quiet</li><li>slow mornings</li><li>the house</li><li>our garden</li><li>we</li><li>our</li><li>unhurried</li><li>cicadas</li><li>pine</li><li>olive leaf</li><li>stone</li><li>Sithonia</li><li>a week of nothing</li><li>private</li><li>hand-drawn map</li><li>local</li><li>breathing room</li><li>shutters open</li><li>the Aegean</li>
         </ul>
       </div>
       <div class="word-col avoid">
         <h4>Words we avoid</h4>
         <ul>
-          <li>luxury (overused — let photos say it)</li><li>amenities</li><li>package</li><li>deal</li><li>booking now</li><li>amazing</li><li>stunning</li><li>unforgettable</li><li>paradise</li><li>dream</li><li>resort-style</li><li>property</li><li>unit</li><li>guests (in copy — use "you")</li><li>top-rated</li><li>world-class</li>
+          <li>luxury (let photos say it)</li><li>amenities</li><li>package</li><li>deal</li><li>booking now</li><li>amazing</li><li>stunning</li><li>unforgettable</li><li>paradise</li><li>dream</li><li>resort-style</li><li>property</li><li>unit</li><li>guests (in copy — use "you")</li><li>top-rated</li><li>world-class</li><li>founder (we removed this)</li>
         </ul>
       </div>
     </div>
@@ -1847,196 +777,48 @@
     <div class="voice-samples">
       <div class="sample">
         <div class="sample-type">Website · Hero headline</div>
-        <div class="sample-body">Three quiet houses in the pines of Sithonia, kept for families who want Greece on their own terms.</div>
+        <div class="sample-body">Three quiet houses in the pines of Sithonia, kept by us for families who want Greece on their own terms.</div>
       </div>
 
       <div class="sample">
         <div class="sample-type">About section · Opening paragraph</div>
-        <div class="sample-body">Avista is a small family collection. Three private homes — each with its own character — set in the pines of Halkidiki, a short drive from the clearest water in the Aegean. We look after them ourselves, because that's how they stay this way.</div>
+        <div class="sample-body">Avista is a small collection. Three private homes — one contemporary stone flagship, two warmer sister villas — set in the pines of Halkidiki, a short drive from the clearest water in the Aegean. We look after them ourselves, because that's how they stay this way.</div>
       </div>
 
       <div class="sample">
-        <div class="sample-type">The Private Resort · Description</div>
+        <div class="sample-type">Avista Private Resort · Description</div>
         <div class="sample-body small">Set in its own clearing of 2,500 square metres. Stone walls, a long pergola, a pool with a quiet waterfall. Designed for larger families who want space, polish, and a view toward the distant Aegean. The most architectural house in the collection.</div>
       </div>
 
       <div class="sample">
-        <div class="sample-type">The Garden Residence · Description</div>
-        <div class="sample-body small">Our most character-filled house — double-height ceilings, terracotta floors, wicker and dark wood. In July the bougainvillea spills across the terrace. The one that feels like visiting Greek family you didn't know you had.</div>
+        <div class="sample-type">Avista Villa · Description</div>
+        <div class="sample-body small">Our most character-filled house — double-height ceilings, terracotta floors, wicker and dark wood. A private pool wrapped in olive trees, lit beautifully for the evenings. The villa that feels like visiting Greek family you didn't know you had.</div>
       </div>
 
       <div class="sample">
-        <div class="sample-type">The Cypress House · Description</div>
-        <div class="sample-body small">Tall cypresses, an olive grove, a sleek pool lit for long evenings. The design-led villa in the collection — made for guests who notice how a wall meets the ground, and who stay up for the hour after sunset.</div>
+        <div class="sample-type">Avista Superb Villa · Description</div>
+        <div class="sample-body small">The quieter sister to the Avista Villa — same warm Greek architecture, same garden quality, without the private pool. A shorter walk to the beach instead. Made for couples and smaller families who don't need a pool to make the week feel like Greece.</div>
       </div>
 
       <div class="sample">
-        <div class="sample-type">Instagram caption</div>
-        <div class="sample-body small">Morning number one. The cicadas, the coffee, and a decision about which beach — made slowly, on purpose. 🌿</div>
+        <div class="sample-type">Sithonia Guide · Beach entry</div>
+        <div class="sample-body small">Kavourotrypes is the famous one — and it earns the reputation, but only before mid-July. Go early in the morning, park at the top, and bring water. After the high season, swap it for Karydi: same colour water, half the people, and a small kantina that serves a perfect Greek salad.</div>
       </div>
 
       <div class="sample">
         <div class="sample-type">Booking confirmation email</div>
-        <div class="sample-body small">You're booked, and we're glad. Two days before you arrive, we'll send through the keys, directions, and the map of places we love — the one we draw for every guest. Until then, καλώς ορίσατε.</div>
+        <div class="sample-body small">You're booked, and we're glad. Two days before you arrive, we'll send through the keys, directions, and the map of places we love — the one we draw for every guest. Until then, welcome.</div>
       </div>
 
       <div class="sample">
         <div class="sample-type">Welcome book · Opening line</div>
-        <div class="sample-body">Make yourself at home. This really was our grandmother's stove, and we'd like you to use it.</div>
+        <div class="sample-body">Make yourself at home. The kitchen is yours, the garden is yours, and the week ahead is yours to do as little with as you'd like.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ INSTAGRAM ============ -->
-<section id="instagram" style="background: var(--cream);">
-  <div class="container">
-    <div class="section-number">08 · Instagram</div>
-    <h2 class="section-title">The grid, as a <span class="italic">rhythm</span></h2>
-    <div class="section-lede">
-      Instagram is where most guests will meet Avista first. The grid should read like a calm magazine spread: a steady rhythm of stone, green, water, interior, and a quiet typographic pause every nine posts.
-    </div>
-
-    <div class="ig-grid-wrap">
-      <div class="ig-grid">
-        <div class="ig-tile"><img src="images/resort-02.jpg" alt=""></div>
-        <div class="ig-tile text stone"><div class="ig-tile-quote">"Where the pines end and the sea begins."</div></div>
-        <div class="ig-tile"><img src="images/garden-02.webp" alt=""></div>
-        <div class="ig-tile"><img src="images/cypress-01.webp" alt=""></div>
-        <div class="ig-tile"><img src="images/resort-04.jpg" alt=""></div>
-        <div class="ig-tile text olive"><div class="ig-tile-quote">Three houses.<br>One quiet Greece.</div></div>
-        <div class="ig-tile"><img src="images/garden-03.webp" alt=""></div>
-        <div class="ig-tile text charcoal"><div class="ig-tile-quote">A slow week<br>in stone &amp; pine.</div></div>
-        <div class="ig-tile"><img src="images/resort-01.jpg" alt=""></div>
-      </div>
-
-      <div class="ig-explain">
-        <div class="eyebrow">Grid system</div>
-        <h4>A 9-tile rhythm</h4>
-        <p style="font-size: 14px; color: var(--charcoal); margin-bottom: 32px;">Every nine posts should contain the following mix. Plan in blocks of three, never one post at a time — that's how the grid stays cohesive.</p>
-
-        <div class="ig-system">
-          <span class="num">6</span>
-          <div>
-            <h5>Photography tiles</h5>
-            <p>A mix across all three villas — exterior, interior, landscape, lifestyle detail. Edit with one consistent preset. Slight desaturation, warm highlights.</p>
-          </div>
-        </div>
-        <div class="ig-system">
-          <span class="num">2</span>
-          <div>
-            <h5>Quiet typographic tiles</h5>
-            <p>Serif quote on cream, stone, or olive. One phrase per tile. Breathing room around the words. The Avista voice in pure form.</p>
-          </div>
-        </div>
-        <div class="ig-system">
-          <span class="num">1</span>
-          <div>
-            <h5>A charcoal pause</h5>
-            <p>Once per rhythm, a dark tile — a short phrase in cream type. This is where the grid resets and the eye exhales.</p>
-          </div>
-        </div>
-
-        <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule);">
-          <div class="eyebrow">To avoid</div>
-          <p style="font-size: 13px; color: var(--charcoal); margin-top: 8px;">Carousel "quote graphics" with stock fonts. Oversaturated sunset drone shots. Lens flares and HDR. Promotional "20% off" tiles. Anything that feels built by a hotel marketing team rather than made by the family who runs the place.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ APPLICATIONS ============ -->
-<section id="applications">
-  <div class="container">
-    <div class="section-number">09 · Applications</div>
-    <h2 class="section-title">The brand, <span class="italic">in the world</span></h2>
-    <div class="section-lede">
-      How the system holds up across a homepage, a booking flow, and a single Instagram post. Everything established above should make these feel inevitable, rather than decorated.
-    </div>
-
-    <div class="eyebrow">Website · Homepage hero</div>
-    <h3 style="font-size: 28px; margin: 8px 0 24px;">avistavillas.com</h3>
-    <div class="app-mockup">
-      <div class="browser-bar">
-        <div class="browser-dot"></div>
-        <div class="browser-dot"></div>
-        <div class="browser-dot"></div>
-        <div class="browser-url">avistavillas.com</div>
-      </div>
-      <div class="browser-frame">
-        <div style="position: relative;">
-          <img class="hero-img" src="images/resort-02.jpg" alt="">
-          <div class="hero-overlay">
-            <div class="hero-nav">
-              <div class="nav-logo">Avista</div>
-              <div class="nav-items">
-                <span>The Collection</span>
-                <span>Sithonia</span>
-                <span>Journal</span>
-                <span>Reserve</span>
-              </div>
-            </div>
-            <div class="hero-content">
-              <div class="hero-eyebrow">Halkidiki · Greece</div>
-              <div class="hero-headline">Three <em>quiet</em> houses<br>in the pines.</div>
-              <div class="hero-cta"><span>Discover the collection</span> →</div>
-            </div>
-          </div>
-        </div>
-        <div class="browser-sub">
-          <div class="browser-sub-grid">
-            <div class="feature">
-              <div class="feature-label">Villa One</div>
-              <h6>The Private Resort</h6>
-              <p>Architectural, set in a private clearing. For larger families seeking complete seclusion.</p>
-            </div>
-            <div class="feature">
-              <div class="feature-label">Villa Two</div>
-              <h6>The Garden Residence</h6>
-              <p>Warm, traditional, full of character. For families who want a lived-in Greek home.</p>
-            </div>
-            <div class="feature">
-              <div class="feature-label">Villa Three</div>
-              <h6>The Cypress House</h6>
-              <p>Design-led, romantic, atmospheric. For guests who stay up for the evening light.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="eyebrow" style="margin-top: 64px;">Booking confirmation · the tone after a reservation</div>
-    <h3 style="font-size: 28px; margin: 8px 0 24px;">After the reservation</h3>
-    <div style="background: var(--cream); padding: 64px; max-width: 680px; margin: 0 auto;">
-      <div style="font-family: var(--ff-script); font-size: 48px; color: var(--charcoal); text-align: center;">Avista</div>
-      <div style="font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.6em; text-align: center; color: var(--charcoal); margin-top: 4px;">VILLAS</div>
-      <div style="width: 40px; height: 1px; background: var(--stone-deep); margin: 32px auto;"></div>
-      <div style="font-family: var(--ff-display); font-style: italic; font-size: 24px; color: var(--ink); text-align: center; line-height: 1.4;">You're booked — and we're glad.</div>
-      <p style="font-size: 15px; color: var(--charcoal); line-height: 1.8; margin-top: 32px;">Dear Sophie,<br><br>Thank you for choosing to spend your week with us at <strong>The Garden Residence</strong>. Your dates — <strong>18–25 July 2026</strong> — are now yours.</p>
-      <p style="font-size: 15px; color: var(--charcoal); line-height: 1.8; margin-top: 16px;">Two days before you arrive, we'll send over the full welcome note: keys, directions, and the hand-drawn map of Sithonia we share with every guest — the beaches we love, the tavernas worth the drive, and the baker in Sarti who opens at seven.</p>
-      <p style="font-family: var(--ff-display); font-style: italic; font-size: 18px; color: var(--stone-deep); margin-top: 32px; text-align: center;">Until then, καλώς ορίσατε.</p>
-    </div>
-
-    <div class="eyebrow" style="margin-top: 64px;">Instagram · a single post</div>
-    <h3 style="font-size: 28px; margin: 8px 0 24px;">A post in full</h3>
-    <div style="max-width: 480px; margin: 0 auto; background: white; border: 1px solid var(--rule); padding: 0;">
-      <div style="padding: 12px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--rule);">
-        <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--charcoal); display: flex; align-items: center; justify-content: center; color: var(--cream); font-family: var(--ff-script); font-size: 18px;">A</div>
-        <div style="font-size: 13px; font-weight: 500; color: var(--ink);">avistavillas</div>
-      </div>
-      <img src="images/cypress-01.webp" style="width: 100%; display: block; filter: saturate(0.92);" alt="">
-      <div style="padding: 16px;">
-        <div style="font-size: 14px; color: var(--ink); line-height: 1.6;">
-          <strong style="font-weight: 500;">avistavillas</strong> The hour after sunset at The Cypress House. When the cicadas quiet down and the lanterns come on. Our favourite time of the day, every day.
-        </div>
-        <div style="font-size: 10px; color: var(--whisper); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 12px;">#Sithonia #Halkidiki #AvistaCollection · 2 hours ago</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CLOSE ============ -->
+<!-- CLOSE -->
 <div class="close">
   <div class="container">
     <div class="close-mark">Avista</div>
@@ -2045,7 +827,7 @@
       "A brand is the quiet thing<br>a guest takes home with them."
     </div>
     <div class="close-meta">
-      Brand &amp; Style Guide · Vol. 01 · 2026 · Sithonia
+      Brand &amp; Style Guide · Vol. 01 · 2026 · v2 · Sithonia
     </div>
   </div>
 </div>

@@ -1,0 +1,336 @@
+---
+import "../../styles/global.css";
+import Header from "../../components/Header.astro";
+
+export const resort01 = "/images/avista/resort-01.jpg";
+export const resort02 = "/images/avista/resort-02.jpg";
+export const resort03 = "/images/avista/resort-03.jpg";
+export const resort04 = "/images/avista/resort-04.jpg";
+export const garden01 = "/images/avista/garden-01.webp";
+export const garden02 = "/images/avista/garden-02.webp";
+export const garden03 = "/images/avista/garden-03.webp";
+export const cypress01 = "/images/avista/cypress-01.webp";
+
+export const villas = {
+  "avista-private-resort": {
+    title: "Avista Private Resort",
+    eyebrow: "The flagship · Contemporary stone",
+    subtitle: "Architectural, secluded, the statement house.",
+    hero: resort01,
+    gallery: [resort01, resort02, resort03, resort04, garden03, cypress01],
+    description: [
+      "Set in its own clearing of 2,500 square metres, framed by pines and looking toward the distant Aegean. Stone walls, a long pergola, a pool with a quiet waterfall — handcrafted masonry with clean contemporary lines inside.",
+      "The Private Resort is made for larger families and groups who want complete seclusion with the polish of a private suite. Mornings move slowly here. Evenings begin late. The house gives everyone room to be together and room to disappear for a while.",
+    ],
+    facts: [
+      { label: "Style", value: "Contemporary stone" },
+      { label: "Best for", value: "Larger families, groups" },
+      { label: "Grounds", value: "2,500 sqm" },
+      { label: "Pool", value: "Private, with waterfall" },
+    ],
+  },
+  "avista-villa": {
+    title: "Avista Villa",
+    eyebrow: "The sister · Traditional Greek · With pool",
+    subtitle: "Warm, traditional, full of character.",
+    hero: garden03,
+    gallery: [garden03, garden01, garden02, resort03, cypress01, resort04],
+    description: [
+      "A classic Greek family home, reimagined. Double-height ceilings with wicker and dark wood, terracotta floors that hold the cool of the morning, and a private pool wrapped in olive trees and lit beautifully for the evenings.",
+      "The Villa feels like visiting Greek family you didn't know you had — warm, lived-in, and quietly cared for. It is the house for slow breakfasts outside, barefoot afternoons, and children moving between garden and terrace while the cicadas keep time.",
+    ],
+    facts: [
+      { label: "Style", value: "Traditional Greek" },
+      { label: "Best for", value: "Families, couples" },
+      { label: "Garden", value: "Olive grove" },
+      { label: "Pool", value: "Private" },
+    ],
+  },
+  "avista-superb-villa": {
+    title: "Avista Superb Villa",
+    eyebrow: "The sister · Traditional Greek · No pool",
+    subtitle: "The quieter sister.",
+    hero: cypress01,
+    gallery: [cypress01, garden02, garden01, garden03, resort03, resort04],
+    description: [
+      "Sharing the same warm Greek architecture as the Avista Villa — terracotta tile, white-washed walls, a bougainvillea-covered terrace and the same garden quality. Without a private pool, the week is shaped a little differently.",
+      "Made for couples and smaller families who would rather walk to the beach, or who do not need a pool to make the week feel like Greece. Quiet without feeling empty, simple without feeling spare.",
+    ],
+    facts: [
+      { label: "Style", value: "Traditional Greek" },
+      { label: "Best for", value: "Couples, smaller families" },
+      { label: "Garden", value: "Shared" },
+      { label: "Beach", value: "Walking distance" },
+    ],
+  },
+};
+
+export function getStaticPaths() {
+  return Object.entries(villas).map(([slug, villa]) => ({
+    params: { slug },
+    props: { villa },
+  }));
+}
+
+const { villa } = Astro.props;
+
+const amenities = [
+  "Private garden",
+  "Outdoor dining",
+  "Shaded pergola",
+  "Air conditioning",
+  "Fully equipped kitchen",
+  "Family-ready spaces",
+  "A small team you can reach",
+  "Hand-drawn map of Sithonia",
+  "Private parking",
+];
+
+const faqs = [
+  {
+    question: "How many people can the house sleep?",
+    answer:
+      "Each villa is sized differently. Tell us how many of you are travelling and we will guide you to the house that fits the group most comfortably.",
+  },
+  {
+    question: "What time is arrival and departure?",
+    answer:
+      "Standard arrival is from 4pm and departure by 11am. We are flexible when the calendar allows — just ask, and we will do what we can.",
+  },
+  {
+    question: "Can you help with local beaches and tavernas?",
+    answer:
+      "Yes. Every guest receives our hand-drawn map of Sithonia, and we are always glad to recommend a beach for a Tuesday or the taverna in Sárti that looks like nothing from the outside.",
+  },
+  {
+    question: "Is the house private?",
+    answer:
+      "Each villa sits in its own grounds, set apart with tree-lines and breathing room. The view, the garden and the week are yours.",
+  },
+  {
+    question: "Is parking available?",
+    answer:
+      "Private parking is included at every villa. Sithonia is best explored by car, so the space is always there when you need it.",
+  },
+  {
+    question: "How do we ask about dates?",
+    answer:
+      "Write to us with the dates you are hoping for. We answer personally, usually the same day and always within twenty-four hours. No automated quotes, no booking widgets — just a conversation.",
+  },
+];
+
+const container = "mx-auto w-full max-w-[1600px]";
+const label = "font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone";
+const heading = "font-display font-light leading-[0.9] text-cream";
+const headingDark = "font-display font-light leading-[0.95] text-ink";
+const button =
+  "inline-flex items-center justify-center border border-stone/55 px-7 py-4 font-display text-[18px] font-normal italic leading-none text-cream transition hover:bg-stone hover:border-stone hover:text-charcoal";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content={`${villa.title} at Avista Villas, Sithonia, Halkidiki. A private family villa for a quiet week in Greece.`}
+    />
+    <meta name="theme-color" content="#2B2A27" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{villa.title} - Avista Villas</title>
+  </head>
+  <body class="bg-charcoal text-cream">
+    <Header />
+
+    <main class="overflow-hidden">
+      <section class="relative min-h-[88vh] bg-charcoal px-3 pt-28 tablet:px-5 tablet:pt-32">
+        <img
+          src={villa.hero}
+          alt={`${villa.title} atmosphere`}
+          class="absolute inset-0 h-full w-full object-cover filter-[saturate(0.92)_contrast(1.02)]"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="noise-layer"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/65 via-charcoal/40 to-ink/80"></div>
+        <div class="cover-glow"></div>
+
+        <div class={`${container} relative flex min-h-[72vh] flex-col justify-end pb-16 text-center tablet:items-center tablet:pb-24`}>
+          <p class={label}>{villa.eyebrow}</p>
+          <h1 class={`${heading} mt-6 max-w-[1100px]`} style="font-size: clamp(4rem, 10vw, 9rem);">
+            {villa.title}
+          </h1>
+          <p class="mt-6 max-w-[620px] font-display italic text-[24px] font-light leading-[1.25] text-cream/80 tablet:text-[34px]">
+            {villa.subtitle}
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-bone px-3 py-16 text-charcoal tablet:px-5 tablet:py-20">
+        <div class={`${container} grid items-center gap-10 tablet:grid-cols-[1fr_auto] tablet:gap-16`}>
+          <div>
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">{villa.eyebrow}</p>
+            <h2 class={`${headingDark} mt-5 max-w-[760px]`} style="font-size: clamp(2.5rem, 5vw, 4rem);">
+              {villa.title}
+            </h2>
+            <p class="mt-4 font-display italic text-[22px] font-light leading-[1.3] text-stone-deep tablet:text-[28px]">
+              {villa.subtitle}
+            </p>
+          </div>
+          <div class="flex flex-col items-start gap-3 border-t border-charcoal/15 pt-8 tablet:items-end tablet:border-l tablet:border-t-0 tablet:pl-12 tablet:pt-0">
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">By enquiry</p>
+            <p class="font-display text-[44px] font-light leading-none text-ink tablet:text-[56px]">
+              <em class="italic text-stone-deep">Upon request</em>
+            </p>
+            <p class="font-sans text-[11px] uppercase tracking-[0.3em] text-stone-deep">For one quiet week</p>
+            <a href="/#contact" class="mt-4 inline-flex items-center justify-center bg-charcoal px-7 py-4 font-display text-[18px] font-normal italic leading-none text-cream transition hover:bg-stone hover:text-charcoal">
+              Ask about dates
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-bone px-3 py-20 text-charcoal tablet:px-5 tablet:py-28">
+        <div class={`${container} grid gap-12 tablet:grid-cols-[0.4fr_1fr] tablet:gap-16`}>
+          <div>
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">/ Description</p>
+          </div>
+          <div>
+            <h2 class={`${headingDark} max-w-[820px]`} style="font-size: clamp(2.5rem, 4.5vw, 3.5rem);">
+              A quiet week, <em class="font-light italic text-stone-deep">beautifully looked after.</em>
+            </h2>
+            <div class="mt-10 grid max-w-[820px] gap-7 font-display text-[20px] font-light leading-[1.55] text-charcoal/80 tablet:text-[22px]">
+              {villa.description.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+            <dl class="mt-12 grid gap-x-10 gap-y-6 border-t border-charcoal/15 pt-10 tablet:grid-cols-4">
+              {villa.facts.map((fact) => (
+                <div>
+                  <dt class="font-sans text-[10px] uppercase tracking-[0.25em] text-stone-deep">{fact.label}</dt>
+                  <dd class="mt-2 font-display italic text-[20px] font-light text-ink">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-cream px-3 py-20 text-charcoal tablet:px-5 tablet:py-28">
+        <div class={`${container} grid gap-12 tablet:grid-cols-[0.4fr_1fr] tablet:gap-16`}>
+          <div>
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">/ Amenities</p>
+          </div>
+          <div>
+            <h2 class={`${headingDark} max-w-[760px]`} style="font-size: clamp(2.25rem, 4vw, 3.25rem);">
+              What the house <em class="italic text-stone-deep">keeps ready.</em>
+            </h2>
+            <ul class="mt-10 grid gap-x-10 gap-y-3 tablet:grid-cols-2">
+              {amenities.map((amenity) => (
+                <li class="border-t border-charcoal/15 py-4 font-display italic text-[20px] font-light text-charcoal tablet:text-[22px]">
+                  {amenity}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-ink px-3 py-20 tablet:px-5 tablet:py-28">
+        <div class={container}>
+          <div class="grid gap-8 tablet:grid-cols-[0.4fr_1fr] tablet:gap-16">
+            <div>
+              <p class={label}>/ Gallery</p>
+            </div>
+            <h2 class={`${heading} max-w-[760px]`} style="font-size: clamp(2.25rem, 4vw, 3.25rem);">
+              The house, <em class="italic text-stone">in frame.</em>
+            </h2>
+          </div>
+          <div class="mt-12 grid grid-cols-2 gap-3 tablet:mt-16 tablet:grid-cols-4 tablet:gap-5">
+            {villa.gallery.map((image, index) => (
+              <figure class={`overflow-hidden ${index === 0 || index === 5 ? "tablet:col-span-2" : ""}`}>
+                <div class={index === 0 || index === 5 ? "aspect-[4/3]" : "aspect-[3/4]"}>
+                  <img
+                    src={image}
+                    alt={`${villa.title} gallery image`}
+                    class="h-full w-full object-cover filter-[saturate(0.92)_contrast(1.02)]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-bone px-3 py-20 text-charcoal tablet:px-5 tablet:py-28">
+        <div class={`${container} grid gap-12 tablet:grid-cols-[0.4fr_1fr] tablet:gap-16`}>
+          <div>
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">/ Guest note</p>
+          </div>
+          <figure>
+            <blockquote class="font-display italic text-[32px] font-light leading-[1.2] text-ink tablet:text-[48px]">
+              &ldquo;The kind of holiday we forgot existed. The garden, the cicadas, and a phone number that always answered when we needed something. We&rsquo;re already planning to come back.&rdquo;
+            </blockquote>
+            <figcaption class="mt-8 font-sans text-[11px] uppercase tracking-[0.3em] text-stone-deep">
+              Sophie · July 2025
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="bg-cream px-3 py-20 text-charcoal tablet:px-5 tablet:py-28">
+        <div class={`${container} grid gap-12 tablet:grid-cols-[0.4fr_1fr] tablet:gap-16`}>
+          <div>
+            <p class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep">/ FAQ</p>
+            <h2 class={`${headingDark} mt-5 max-w-[420px]`} style="font-size: clamp(2.25rem, 4vw, 3.25rem);">
+              Frequently asked <em class="italic text-stone-deep">questions.</em>
+            </h2>
+            <p class="mt-6 max-w-[420px] font-display italic text-[18px] font-light leading-[1.5] text-charcoal/70">
+              Everything you need to plan a quiet week with us. Anything missing — write to us, and we will answer the same day.
+            </p>
+          </div>
+          <div>
+            {faqs.map((faq) => (
+              <details class="border-t border-charcoal/20 py-6 last:border-b">
+                <summary class="cursor-pointer font-display text-[24px] font-light leading-[1.2] text-ink tablet:text-[28px]">
+                  {faq.question}
+                </summary>
+                <p class="mt-4 max-w-[720px] font-display italic text-[18px] font-light leading-[1.5] text-charcoal/70 tablet:text-[20px]">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden bg-charcoal px-3 pt-24 tablet:px-5 tablet:pt-32">
+        <img
+          src={villa.hero}
+          alt={`${villa.title} final view`}
+          class="absolute inset-0 h-full w-full object-cover filter-[saturate(0.92)_contrast(1.02)]"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="noise-layer"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-charcoal/65 via-charcoal/45 to-ink/75"></div>
+        <div class={`${container} relative flex min-h-[520px] flex-col items-center justify-center text-center`}>
+          <p class={label}>Sithonia · Halkidiki · Greece</p>
+          <h2 class={`${heading} mt-6 max-w-[920px] script-mark`} style="font-size: clamp(4.5rem, 11vw, 8.5rem);">
+            Plan a quiet week.
+          </h2>
+          <div class="mt-10 flex flex-wrap justify-center gap-3">
+            <a href="/#contact" class="inline-flex items-center justify-center bg-stone px-7 py-4 font-display text-[18px] font-normal italic leading-none text-charcoal transition hover:bg-cream">
+              Reach out
+            </a>
+            <a href="/" class={button}>Back home</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../scripts/gsap.js"></script>
+  </body>
+</html>

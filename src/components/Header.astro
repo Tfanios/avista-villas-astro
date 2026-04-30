@@ -1,0 +1,221 @@
+---
+type Props = {
+  homeHref?: string;
+  contactHref?: string;
+};
+
+const { homeHref = "/", contactHref = "/#contact" } = Astro.props;
+
+const navLinks = [
+  { number: "01", label: "Home", href: "/" },
+  { number: "02", label: "About", href: "/#about" },
+  { number: "03", label: "The Collection", href: "/#stay" },
+  { number: "04", label: "Why Sithonia", href: "/#sithonia" },
+  { number: "05", label: "Journal", href: "/#stories" },
+  { number: "06", label: "Reach out", href: "/#contact" },
+];
+
+const villaLinks = [
+  { name: "Avista Private Resort", href: "/villas/avista-private-resort" },
+  { name: "Avista Villa", href: "/villas/avista-villa" },
+  { name: "Avista Superb Villa", href: "/villas/avista-superb-villa" },
+];
+
+const menuImage = "/images/avista/cypress-01.webp";
+---
+
+<header
+  class="site-header fixed inset-x-0 top-0 z-50 px-3 pt-3 tablet:px-5 tablet:pt-5"
+>
+  <nav
+    class="mx-auto flex max-w-[1600px] items-center justify-between"
+    aria-label="Primary"
+  >
+    <a
+      href={homeHref}
+      class="script-mark text-[34px] text-cream tablet:text-[40px]"
+    >
+      Avista
+    </a>
+    <div class="flex items-center bg-cream p-1.5">
+      <a
+        href={contactHref}
+        class="hidden px-7 py-4 font-display text-[18px] font-normal italic leading-none text-charcoal tablet:block"
+      >
+        Reach out
+      </a>
+      <button
+        type="button"
+        id="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        class="menu-toggle relative flex h-12 w-12 items-center justify-center bg-charcoal tablet:h-14 tablet:w-14"
+      >
+        <span class="menu-toggle-line absolute h-px w-5 bg-cream"></span>
+        <span class="menu-toggle-line absolute h-px w-5 bg-cream"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div
+  id="site-menu"
+  class="site-menu"
+  aria-hidden="true"
+>
+  <button
+    type="button"
+    class="menu-backdrop absolute inset-0 bg-ink/80"
+    aria-label="Close menu"
+    data-menu-close
+    tabindex="-1"
+  ></button>
+
+  <div
+    class="menu-panel absolute inset-0 grid bg-charcoal text-cream desktop:grid-cols-[0.95fr_1.05fr]"
+  >
+    <aside
+      class="menu-image relative hidden overflow-hidden desktop:block"
+      aria-hidden="true"
+    >
+      <img
+        src={menuImage}
+        alt=""
+        class="menu-image-img absolute inset-0 h-full w-full object-cover filter-[saturate(0.92)_contrast(1.02)]"
+      />
+      <div class="noise-layer"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-ink/40 via-charcoal/35 to-ink/75"
+      >
+      </div>
+      <div class="cover-glow"></div>
+      <div class="relative flex h-full flex-col justify-end p-12 desktop:p-16">
+        <span
+          class="menu-quote-divider mb-7 inline-block h-px w-12 bg-stone"
+          aria-hidden="true"></span>
+        <p
+          class="menu-quote font-display italic text-[26px] font-light leading-[1.3] text-cream/90 desktop:text-[32px] max-w-[480px]"
+        >
+          Three quiet houses in the pines, kept by us for families who want
+          Greece on their own terms.
+        </p>
+        <p
+          class="menu-quote-meta mt-8 font-sans text-[11px] uppercase tracking-[0.45em] text-stone"
+        >
+          Sithonia &middot; Halkidiki
+        </p>
+      </div>
+    </aside>
+
+    <div
+      class="relative flex min-h-screen flex-col px-5 pt-3 tablet:px-10 tablet:pt-5 desktop:px-16"
+    >
+      <div class="menu-top flex items-center justify-between">
+        <a
+          href={homeHref}
+          class="script-mark text-[34px] text-cream tablet:text-[40px]"
+          data-menu-close
+        >
+          Avista
+        </a>
+        <button
+          type="button"
+          class="menu-close-btn relative flex h-12 w-12 items-center justify-center bg-cream tablet:h-14 tablet:w-14"
+          aria-label="Close menu"
+          data-menu-close
+        >
+          <span
+            class="menu-close-line absolute h-px w-5 rotate-45 bg-charcoal"
+          ></span>
+          <span
+            class="menu-close-line absolute h-px w-5 -rotate-45 bg-charcoal"
+          ></span>
+        </button>
+      </div>
+
+      <nav
+        class="flex flex-1 flex-col justify-center py-12 tablet:py-16"
+        aria-label="Menu navigation"
+      >
+        <ul class="menu-list grid">
+          {
+            navLinks.map((link) => (
+              <li class="menu-item border-b border-stone/20 last:border-b-0">
+                <a
+                  href={link.href}
+                  class="menu-link group flex items-end gap-5 py-4 tablet:gap-7 tablet:py-5"
+                  data-menu-close
+                >
+                  <span class="menu-link-num font-sans text-[10px] uppercase tracking-[0.35em] text-stone-deep transition-colors duration-300 group-hover:text-stone tablet:text-[11px] tablet:pb-3">
+                    № {link.number}
+                  </span>
+                  <span
+                    class="menu-link-text font-display font-light italic leading-[0.95] text-cream transition-colors duration-300 group-hover:text-stone"
+                    style="font-size: clamp(2.25rem, 6.5vw, 4.75rem);"
+                  >
+                    {link.label}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <div
+        class="menu-footer grid gap-10 border-t border-stone/25 py-8 tablet:grid-cols-[1fr_0.9fr] tablet:py-10"
+      >
+        <div class="menu-footer-block">
+          <p
+            class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep"
+          >
+            Villas
+          </p>
+          <ul class="mt-5 grid gap-2.5">
+            {
+              villaLinks.map((villa) => (
+                <li>
+                  <a
+                    href={villa.href}
+                    class="menu-villa-link font-display italic text-[20px] font-light text-cream/85 transition hover:text-cream"
+                    data-menu-close
+                  >
+                    {villa.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="menu-footer-block">
+          <p
+            class="font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-stone-deep"
+          >
+            Reach out
+          </p>
+          <div
+            class="mt-5 grid gap-2 font-display text-[18px] font-light text-cream/85"
+          >
+            <a
+              href="tel:+300000000000"
+              class="menu-contact-link transition hover:text-cream"
+              >+30 ___ ___ ____</a
+            >
+            <a
+              href="mailto:hello@avistavillas.com"
+              class="menu-contact-link transition hover:text-cream"
+              >hello@avistavillas.com</a
+            >
+            <a
+              href="https://www.instagram.com/avistavillas/"
+              target="_blank"
+              rel="noopener"
+              class="menu-contact-link transition hover:text-cream">Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
